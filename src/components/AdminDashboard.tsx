@@ -181,7 +181,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
       setIsLoading(true);
       const params = new URLSearchParams({
         page: String(questionPage),
-        limit: '15',
+        limit: '10',
         type: questionTypeFilter,
         tier: questionTierFilter,
         search: questionSearch
@@ -706,40 +706,22 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
 
   return (
     <div className="space-y-6">
-      {/* Top Banner */}
-      <div className="bg-[#FF5722] rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <div className="flex items-center gap-2 mb-2">
-            <span className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-bold border border-white/30">
-              TRANG QUẢN TRỊ CAO CẤP
-            </span>
-            <span className="text-xs text-rose-100">Cơ sở dữ liệu PostgreSQL trực tuyến</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-black font-heading tracking-tight">
-            Trung Tâm Điều Hành & Giám Sát EduCareer THPT
-          </h2>
-          <p className="text-sm text-rose-100 max-w-2xl mt-1">
-            Quản trị học sinh, lịch sử thi Holland & DISC, quản lý ngân hàng câu hỏi 3 mốc (20, 50, 70) và danh mục ngành nghề đào tạo.
-          </p>
-        </div>
-
-        <div className="flex items-center gap-2 self-start md:self-auto">
-          <button
-            onClick={() => setRefreshTrigger((v) => v + 1)}
-            className="p-3 rounded-2xl bg-white/10 hover:bg-white/20 text-white backdrop-blur-md transition-all cursor-pointer flex items-center gap-2 text-xs font-bold"
-          >
-            <RefreshCw className="w-4 h-4" />
-            <span>Làm Mới</span>
-          </button>
-        </div>
-      </div>
-
       {/* Main Layout: Vertical Sidebar + Content Area */}
       <div className="flex flex-col lg:flex-row gap-6 items-start">
         {/* Vertical Sidebar Navigation (Menu Dọc) */}
         <aside className="w-full lg:w-72 bg-white rounded-3xl p-3 border border-slate-200 shadow-sm shrink-0 space-y-1">
-          <div className="px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">
-            Menu Quản Trị Hệ Thống
+          <div className="px-3 py-2 flex items-center justify-between">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+              Menu Quản Trị
+            </span>
+            <button
+              onClick={() => setRefreshTrigger((v) => v + 1)}
+              title="Làm mới dữ liệu"
+              className="p-1.5 rounded-lg hover:bg-slate-100 text-slate-500 hover:text-[#FF5722] transition-colors cursor-pointer flex items-center gap-1 text-xs font-semibold"
+            >
+              <RefreshCw className="w-3.5 h-3.5" />
+              <span>Làm mới</span>
+            </button>
           </div>
           {[
             { id: 'users', label: 'Quản Lý User', icon: Users, count: userTotal },
@@ -1192,11 +1174,9 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
             <div>
               <h3 className="font-heading font-bold text-slate-900 text-base sm:text-lg flex items-center gap-2">
                 <HelpCircle className="w-5 h-5 text-amber-600" />
-                <span>Ngân Hàng Câu Hỏi Holland & DISC (Chia 3 Mốc 20, 50, 70)</span>
+                <span>Ngân Hàng Câu Hỏi Holland & DISC </span>
               </h3>
-              <p className="text-xs text-slate-500">
-                Quản lý chi tiết nội dung từng câu hỏi trắc nghiệm, các đáp án và điểm trọng số
-              </p>
+      
             </div>
 
             <div className="flex items-center gap-2 flex-wrap">
@@ -1383,7 +1363,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
           <div className="flex items-center justify-between pt-2">
             <span className="text-xs text-slate-500">
               Tổng số: <strong>{questionTotal}</strong> câu hỏi • Trang <strong>{questionPage}</strong>/
-              {Math.ceil(questionTotal / 15) || 1}
+              {Math.ceil(questionTotal / 10) || 1}
             </span>
             <div className="flex items-center gap-1.5">
               <button
@@ -1393,8 +1373,21 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
+              {Array.from({ length: Math.min(Math.ceil(questionTotal / 10) || 1, 7) }).map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setQuestionPage(idx + 1)}
+                  className={`w-7 h-7 rounded-xl text-xs font-bold cursor-pointer transition-all ${
+                    questionPage === idx + 1
+                      ? 'bg-amber-500 text-white'
+                      : 'border border-slate-200 text-slate-600 hover:bg-slate-50'
+                  }`}
+                >
+                  {idx + 1}
+                </button>
+              ))}
               <button
-                disabled={questionPage >= Math.ceil(questionTotal / 15)}
+                disabled={questionPage >= Math.ceil(questionTotal / 10)}
                 onClick={() => setQuestionPage((p) => p + 1)}
                 className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-40 cursor-pointer hover:bg-slate-50"
               >
@@ -1756,6 +1749,43 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
               </tbody>
             </table>
           </div>
+
+          {/* Pagination Majors */}
+          <div className="flex items-center justify-between pt-2">
+            <span className="text-xs text-slate-500">
+              Tổng số: <strong>{majorsTotal}</strong> ngành học • Trang <strong>{majorsPage}</strong>/
+              {Math.ceil(majorsTotal / 10) || 1}
+            </span>
+            <div className="flex items-center gap-1.5">
+              <button
+                disabled={majorsPage <= 1}
+                onClick={() => setMajorsPage((p) => p - 1)}
+                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-40 cursor-pointer hover:bg-slate-50"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              {Array.from({ length: Math.min(Math.ceil(majorsTotal / 10) || 1, 7) }).map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setMajorsPage(idx + 1)}
+                  className={`w-7 h-7 rounded-xl text-xs font-bold cursor-pointer transition-all ${
+                    majorsPage === idx + 1
+                      ? 'bg-emerald-600 text-white'
+                      : 'border border-slate-200 text-slate-600 hover:bg-slate-50'
+                  }`}
+                >
+                  {idx + 1}
+                </button>
+              ))}
+              <button
+                disabled={majorsPage >= Math.ceil(majorsTotal / 10)}
+                onClick={() => setMajorsPage((p) => p + 1)}
+                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-40 cursor-pointer hover:bg-slate-50"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
         </div>
       )}
 
@@ -1887,6 +1917,43 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
                 ))}
               </tbody>
             </table>
+          </div>
+
+          {/* Pagination Careers */}
+          <div className="flex items-center justify-between pt-2">
+            <span className="text-xs text-slate-500">
+              Tổng số: <strong>{careersTotal}</strong> nghề nghiệp • Trang <strong>{careersPage}</strong>/
+              {Math.ceil(careersTotal / 10) || 1}
+            </span>
+            <div className="flex items-center gap-1.5">
+              <button
+                disabled={careersPage <= 1}
+                onClick={() => setCareersPage((p) => p - 1)}
+                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-40 cursor-pointer hover:bg-slate-50"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              {Array.from({ length: Math.min(Math.ceil(careersTotal / 10) || 1, 7) }).map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCareersPage(idx + 1)}
+                  className={`w-7 h-7 rounded-xl text-xs font-bold cursor-pointer transition-all ${
+                    careersPage === idx + 1
+                      ? 'bg-sky-600 text-white'
+                      : 'border border-slate-200 text-slate-600 hover:bg-slate-50'
+                  }`}
+                >
+                  {idx + 1}
+                </button>
+              ))}
+              <button
+                disabled={careersPage >= Math.ceil(careersTotal / 10)}
+                onClick={() => setCareersPage((p) => p + 1)}
+                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-40 cursor-pointer hover:bg-slate-50"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
         </div>
       )}
