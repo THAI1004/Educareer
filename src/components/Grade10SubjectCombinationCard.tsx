@@ -58,41 +58,16 @@ export const Grade10SubjectCombinationCard: React.FC<Grade10SubjectCombinationCa
 
       {/* Primary Plan - Highlighted (Phương án 1 - Ưu tiên số 1) */}
       <div className="bg-emerald-50/70 border-2 border-emerald-500/80 rounded-2xl p-5 sm:p-6 shadow-sm relative">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 text-white font-black text-xs tracking-wider uppercase shadow-xs">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-emerald-600 text-white font-black text-xs tracking-wider uppercase shadow-xs w-fit">
             <CheckCircle2 className="w-4 h-4" />
             {primaryPlan.priorityLabel}
           </span>
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-slate-500 font-semibold">Tổ hợp xét tuyển ĐH mục tiêu:</span>
-            <span className="text-base sm:text-lg font-black font-mono text-emerald-800 bg-white px-3 py-1 rounded-xl border border-emerald-300 shadow-2xs">
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-xs sm:text-sm text-slate-600 font-semibold">Tổ hợp xét tuyển ĐH mục tiêu:</span>
+            <span className="text-base sm:text-lg font-black font-mono text-emerald-800 bg-white px-4 py-1.5 rounded-2xl border-2 border-emerald-400 shadow-sm">
               {primaryPlan.code} ({primaryPlan.name})
             </span>
-          </div>
-        </div>
-
-        <p className="text-xs sm:text-sm text-slate-700 font-medium mb-4 leading-relaxed">
-          {primaryPlan.description}. Khuyên dùng cho học sinh có thế mạnh tư duy logic kỹ thuật và mong muốn xét tuyển vào các trường đại học nhóm ngành kỹ thuật hàng đầu.
-        </p>
-
-        {/* 4 môn học lựa chọn lớp 10 */}
-        <div className="bg-white rounded-xl p-4 border border-emerald-200 shadow-2xs space-y-2">
-          <div className="flex items-center gap-2 text-xs font-bold text-emerald-900 uppercase tracking-wide">
-            <Layers className="w-4 h-4 text-emerald-600" />
-            <span>4 Môn Lựa Chọn Đăng Ký Vào Lớp 10 Khuyên Dùng:</span>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
-            {primaryPlan.fourSelectiveSubjects.map((subject, idx) => (
-              <div
-                key={idx}
-                className="flex items-center gap-2 px-3 py-2 rounded-xl bg-emerald-50/80 border border-emerald-200 text-xs font-bold text-emerald-900"
-              >
-                <div className="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[10px] font-black shrink-0">
-                  {idx + 1}
-                </div>
-                <span>{subject}</span>
-              </div>
-            ))}
           </div>
         </div>
       </div>

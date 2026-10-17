@@ -255,23 +255,14 @@ export const PrintReportModal: React.FC<PrintReportModalProps> = ({ result, onCl
                   </span>
                 </div>
 
-                <div className="bg-white p-3 rounded-lg border border-emerald-300">
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-[10px] font-extrabold px-1.5 py-0.5 rounded bg-emerald-600 text-white block w-fit">
-                      {g10.primaryPlan.priorityLabel}
-                    </span>
-                    <span className="text-xs font-black text-emerald-950 font-mono">
-                      Tổ hợp mục tiêu: {g10.primaryPlan.code} ({g10.primaryPlan.name})
-                    </span>
-                  </div>
-                  <p className="text-[11px] text-slate-700 mt-1">
-                    <strong>4 Môn lựa chọn vào lớp 10 khuyên dùng:</strong> {g10.primaryPlan.fourSelectiveSubjects.join(', ')}
-                  </p>
+                <div className="bg-white p-3 rounded-lg border border-emerald-300 flex items-center justify-between">
+                  <span className="text-[10px] font-extrabold px-1.5 py-0.5 rounded bg-emerald-600 text-white block w-fit">
+                    {g10.primaryPlan.priorityLabel}
+                  </span>
+                  <span className="text-xs font-black text-emerald-950 font-mono">
+                    Tổ hợp xét tuyển ĐH mục tiêu: {g10.primaryPlan.code} ({g10.primaryPlan.name})
+                  </span>
                 </div>
-
-                <p className="text-[10px] text-slate-500 mt-2 italic">
-                  * Ghi chú: {g10.compulsorySubjectsNote}
-                </p>
               </div>
             );
           })()}
