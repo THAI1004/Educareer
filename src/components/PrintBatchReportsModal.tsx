@@ -145,94 +145,94 @@ export const PrintBatchReportsModal: React.FC<PrintBatchReportsModalProps> = ({
         </div>
 
         {/* Printable Content Body */}
-        <div id="printable-batch-area" className="p-6 sm:p-8 overflow-y-auto space-y-12 bg-white print:p-0 print:space-y-8">
+        <div id="printable-batch-area" className="p-4 sm:p-6 overflow-y-auto space-y-6 bg-white print:p-0 print:space-y-0">
           {results.map((res, idx) => (
             <div
               key={res.id || idx}
-              className="p-6 border border-slate-200 rounded-3xl bg-white shadow-xs print:border-none print:shadow-none print:p-4 print:break-after-page page-break"
+              className="p-5 border border-slate-200 rounded-2xl bg-white shadow-xs print:border-none print:shadow-none print:p-0 page-break text-[11px] leading-snug"
             >
               {/* Header Certificate Style */}
-              <div className="border-b-2 border-orange-500 pb-4 mb-5 flex items-center justify-between">
+              <div className="border-b-2 border-orange-500 pb-2 mb-2.5 flex items-center justify-between">
                 <div>
-                  <div className="flex items-center gap-2">
-                    <span className="font-heading font-black text-xl text-slate-900 tracking-tight">
+                  <div className="flex items-center gap-1.5">
+                    <span className="font-heading font-black text-lg text-slate-900 tracking-tight">
                       EduCareer<span className="text-orange-500">.</span>
                     </span>
-                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-orange-100 text-orange-900">
+                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-orange-100 text-orange-900">
                       THPT Quốc Gia
                     </span>
                   </div>
-                  <h4 className="text-sm font-bold text-slate-700 mt-1">
+                  <h4 className="text-xs font-bold text-slate-700 mt-0.5 uppercase">
                     PHIẾU KẾT QUẢ ĐÁNH GIÁ ĐỊNH HƯỚNG NGHỀ NGHIỆP & CHỌN NGÀNH
                   </h4>
                 </div>
-                <div className="text-right text-xs text-slate-500">
-                  <p>Mã kết quả: <strong>#{res.id?.slice(0, 10)}</strong></p>
+                <div className="text-right text-[10px] text-slate-500 font-mono">
+                  <p>Mã kết quả: <strong>#{res.id?.slice(0, 8)}</strong></p>
                   <p>Ngày đánh giá: {new Date(res.testDate).toLocaleDateString('vi-VN')}</p>
                 </div>
               </div>
 
               {/* Student Info Box */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 bg-slate-50 rounded-2xl mb-5 text-xs">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 p-2.5 bg-slate-50 rounded-xl mb-2.5 text-[10.5px]">
                 <div>
-                  <span className="text-slate-400 block">Học sinh:</span>
-                  <strong className="text-slate-900 text-sm font-bold">{res.studentName}</strong>
+                  <span className="text-slate-400 block text-[10px]">Học sinh:</span>
+                  <strong className="text-slate-900 font-bold">{res.studentName}</strong>
                 </div>
                 <div>
-                  <span className="text-slate-400 block">Email tài khoản:</span>
+                  <span className="text-slate-400 block text-[10px]">Email tài khoản:</span>
                   <strong className="text-slate-800">{res.userEmail || 'Chưa liên kết'}</strong>
                 </div>
                 <div>
-                  <span className="text-slate-400 block">Trường THPT:</span>
+                  <span className="text-slate-400 block text-[10px]">Trường THPT:</span>
                   <strong className="text-slate-800">{res.school || 'Trường THPT'}</strong>
                 </div>
                 <div>
-                  <span className="text-slate-400 block">Bộ mốc câu hỏi:</span>
+                  <span className="text-slate-400 block text-[10px]">Bộ mốc câu hỏi:</span>
                   <strong className="text-orange-600 font-bold">{res.tier || 20} câu</strong>
                 </div>
               </div>
 
               {/* Core Personality & Holland Overview */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
-                <div className="p-4 rounded-2xl border border-amber-200 bg-amber-50/50">
-                  <div className="flex items-center gap-2 mb-2 text-xs font-bold text-amber-900">
-                    <Compass className="w-4 h-4 text-amber-600" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 mb-2.5 text-[10.5px]">
+                <div className="p-2.5 rounded-xl border border-amber-200 bg-amber-50/50">
+                  <div className="flex items-center gap-1.5 mb-1 font-bold text-amber-900">
+                    <Compass className="w-3.5 h-3.5 text-amber-600" />
                     <span>XU HƯỚNG HOLLAND: NHÓM {res.primaryHolland}</span>
                   </div>
-                  <p className="text-xs text-slate-700 leading-relaxed">
-                    Điểm số nổi trội phản ánh năng lực tự nhiên và động lực gắn bó lâu dài của học sinh trong các ngành nghề tương ứng.
+                  <p className="text-slate-700 leading-relaxed text-[10px]">
+                    Điểm số nổi trội phản ánh năng lực tự nhiên và động lực gắn bó lâu dài của học sinh.
                   </p>
                 </div>
 
-                <div className="p-4 rounded-2xl border border-sky-200 bg-sky-50/50">
-                  <div className="flex items-center gap-2 mb-2 text-xs font-bold text-sky-900">
-                    <Layers className="w-4 h-4 text-sky-600" />
+                <div className="p-2.5 rounded-xl border border-sky-200 bg-sky-50/50">
+                  <div className="flex items-center gap-1.5 mb-1 font-bold text-sky-900">
+                    <Layers className="w-3.5 h-3.5 text-sky-600" />
                     <span>PHONG CÁCH DISC: {res.primaryDisc} - {res.secondaryDisc}</span>
                   </div>
-                  <p className="text-xs text-slate-700 leading-relaxed">
-                    {res.analysis?.summary || 'Phong cách hành vi làm việc, ra quyết định và cách tương tác trong môi trường đại học.'}
+                  <p className="text-slate-700 leading-relaxed text-[10px] line-clamp-2">
+                    {res.analysis?.summary || 'Phong cách hành vi làm việc, ra quyết định và cách tương tác.'}
                   </p>
                 </div>
               </div>
 
               {/* Majors Comparison */}
-              <div className="p-4 bg-orange-50/70 border border-orange-200 rounded-2xl mb-5">
-                <div className="text-xs font-bold text-orange-900 mb-2 flex items-center gap-1.5">
-                  <GraduationCap className="w-4 h-4 text-orange-600" />
+              <div className="p-2.5 bg-orange-50/70 border border-orange-200 rounded-xl mb-2.5 text-[10.5px]">
+                <div className="font-bold text-orange-900 mb-1.5 flex items-center gap-1">
+                  <GraduationCap className="w-3.5 h-3.5 text-orange-600" />
                   <span>KẾT QUẢ ĐỐI CHIẾU NGÀNH HỌC ĐẠI HỌC</span>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                  <div className="p-3 bg-white rounded-xl border border-orange-100">
-                    <span className="text-slate-400 block mb-0.5">Nguyện vọng ban đầu:</span>
-                    <strong className="text-slate-800 text-sm font-bold">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[10.5px]">
+                  <div className="p-2 bg-white rounded-lg border border-orange-100">
+                    <span className="text-slate-400 block text-[9.5px]">Nguyện vọng ban đầu:</span>
+                    <strong className="text-slate-800 font-bold">
                       {res.initialMajorName || 'Chưa chọn'}
                     </strong>
                   </div>
-                  <div className="p-3 bg-white rounded-xl border border-emerald-300">
-                    <span className="text-emerald-600 font-bold block mb-0.5">
+                  <div className="p-2 bg-white rounded-lg border border-emerald-300">
+                    <span className="text-emerald-600 font-bold block text-[9.5px]">
                       ✓ Ngành tư vấn sau trắc nghiệm:
                     </span>
-                    <strong className="text-emerald-900 text-sm font-bold">
+                    <strong className="text-emerald-900 font-bold">
                       {res.finalMajorName || 'Phù hợp đa ngành'}
                     </strong>
                   </div>
@@ -241,15 +241,15 @@ export const PrintBatchReportsModal: React.FC<PrintBatchReportsModalProps> = ({
 
               {/* Recommended Careers */}
               {res.recommendedCareers && res.recommendedCareers.length > 0 && (
-                <div>
-                  <h5 className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                <div className="mb-2">
+                  <h5 className="text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">
                     Top nghề nghiệp và ngành đào tạo gợi ý:
                   </h5>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                    {res.recommendedCareers.slice(0, 4).map((c, cIdx) => (
-                      <div key={cIdx} className="p-2.5 bg-slate-50 border border-slate-200 rounded-xl">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-[10px]">
+                    {res.recommendedCareers.slice(0, 2).map((c, cIdx) => (
+                      <div key={cIdx} className="p-1.5 bg-slate-50 border border-slate-200 rounded-lg">
                         <strong className="text-slate-900 block font-bold">{c.jobTitle}</strong>
-                        <span className="text-slate-500 text-[11px]">
+                        <span className="text-slate-500 text-[9.5px]">
                           Ngành: {c.universityMajor} ({c.majorCode})
                         </span>
                       </div>
@@ -266,12 +266,12 @@ export const PrintBatchReportsModal: React.FC<PrintBatchReportsModalProps> = ({
                   res.recommendedCareers || []
                 );
                 return (
-                  <div className="p-2.5 bg-emerald-50/70 border border-emerald-300 rounded-xl break-inside-avoid flex items-center justify-between">
-                    <span className="text-xs font-black text-emerald-950 flex items-center gap-1.5 uppercase">
+                  <div className="p-2 bg-emerald-50/70 border border-emerald-300 rounded-xl break-inside-avoid flex items-center justify-between text-[10.5px]">
+                    <span className="font-black text-emerald-950 flex items-center gap-1.5 uppercase text-[10px]">
                       <BookOpen className="w-3.5 h-3.5 text-emerald-700" />
                       Tổ hợp xét tuyển ĐH mục tiêu:
                     </span>
-                    <span className="text-xs font-bold text-emerald-800 bg-white px-2.5 py-0.5 rounded border border-emerald-300 font-mono">
+                    <span className="font-bold text-emerald-800 bg-white px-2 py-0.5 rounded border border-emerald-300 font-mono text-[10px]">
                       {g10.primaryPlan.code} ({g10.primaryPlan.name})
                     </span>
                   </div>
@@ -279,14 +279,14 @@ export const PrintBatchReportsModal: React.FC<PrintBatchReportsModalProps> = ({
               })()}
 
               {/* Signature Footer */}
-              <div className="mt-8 pt-4 border-t border-slate-200 flex justify-between text-xs text-slate-500">
+              <div className="mt-4 pt-2.5 border-t border-slate-200 flex justify-between text-[10px] text-slate-500 break-inside-avoid">
                 <div className="text-center">
                   <p>Học sinh ký tên</p>
-                  <p className="mt-8 font-semibold text-slate-700">{res.studentName}</p>
+                  <p className="mt-5 font-semibold text-slate-700">{res.studentName}</p>
                 </div>
                 <div className="text-center">
                   <p>Chuyên viên tư vấn / Nhà trường</p>
-                  <p className="mt-8 font-semibold text-slate-700">EduCareer Certified</p>
+                  <p className="mt-5 font-semibold text-slate-700">EduCareer Certified</p>
                 </div>
               </div>
             </div>
