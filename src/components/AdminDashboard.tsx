@@ -709,7 +709,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
       {/* Main Layout: Vertical Sidebar + Content Area */}
       <div className="flex flex-col lg:flex-row gap-6 items-start">
         {/* Vertical Sidebar Navigation (Menu Dọc) */}
-        <aside className="w-full lg:w-72 bg-white rounded-3xl p-3 border border-slate-200 shadow-sm shrink-0 space-y-1">
+        <aside className="w-full lg:w-80 bg-white rounded-3xl p-3 border border-slate-200 shadow-sm shrink-0 space-y-1">
           <div className="px-3 py-2 flex items-center justify-between">
             <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
               Menu Quản Trị
@@ -746,7 +746,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
               >
                 <div className="flex items-center gap-3 min-w-0">
                   <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-white' : 'text-slate-500'}`} />
-                  <span className="truncate">{tab.label}</span>
+                  <span className="whitespace-nowrap">{tab.label}</span>
                 </div>
                 {tab.count !== undefined && (
                   <span
@@ -851,24 +851,24 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
           {/* Table */}
           <div className="overflow-x-auto rounded-2xl border border-slate-200">
             <table className="w-full text-left text-xs sm:text-sm">
-              <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase text-[11px]">
+              <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase text-[11px] whitespace-nowrap">
                 <tr>
-                  <th className="p-3">Họ Tên & Email</th>
-                  <th className="p-3">Vai Trò</th>
-                  <th className="p-3">Trường THPT</th>
-                  <th className="p-3">Trạng Thái</th>
-                  <th className="p-3">Lần Hoạt Động Cuối</th>
-                  <th className="p-3 text-right">Thao Tác</th>
+                  <th className="p-3 whitespace-nowrap">Họ Tên & Email</th>
+                  <th className="p-3 whitespace-nowrap text-center">Vai Trò</th>
+                  <th className="p-3 whitespace-nowrap">Trường THPT</th>
+                  <th className="p-3 whitespace-nowrap text-center">Trạng Thái</th>
+                  <th className="p-3 whitespace-nowrap">Lần Hoạt Động Cuối</th>
+                  <th className="p-3 text-right whitespace-nowrap">Thao Tác</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
                 {users.map((u) => (
                   <tr key={u.id} className="hover:bg-slate-50/70 transition-colors">
-                    <td className="p-3">
+                    <td className="p-3 whitespace-nowrap">
                       <div className="font-bold text-slate-900">{u.name}</div>
                       <div className="text-xs text-slate-500">{u.email}</div>
                     </td>
-                    <td className="p-3">
+                    <td className="p-3 whitespace-nowrap text-center">
                       <span
                         className={`px-2 py-0.5 rounded-full text-xs font-bold ${
                           u.role === 'admin'
@@ -879,11 +879,11 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
                         {u.role === 'admin' ? 'Admin' : 'Học sinh'}
                       </span>
                     </td>
-                    <td className="p-3 text-slate-700">
+                    <td className="p-3 text-slate-700 whitespace-nowrap">
                       <div>{u.school || 'THPT'}</div>
                       <div className="text-[11px] text-slate-400">{u.grade || 'Lớp 12'}</div>
                     </td>
-                    <td className="p-3">
+                    <td className="p-3 whitespace-nowrap text-center">
                       <span
                         className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold ${
                           u.status === 'active'
@@ -899,12 +899,12 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
                         <span>{u.status === 'active' ? 'Hoạt động' : 'Hủy hoạt động'}</span>
                       </span>
                     </td>
-                    <td className="p-3 text-xs text-slate-500">
+                    <td className="p-3 text-xs text-slate-500 whitespace-nowrap">
                       {u.last_active
                         ? new Date(u.last_active).toLocaleString('vi-VN')
                         : 'Mới tạo'}
                     </td>
-                    <td className="p-3 text-right space-x-1">
+                    <td className="p-3 text-right space-x-1 whitespace-nowrap">
                       <button
                         onClick={() => handleToggleUserStatus(u)}
                         title={u.status === 'active' ? 'Hủy hoạt động' : 'Kích hoạt lại'}
@@ -1050,7 +1050,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
           {/* Table */}
           <div className="overflow-x-auto rounded-2xl border border-slate-200">
             <table className="w-full text-left text-xs sm:text-sm">
-              <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase text-[11px]">
+              <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase text-[11px] whitespace-nowrap">
                 <tr>
                   <th className="p-3 w-10 text-center">
                     <input
@@ -1063,12 +1063,12 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
                       className="rounded text-orange-600"
                     />
                   </th>
-                  <th className="p-3">Học Sinh THPT</th>
-                  <th className="p-3">Mốc Câu</th>
-                  <th className="p-3">Holland & DISC</th>
-                  <th className="p-3">Ngành Tư Vấn</th>
-                  <th className="p-3">Thời Gian Thi</th>
-                  <th className="p-3 text-right">In Phiếu</th>
+                  <th className="p-3 whitespace-nowrap">Học Sinh THPT</th>
+                  <th className="p-3 whitespace-nowrap text-center">Mốc Câu</th>
+                  <th className="p-3 whitespace-nowrap">Holland & DISC</th>
+                  <th className="p-3 whitespace-nowrap">Ngành Tư Vấn</th>
+                  <th className="p-3 whitespace-nowrap">Thời Gian Thi</th>
+                  <th className="p-3 text-right whitespace-nowrap">In Phiếu</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
@@ -1081,7 +1081,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
                         isChecked ? 'bg-orange-50/40' : ''
                       }`}
                     >
-                      <td className="p-3 text-center">
+                      <td className="p-3 text-center whitespace-nowrap">
                         <input
                           type="checkbox"
                           checked={isChecked}
@@ -1089,27 +1089,27 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
                           className="rounded text-orange-600"
                         />
                       </td>
-                      <td className="p-3">
+                      <td className="p-3 whitespace-nowrap">
                         <div className="font-bold text-slate-900">{h.studentName}</div>
                         <div className="text-xs text-slate-500">{h.userEmail}</div>
                       </td>
-                      <td className="p-3">
+                      <td className="p-3 whitespace-nowrap text-center">
                         <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800">
                           {h.tier || 20} câu
                         </span>
                       </td>
-                      <td className="p-3">
+                      <td className="p-3 whitespace-nowrap">
                         <div className="font-bold text-slate-800">
                           Nhóm {h.primaryHolland} • {h.primaryDisc}
                         </div>
                       </td>
-                      <td className="p-3 text-xs font-semibold text-emerald-800">
+                      <td className="p-3 text-xs font-semibold text-emerald-800 whitespace-nowrap">
                         {h.finalMajorName || 'Đa ngành'}
                       </td>
-                      <td className="p-3 text-xs text-slate-500">
+                      <td className="p-3 text-xs text-slate-500 whitespace-nowrap">
                         {new Date(h.testDate).toLocaleDateString('vi-VN')}
                       </td>
-                      <td className="p-3 text-right">
+                      <td className="p-3 text-right whitespace-nowrap">
                         <button
                           onClick={() => handlePrintSingleHistory(h)}
                           title="In chi tiết phiếu kết quả học sinh này"
@@ -1280,26 +1280,26 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
           {/* Table */}
           <div className="overflow-x-auto rounded-2xl border border-slate-200">
             <table className="w-full text-left text-xs sm:text-sm">
-              <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase text-[11px]">
+              <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase text-[11px] whitespace-nowrap">
                 <tr>
-                  <th className="p-3 w-16">Thứ Tự</th>
-                  <th className="p-3">Loại / Mốc</th>
-                  <th className="p-3">Nội Dung Câu Hỏi</th>
-                  <th className="p-3">Số Đáp Án</th>
-                  <th className="p-3">Trạng Thái</th>
-                  <th className="p-3 text-right">Thao Tác</th>
+                  <th className="p-3 w-16 text-center">Thứ Tự</th>
+                  <th className="p-3 whitespace-nowrap">Loại / Mốc</th>
+                  <th className="p-3 min-w-[360px]">Nội Dung Câu Hỏi</th>
+                  <th className="p-3 whitespace-nowrap text-center">Số Đáp Án</th>
+                  <th className="p-3 whitespace-nowrap text-center">Trạng Thái</th>
+                  <th className="p-3 text-right whitespace-nowrap">Thao Tác</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
                 {questionsList.map((q) => (
                   <tr key={q.id} className="hover:bg-slate-50/70 transition-colors">
-                    <td className="p-3 font-bold text-slate-800">
+                    <td className="p-3 font-bold text-slate-800 text-center whitespace-nowrap">
                       #{q.question_order || q.id}
                     </td>
-                    <td className="p-3">
-                      <div className="flex items-center gap-1.5">
+                    <td className="p-3 whitespace-nowrap">
+                      <div className="flex items-center gap-1.5 whitespace-nowrap">
                         <span
-                          className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
+                          className={`px-2 py-0.5 rounded-full text-[10px] font-bold shrink-0 ${
                             q.type === 'HOLLAND'
                               ? 'bg-amber-100 text-amber-900'
                               : 'bg-sky-100 text-sky-900'
@@ -1307,18 +1307,20 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
                         >
                           {q.type}
                         </span>
-                        <span className="text-[11px] text-slate-500">Mốc {q.tier} câu</span>
+                        <span className="text-[11px] text-slate-500 shrink-0 font-medium">Mốc {q.tier} câu</span>
                       </div>
                     </td>
-                    <td className="p-3 font-medium text-slate-800 max-w-md">
+                    <td className="p-3 font-medium text-slate-800 leading-relaxed">
                       {q.scenario}
                     </td>
-                    <td className="p-3 text-xs text-slate-600">
-                      {q.options?.length || 4} phương án
+                    <td className="p-3 text-xs text-slate-600 whitespace-nowrap text-center">
+                      <span className="inline-block px-2.5 py-1 rounded-lg bg-slate-100 font-medium">
+                        {q.options?.length || 4} phương án
+                      </span>
                     </td>
-                    <td className="p-3">
+                    <td className="p-3 whitespace-nowrap text-center">
                       <span
-                        className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold ${
+                        className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold whitespace-nowrap ${
                           q.status === 'active'
                             ? 'bg-emerald-50 text-emerald-700'
                             : 'bg-slate-100 text-slate-600'
@@ -1327,7 +1329,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
                         {q.status === 'active' ? 'Hoạt động' : 'Hủy hoạt động'}
                       </span>
                     </td>
-                    <td className="p-3 text-right space-x-1">
+                    <td className="p-3 text-right space-x-1 whitespace-nowrap">
                       <button
                         onClick={() => handleToggleQuestionStatus(q)}
                         title="Đổi trạng thái"
@@ -1666,22 +1668,22 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
           {/* Table */}
           <div className="overflow-x-auto rounded-2xl border border-slate-200">
             <table className="w-full text-left text-xs sm:text-sm">
-              <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase text-[11px]">
+              <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase text-[11px] whitespace-nowrap">
                 <tr>
-                  <th className="p-3 w-16">Hình Ảnh</th>
-                  <th className="p-3">Mã Ngành & Tên</th>
-                  <th className="p-3">Khối Ngành</th>
-                  <th className="p-3">Holland Chuẩn</th>
-                  <th className="p-3">Vị Trí Đầu Ra Tuyển Dụng</th>
-                  <th className="p-3">Trạng Thái</th>
-                  <th className="p-3 text-right">Thao Tác</th>
+                  <th className="p-3 w-16 text-center">Hình Ảnh</th>
+                  <th className="p-3 whitespace-nowrap">Mã Ngành & Tên</th>
+                  <th className="p-3 whitespace-nowrap">Khối Ngành</th>
+                  <th className="p-3 whitespace-nowrap text-center">Holland Chuẩn</th>
+                  <th className="p-3 min-w-[260px]">Vị Trí Đầu Ra Tuyển Dụng</th>
+                  <th className="p-3 whitespace-nowrap text-center">Trạng Thái</th>
+                  <th className="p-3 text-right whitespace-nowrap">Thao Tác</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
                 {majorsList.map((m) => (
                   <tr key={m.id} className="hover:bg-slate-50/70 transition-colors">
-                    <td className="p-3">
-                      <div className="w-12 h-12 rounded-xl bg-slate-100 overflow-hidden border border-slate-200 shrink-0 flex items-center justify-center">
+                    <td className="p-3 text-center whitespace-nowrap">
+                      <div className="w-12 h-12 rounded-xl bg-slate-100 overflow-hidden border border-slate-200 shrink-0 flex items-center justify-center mx-auto">
                         {m.image_url ? (
                           <img
                             src={formatImageUrl(m.image_url)}
@@ -1693,22 +1695,22 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
                         )}
                       </div>
                     </td>
-                    <td className="p-3">
+                    <td className="p-3 whitespace-nowrap">
                       <div className="font-bold text-slate-900">{m.name}</div>
                       <div className="text-xs text-slate-500">Mã: {m.code}</div>
                     </td>
-                    <td className="p-3 text-slate-700">{m.category}</td>
-                    <td className="p-3">
+                    <td className="p-3 text-slate-700 whitespace-nowrap">{m.category}</td>
+                    <td className="p-3 whitespace-nowrap text-center">
                       <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800">
                         Nhóm {m.typicalHolland}
                       </span>
                     </td>
-                    <td className="p-3 max-w-xs text-xs text-slate-600">
+                    <td className="p-3 text-xs text-slate-600 leading-relaxed">
                       {m.careerOutcomes?.slice(0, 3).join(', ')}...
                     </td>
-                    <td className="p-3">
+                    <td className="p-3 whitespace-nowrap text-center">
                       <span
-                        className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold ${
+                        className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold whitespace-nowrap ${
                           m.status !== 'inactive'
                             ? 'bg-emerald-50 text-emerald-700'
                             : 'bg-slate-100 text-slate-600'
@@ -1717,7 +1719,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
                         {m.status !== 'inactive' ? 'Hoạt động' : 'Hủy hoạt động'}
                       </span>
                     </td>
-                    <td className="p-3 text-right space-x-1">
+                    <td className="p-3 text-right space-x-1 whitespace-nowrap">
                       <button
                         onClick={() => handleToggleMajorStatus(m)}
                         title="Đổi trạng thái"
@@ -1838,27 +1840,27 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
           {/* Table */}
           <div className="overflow-x-auto rounded-2xl border border-slate-200">
             <table className="w-full text-left text-xs sm:text-sm">
-              <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase text-[11px]">
+              <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase text-[11px] whitespace-nowrap">
                 <tr>
-                  <th className="p-3">Tên Nghề & Chức Danh</th>
-                  <th className="p-3">Giao Điểm Holland × DISC</th>
-                  <th className="p-3">Ngành Học Phù Hợp</th>
-                  <th className="p-3">Thu Nhập Bình Quân</th>
-                  <th className="p-3">Trạng Thái</th>
-                  <th className="p-3 text-right">Thao Tác</th>
+                  <th className="p-3 whitespace-nowrap">Tên Nghề & Chức Danh</th>
+                  <th className="p-3 whitespace-nowrap text-center">Giao Điểm Holland × DISC</th>
+                  <th className="p-3 whitespace-nowrap">Ngành Học Phù Hợp</th>
+                  <th className="p-3 whitespace-nowrap">Thu Nhập Bình Quân</th>
+                  <th className="p-3 whitespace-nowrap text-center">Trạng Thái</th>
+                  <th className="p-3 text-right whitespace-nowrap">Thao Tác</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
                 {careersList.map((c) => (
                   <tr key={c.id} className="hover:bg-slate-50/70 transition-colors">
-                    <td className="p-3">
+                    <td className="p-3 whitespace-nowrap">
                       <div className="font-bold text-slate-900">{c.jobTitle}</div>
                       <div className="text-[11px] text-slate-400 truncate max-w-xs">
                         {c.description}
                       </div>
                     </td>
-                    <td className="p-3">
-                      <div className="flex items-center gap-1.5">
+                    <td className="p-3 whitespace-nowrap text-center">
+                      <div className="inline-flex items-center gap-1.5">
                         <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800">
                           {c.holland}
                         </span>
@@ -1868,16 +1870,16 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
                         </span>
                       </div>
                     </td>
-                    <td className="p-3 text-slate-800 font-medium">
+                    <td className="p-3 text-slate-800 font-medium whitespace-nowrap">
                       <div>{c.universityMajor}</div>
                       <div className="text-[11px] text-slate-500">Mã: {c.majorCode}</div>
                     </td>
-                    <td className="p-3 text-xs font-semibold text-emerald-800">
+                    <td className="p-3 text-xs font-semibold text-emerald-800 whitespace-nowrap">
                       {c.averageSalaryRange}
                     </td>
-                    <td className="p-3">
+                    <td className="p-3 whitespace-nowrap text-center">
                       <span
-                        className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold ${
+                        className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold whitespace-nowrap ${
                           c.status !== 'inactive'
                             ? 'bg-emerald-50 text-emerald-700'
                             : 'bg-slate-100 text-slate-600'
