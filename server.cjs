@@ -195,10 +195,23 @@ app.post('/api/sessions/update', async (req, res) => {
 // ----------------------------------------------------
 app.get('/api/history', async (req, res) => {
   try {
-    const { search, tier, primaryDisc, primaryHolland, page = 1, limit = 10, userEmail } = req.query;
+    const { search, tier, primaryDisc, primaryHolland, page = 1, limit = 10, userEmail, isAdmin } = req.query;
+
+    // Security & Privacy: If not admin and no userEmail provided, return empty
+    // "cái lịch sử này của ai thì người ấy xem thôi"
+    if (!userEmail && isAdmin !== 'true') {
+      return res.json({
+        items: [],
+        total: 0,
+        page: 1,
+        totalPages: 0
+      });
+    }
+
     let query = 'SELECT * FROM test_history WHERE 1=1';
     const params = [];
 
+    // Normal students only see their own test history
     if (userEmail) {
       params.push(userEmail);
       query += ` AND user_email = $${params.length}`;

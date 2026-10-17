@@ -9,13 +9,18 @@ import {
   Sparkles,
   ArrowRight,
   PlusCircle,
-  GraduationCap
+  GraduationCap,
+  Lock,
+  LogIn,
+  ShieldCheck
 } from 'lucide-react';
-import type { EvaluationResult } from '../types/career.ts';
+import type { EvaluationResult, UserProfile } from '../types/career.ts';
 import { DISC_TRAITS_INFO } from '../data/careerMatrix.ts';
 
 interface HistoryViewProps {
   history: EvaluationResult[];
+  currentUser: UserProfile | null;
+  onOpenLogin: () => void;
   onSelectResult: (result: EvaluationResult) => void;
   onDeleteResult: (id: string) => void;
   onClearAllHistory: () => void;
@@ -26,6 +31,8 @@ interface HistoryViewProps {
 
 export const HistoryView: React.FC<HistoryViewProps> = ({
   history,
+  currentUser,
+  onOpenLogin,
   onSelectResult,
   onDeleteResult,
   onClearAllHistory,
@@ -54,15 +61,25 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
       <div className="bg-white rounded-2xl border border-slate-200 shadow-xs p-5 sm:p-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-slate-100">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-orange-500 text-white flex items-center justify-center shadow-xs">
               <History className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-lg sm:text-xl font-heading font-extrabold text-slate-900">
-                Lịch Sử Các Lần Kiểm Tra
-              </h2>
+              <div className="flex items-center gap-2">
+                <h2 className="text-lg sm:text-xl font-heading font-extrabold text-slate-900">
+                  Lịch Sử Các Lần Kiểm Tra
+                </h2>
+                {currentUser && (
+                  <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                    Cá nhân: {currentUser.name}
+                  </span>
+                )}
+              </div>
               <p className="text-xs text-slate-500 mt-0.5">
-                Theo dõi kết quả đánh giá hành vi và các chuyên ngành đã lựa chọn
+                {currentUser
+                  ? `Lịch sử làm bài trắc nghiệm được bảo mật riêng cho tài khoản ${currentUser.email}`
+                  : 'Lịch sử làm bài được bảo mật riêng tư theo từng tài khoản học sinh'}
               </p>
             </div>
           </div>
@@ -91,56 +108,70 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
           </div>
         </div>
 
-        {/* Search Bar & Sample Data Button */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 my-4">
-          <div className="w-full sm:w-80">
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Tìm theo tên sinh viên, ngành học, nhóm..."
-              className="w-full px-3 py-1.5 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:outline-hidden focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-            />
-          </div>
-
-          {history.length === 0 && (
-            <button
-              type="button"
-              onClick={onLoadSampleHistory}
-              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-orange-800 border border-orange-200 text-xs font-bold transition-all cursor-pointer"
-            >
-              <Sparkles className="w-3.5 h-3.5 text-orange-600" />
-              <span>Nạp 3 Kết Quả Mẫu Thử Nghiệm</span>
-            </button>
-          )}
-        </div>
-
-        {/* History List */}
-        {filteredHistory.length === 0 ? (
-          <div className="p-10 text-center bg-slate-50 rounded-xl border border-dashed border-slate-200">
-            <History className="w-10 h-10 text-slate-300 mx-auto mb-2.5" />
-            <h4 className="text-sm font-bold text-slate-700">Chưa có bản ghi lịch sử kiểm tra</h4>
-            <p className="text-xs text-slate-500 max-w-md mx-auto mt-1 mb-4">
-              Sinh viên hoàn thành bài trắc nghiệm hành vi để tự động lưu kết quả phân tích tại đây.
+        {/* Not logged in prompt */}
+        {!currentUser ? (
+          <div className="my-6 p-8 text-center bg-slate-50 rounded-2xl border border-dashed border-slate-200">
+            <div className="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center mx-auto mb-3">
+              <Lock className="w-6 h-6" />
+            </div>
+            <h4 className="text-base font-extrabold text-slate-800">
+              Lịch sử làm bài mang tính riêng tư
+            </h4>
+            <p className="text-xs sm:text-sm text-slate-500 max-w-md mx-auto mt-1.5 mb-5 leading-relaxed">
+              Mỗi học sinh chỉ có thể xem lại kết quả bài test của chính mình. Vui lòng đăng nhập để lưu trữ và xem lại các lần kiểm tra trước đó.
             </p>
-            <div className="flex items-center justify-center gap-2.5 flex-wrap">
+            <div className="flex items-center justify-center gap-3">
               <button
                 type="button"
-                onClick={onStartNewTest}
-                className="px-4 py-2 rounded-xl bg-sky-600 text-white font-bold text-xs hover:bg-sky-700 transition-colors shadow-xs"
+                onClick={onOpenLogin}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm shadow-xs transition-colors cursor-pointer"
               >
-                Bắt đầu làm bài test
+                <LogIn className="w-4 h-4" />
+                <span>Đăng nhập để xem lịch sử</span>
               </button>
               <button
                 type="button"
-                onClick={onLoadSampleHistory}
-                className="px-3.5 py-2 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold text-xs hover:bg-slate-50 transition-colors"
+                onClick={onStartNewTest}
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 font-bold text-xs sm:text-sm transition-colors cursor-pointer"
               >
-                Tải dữ liệu mẫu
+                <span>Làm bài test ngay</span>
               </button>
             </div>
           </div>
         ) : (
+          <>
+            {/* Search Bar */}
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-3 my-4">
+              <div className="w-full sm:w-80">
+                <input
+                  type="text"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  placeholder="Tìm theo ngành học, nhóm tính cách..."
+                  className="w-full px-3 py-1.5 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:outline-hidden focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                />
+              </div>
+            </div>
+
+            {/* History List */}
+            {filteredHistory.length === 0 ? (
+              <div className="p-10 text-center bg-slate-50 rounded-xl border border-dashed border-slate-200">
+                <History className="w-10 h-10 text-slate-300 mx-auto mb-2.5" />
+                <h4 className="text-sm font-bold text-slate-700">Bạn chưa có bài kiểm tra nào được lưu</h4>
+                <p className="text-xs text-slate-500 max-w-md mx-auto mt-1 mb-4">
+                  Hãy hoàn thành bài trắc nghiệm hướng nghiệp để hệ thống tự động ghi nhận và phân tích chi tiết tại đây.
+                </p>
+                <div className="flex items-center justify-center gap-2.5 flex-wrap">
+                  <button
+                    type="button"
+                    onClick={onStartNewTest}
+                    className="px-4 py-2 rounded-xl bg-sky-600 text-white font-bold text-xs hover:bg-sky-700 transition-colors shadow-xs cursor-pointer"
+                  >
+                    Bắt đầu làm bài test
+                  </button>
+                </div>
+              </div>
+            ) : (
           <div className="space-y-3">
             {filteredHistory.map((item, index) => {
               const discKey = (item.primaryDisc || 'D') as keyof typeof DISC_TRAITS_INFO;
@@ -247,6 +278,8 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
               );
             })}
           </div>
+        )}
+          </>
         )}
       </div>
     </div>

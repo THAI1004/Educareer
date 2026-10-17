@@ -183,7 +183,8 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
         page: String(historyPage),
         limit: '10',
         search: historySearch,
-        tier: historyTierFilter
+        tier: historyTierFilter,
+        isAdmin: currentUser?.role === 'admin' ? 'true' : 'false'
       });
       fetch(`/api/history?${params}`)
         .then((res) => res.json())

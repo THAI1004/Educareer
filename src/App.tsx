@@ -131,17 +131,22 @@ export default function App() {
     }
   }, []);
 
-  // Fetch History from PostgreSQL
+  // Fetch History from PostgreSQL (chỉ tải lịch sử của chính user đang đăng nhập)
   const loadHistoryFromDB = () => {
-    const params = new URLSearchParams();
-    if (currentUser?.email) {
-      params.append('userEmail', currentUser.email);
+    if (!currentUser?.email) {
+      setHistory([]);
+      return;
     }
+    const params = new URLSearchParams();
+    params.append('userEmail', currentUser.email);
+
     fetch(`/api/history?${params}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.items) {
           setHistory(data.items);
+        } else {
+          setHistory([]);
         }
       })
       .catch((err) => console.warn('Could not fetch PostgreSQL history', err));
@@ -149,7 +154,7 @@ export default function App() {
 
   useEffect(() => {
     loadHistoryFromDB();
-  }, [currentUser]);
+  }, [currentUser?.email]);
 
   // Synchronize Real-time Session with Backend
   useEffect(() => {
@@ -367,6 +372,8 @@ export default function App() {
   const handleLogout = () => {
     localStorage.removeItem(USER_SESSION_KEY);
     setCurrentUser(null);
+    setHistory([]);
+    setEvaluationResult(null);
     if (activeTab === 'admin') setActiveTab('counseling');
   };
 
@@ -603,6 +610,8 @@ export default function App() {
         {activeTab === 'history' && (
           <HistoryView
             history={history}
+            currentUser={currentUser}
+            onOpenLogin={() => setIsAuthModalOpen(true)}
             onSelectResult={(item: EvaluationResult) => {
               setEvaluationResult(item);
               setActiveTab('counseling');
