@@ -550,7 +550,14 @@ export default function App() {
                   <EvaluationSummary
                     evaluation={evaluationResult}
                     currentMajorId={selectedRevisedMajor.id}
-                    onSelectRevisedMajor={(m) => setSelectedRevisedMajor(m)}
+                    onSelectRevisedMajor={(m) => {
+                      setSelectedRevisedMajor(m);
+                      setEvaluationResult((prev) => (prev ? {
+                        ...prev,
+                        finalMajorId: m.id,
+                        finalMajorName: m.name
+                      } : null));
+                    }}
                     onViewRecommendations={() => {
                       const el = document.getElementById('career-recommendations-section');
                       if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -651,6 +658,22 @@ export default function App() {
           <AdminDashboard currentUser={currentUser} />
         )}
       </main>
+
+      {/* Footer matching exact project specifications */}
+      <footer className="mt-16 bg-white border-t border-slate-200 py-6 text-xs text-slate-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <p className="font-medium text-slate-600">
+            © 2026–2027 Đề Tài NCKH KHKT • Trường THPT Thành Sen, Tỉnh Hà Tĩnh
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-[11px] sm:text-xs text-slate-500">
+            <span>Chuẩn dữ liệu mã ngành Bộ GD&ĐT</span>
+            <span>•</span>
+            <span>Định hướng tuyển sinh 2026</span>
+            <span>•</span>
+            <span>Mô hình tích hợp DISC & Holland RIASEC</span>
+          </div>
+        </div>
+      </footer>
 
       {/* Auth Modal */}
       <AuthModal
