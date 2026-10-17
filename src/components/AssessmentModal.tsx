@@ -384,23 +384,26 @@ export const AssessmentModal: React.FC<AssessmentModalProps> = ({
           </button>
 
           <div className="flex items-center gap-2">
-            {currentStep < totalQuestions - 1 ? (
+            {currentStep < totalQuestions - 1 && (
               <button
                 type="button"
                 onClick={handleNext}
-                className="flex items-center gap-1.5 px-5 py-2.5 rounded-2xl bg-orange-500 hover:bg-orange-600 text-white text-xs sm:text-sm font-bold shadow-md shadow-orange-500/20 transition-all cursor-pointer"
+                className="flex items-center gap-1.5 px-4 sm:px-5 py-2.5 rounded-2xl bg-orange-500 hover:bg-orange-600 text-white text-xs sm:text-sm font-bold shadow-md shadow-orange-500/20 transition-all cursor-pointer"
               >
                 <span>Câu Tiếp Theo</span>
                 <ChevronRight className="w-4 h-4" />
               </button>
-            ) : (
+            )}
+
+            {/* Nút nộp bài: Hiển thị và mở sẵn ngay khi người dùng đã trả lời hết mọi câu hỏi (dù đang ở câu nào) hoặc khi đang ở câu cuối cùng */}
+            {(isAllAnswered || currentStep === totalQuestions - 1) && (
               <button
                 type="button"
                 onClick={onSubmitTest}
                 disabled={!isAllAnswered}
-                className={`flex items-center gap-1.5 px-6 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all shadow-md ${
+                className={`flex items-center gap-1.5 px-5 sm:px-6 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all shadow-md ${
                   isAllAnswered
-                    ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-500/30 hover:shadow-lg cursor-pointer'
+                    ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-500/30 hover:shadow-lg cursor-pointer ring-2 ring-emerald-400/50 animate-pulse'
                     : 'bg-slate-300 text-slate-500 cursor-not-allowed'
                 }`}
               >
