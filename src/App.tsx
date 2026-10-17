@@ -459,13 +459,15 @@ export default function App() {
               <div className="absolute bottom-4 right-20 w-56 h-56 rounded-full bg-orange-300/20 blur-3xl pointer-events-none" />
             </div>
 
-            {/* VISUAL CAREER SHOWCASE: HOLLAND & DISC & MAJORS WITH PHOTOS */}
+            {/* VISUAL CAREER SHOWCASE: HOLLAND & DISC & MAJORS WITH PHOTOS (Tạm ẩn theo yêu cầu) */}
+            {/*
             <VisualCareerShowcase
               onStartTest={() => {
                 const el = document.getElementById('step-1-test-section');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }}
             />
+            */}
 
             {/* TIER SELECTOR: 20, 50, 70 CÂU */}
             <TierSelector
