@@ -12,9 +12,11 @@ import {
   CheckCircle2,
   Mail,
   User,
-  GraduationCap
+  GraduationCap,
+  BookOpen
 } from 'lucide-react';
 import type { EvaluationResult } from '../types/career.ts';
+import { getGrade10Recommendations } from '../utils/grade10Recommendations.ts';
 
 interface PrintBatchReportsModalProps {
   isOpen: boolean;
@@ -182,6 +184,31 @@ export const PrintBatchReportsModal: React.FC<PrintBatchReportsModalProps> = ({
                   </div>
                 </div>
               )}
+
+              {/* Gợi ý tổ hợp môn lớp 10 THPT */}
+              {(() => {
+                const g10 = getGrade10Recommendations(
+                  res.primaryHolland || 'R',
+                  res.primaryDisc || 'D',
+                  res.recommendedCareers || []
+                );
+                return (
+                  <div className="p-3 bg-emerald-50/70 border border-emerald-300 rounded-xl break-inside-avoid">
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-xs font-black text-emerald-950 flex items-center gap-1.5 uppercase">
+                        <BookOpen className="w-3.5 h-3.5 text-emerald-700" />
+                        Gợi ý tổ hợp môn học Lớp 10 THPT:
+                      </span>
+                      <span className="text-[10px] font-bold text-emerald-800 bg-white px-2 py-0.5 rounded border border-emerald-200">
+                        {g10.primaryPlan.code} ({g10.primaryPlan.name})
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-slate-700 font-medium">
+                      <strong>4 Môn lựa chọn gợi ý:</strong> {g10.primaryPlan.fourSelectiveSubjects.join(', ')}
+                    </p>
+                  </div>
+                );
+              })()}
 
               {/* Signature Footer */}
               <div className="mt-8 pt-4 border-t border-slate-200 flex justify-between text-xs text-slate-500">

@@ -1,7 +1,8 @@
 import React from 'react';
-import { X, Printer, Compass } from 'lucide-react';
+import { X, Printer, Compass, BookOpen, CheckCircle2 } from 'lucide-react';
 import type { EvaluationResult } from '../types/career.ts';
 import { DISC_TRAITS_INFO } from '../data/careerMatrix.ts';
+import { getGrade10Recommendations } from '../utils/grade10Recommendations.ts';
 
 interface PrintReportModalProps {
   result: EvaluationResult | null;
@@ -234,6 +235,58 @@ export const PrintReportModal: React.FC<PrintReportModalProps> = ({ result, onCl
               </tbody>
             </table>
           </div>
+
+          {/* 4. Grade 10 Subject Recommendations for High School */}
+          {(() => {
+            const g10 = getGrade10Recommendations(
+              result.primaryHolland || 'R',
+              result.primaryDisc || 'D',
+              result.recommendedCareers || []
+            );
+            return (
+              <div className="mb-4 p-3 rounded-xl border border-emerald-300 bg-emerald-50/50 break-inside-avoid">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-xs font-black text-emerald-900 uppercase tracking-wide flex items-center gap-1.5">
+                    <BookOpen className="w-3.5 h-3.5 text-emerald-700" />
+                    <span>4. Gợi Ý Phương Án Tổ Hợp Môn Học Lớp 10 THPT Phù Hợp Nhất</span>
+                  </h3>
+                  <span className="text-[10px] font-bold text-emerald-800 bg-white px-2 py-0.5 rounded border border-emerald-200">
+                    Định hướng GDPT 2018
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2 text-xs">
+                  <div className="bg-white p-2.5 rounded-lg border border-emerald-300">
+                    <span className="text-[10px] font-extrabold px-1.5 py-0.5 rounded bg-emerald-600 text-white block w-fit mb-1">
+                      {g10.primaryPlan.priorityLabel}
+                    </span>
+                    <p className="font-black text-emerald-950 font-mono text-xs">
+                      {g10.primaryPlan.code} ({g10.primaryPlan.name})
+                    </p>
+                    <p className="text-[11px] text-slate-600 mt-1">
+                      <strong>4 môn lựa chọn:</strong> {g10.primaryPlan.fourSelectiveSubjects.join(', ')}
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-2.5 rounded-lg border border-slate-200">
+                    <span className="text-[10px] font-extrabold px-1.5 py-0.5 rounded bg-sky-600 text-white block w-fit mb-1">
+                      {g10.secondaryPlan.priorityLabel}
+                    </span>
+                    <p className="font-bold text-slate-800 font-mono text-xs">
+                      {g10.secondaryPlan.code} ({g10.secondaryPlan.name})
+                    </p>
+                    <p className="text-[11px] text-slate-600 mt-1">
+                      <strong>4 môn lựa chọn:</strong> {g10.secondaryPlan.fourSelectiveSubjects.join(', ')}
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-[10px] text-slate-500 mt-2 italic">
+                  * Ghi chú: {g10.compulsorySubjectsNote}
+                </p>
+              </div>
+            );
+          })()}
 
           {/* Signatures */}
           <div className="grid grid-cols-2 gap-8 pt-4 mt-3 border-t border-slate-300 text-center text-xs break-inside-avoid">

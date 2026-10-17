@@ -33,6 +33,7 @@ import { AuthModal } from './components/AuthModal.tsx';
 import { TierSelector } from './components/TierSelector.tsx';
 import { AdminDashboard } from './components/AdminDashboard.tsx';
 import { VisualCareerShowcase } from './components/VisualCareerShowcase.tsx';
+import { Grade10SubjectCombinationCard } from './components/Grade10SubjectCombinationCard.tsx';
 
 import { UNIVERSITY_MAJORS_LIST, CAREER_MATRIX_DATA } from './data/careerMatrix.ts';
 import { QUESTIONS_BY_TIER } from './data/questionsService.ts';
@@ -554,6 +555,15 @@ export default function App() {
                       const el = document.getElementById('career-recommendations-section');
                       if (el) el.scrollIntoView({ behavior: 'smooth' });
                     }}
+                  />
+
+                  {/* Gợi Ý Phương Án Tổ Hợp Môn Học Lớp 10 THPT Phù Hợp Nhất */}
+                  <Grade10SubjectCombinationCard
+                    primaryHolland={evaluationResult.primaryHolland}
+                    primaryDisc={evaluationResult.primaryDisc}
+                    recommendedCareers={evaluationResult.recommendedCareers || []}
+                    studentName={evaluationResult.studentName}
+                    selectedMajorName={selectedRevisedMajor.name}
                   />
                 </div>
 
