@@ -7,10 +7,20 @@ import { getGrade10Recommendations } from '../utils/grade10Recommendations.ts';
 interface PrintReportModalProps {
   result: EvaluationResult | null;
   onClose: () => void;
+  autoPrint?: boolean;
 }
 
-export const PrintReportModal: React.FC<PrintReportModalProps> = ({ result, onClose }) => {
+export const PrintReportModal: React.FC<PrintReportModalProps> = ({ result, onClose, autoPrint }) => {
   if (!result) return null;
+
+  React.useEffect(() => {
+    if (autoPrint) {
+      const timer = setTimeout(() => {
+        handlePrint();
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+  }, [autoPrint]);
 
   const handlePrint = () => {
     const reportElem = document.getElementById('printable-career-report');

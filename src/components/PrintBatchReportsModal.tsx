@@ -32,7 +32,80 @@ export const PrintBatchReportsModal: React.FC<PrintBatchReportsModalProps> = ({
   if (!isOpen || results.length === 0) return null;
 
   const handlePrint = () => {
-    window.print();
+    const printableArea = document.getElementById('printable-batch-area');
+    if (!printableArea) {
+      window.print();
+      return;
+    }
+
+    let iframe = document.getElementById('batch-print-iframe') as HTMLIFrameElement;
+    if (!iframe) {
+      iframe = document.createElement('iframe');
+      iframe.id = 'batch-print-iframe';
+      iframe.style.position = 'fixed';
+      iframe.style.right = '0';
+      iframe.style.bottom = '0';
+      iframe.style.width = '0';
+      iframe.style.height = '0';
+      iframe.style.border = 'none';
+      document.body.appendChild(iframe);
+    }
+
+    const doc = iframe.contentWindow?.document;
+    if (!doc) {
+      window.print();
+      return;
+    }
+
+    doc.open();
+    doc.write(`
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>Phiếu Báo Cáo Định Hướng Ngành Nghề & Đại Học</title>
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+          <style>
+            @page {
+              size: A4 portrait;
+              margin: 10mm 12mm 10mm 12mm;
+            }
+            body {
+              font-family: 'Quicksand', system-ui, -apple-system, sans-serif !important;
+              color: #0f172a !important;
+              background: #ffffff !important;
+              margin: 0 !important;
+              padding: 0 !important;
+              -webkit-print-color-adjust: exact !important;
+              print-color-adjust: exact !important;
+            }
+            * {
+              -webkit-print-color-adjust: exact !important;
+              print-color-adjust: exact !important;
+            }
+            .page-break {
+              page-break-after: always !important;
+              break-after: page !important;
+            }
+            table, tr, td, th {
+              page-break-inside: avoid !important;
+              break-inside: avoid !important;
+            }
+          </style>
+        </head>
+        <body class="p-2">
+          ${printableArea.innerHTML}
+        </body>
+      </html>
+    `);
+    doc.close();
+
+    setTimeout(() => {
+      iframe.contentWindow?.focus();
+      iframe.contentWindow?.print();
+    }, 450);
   };
 
   return (
@@ -72,11 +145,11 @@ export const PrintBatchReportsModal: React.FC<PrintBatchReportsModalProps> = ({
         </div>
 
         {/* Printable Content Body */}
-        <div className="p-6 sm:p-8 overflow-y-auto space-y-12 bg-white print:p-0 print:space-y-8">
+        <div id="printable-batch-area" className="p-6 sm:p-8 overflow-y-auto space-y-12 bg-white print:p-0 print:space-y-8">
           {results.map((res, idx) => (
             <div
               key={res.id || idx}
-              className="p-6 border border-slate-200 rounded-3xl bg-white shadow-xs print:border-none print:shadow-none print:p-4 print:break-after-page"
+              className="p-6 border border-slate-200 rounded-3xl bg-white shadow-xs print:border-none print:shadow-none print:p-4 print:break-after-page page-break"
             >
               {/* Header Certificate Style */}
               <div className="border-b-2 border-orange-500 pb-4 mb-5 flex items-center justify-between">

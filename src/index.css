@@ -56,10 +56,10 @@
 @media print {
   @page {
     size: A4 portrait;
-    margin: 10mm 12mm 10mm 12mm;
+    margin: 8mm 10mm 8mm 10mm;
   }
 
-  /* Reset toàn bộ trang */
+  /* Reset body và ẩn các thành phần giao diện nền */
   html, body {
     background: #ffffff !important;
     color: #0f172a !important;
@@ -72,27 +72,62 @@
     print-color-adjust: exact !important;
   }
 
-  /* Ẩn các nút điều khiển, header website và overlay */
+  /* Ẩn các nút, navbar, sidebar, header và backdrop overlay */
   .no-print,
   button,
   header,
   nav,
+  aside,
   .print\:hidden {
     display: none !important;
   }
 
-  /* Định vị container in để render trên cùng */
-  #printable-career-report {
+  /* Làm trong suốt và loại bỏ hoàn toàn viền/bóng xám của modal khi in trực tiếp */
+  .fixed.inset-0,
+  [class*="backdrop-blur"] {
+    position: static !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  .shadow-xl,
+  .shadow-2xl,
+  .shadow-md,
+  .shadow-xs {
+    box-shadow: none !important;
+  }
+
+  .border,
+  .border-slate-200,
+  .rounded-2xl,
+  .rounded-3xl {
+    border-radius: 0 !important;
+  }
+
+  /* Định vị container in chuẩn A4 */
+  #printable-career-report,
+  #printable-batch-area {
     display: block !important;
     visibility: visible !important;
     position: static !important;
     width: 100% !important;
+    max-width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
     background: #ffffff !important;
   }
 
-  /* Tránh ngắt trang giữa chừng */
+  .page-break,
+  .print\:break-after-page {
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+
+  /* Tránh ngắt trang giữa chừng trong các block quan trọng */
   table, tr, td, th, .break-inside-avoid {
     page-break-inside: avoid !important;
     break-inside: avoid !important;

@@ -56,6 +56,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
   const [printResults, setPrintResults] = useState<EvaluationResult[]>([]);
   const [isPrintModalOpen, setIsPrintModalOpen] = useState(false);
   const [viewingDetailReport, setViewingDetailReport] = useState<EvaluationResult | null>(null);
+  const [isAutoPrintSingle, setIsAutoPrintSingle] = useState(false);
 
   // Common Loading & Error states
   const [isLoading, setIsLoading] = useState(false);
@@ -304,8 +305,8 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
 
   // History Single / Batch Printing
   const handlePrintSingleHistory = (result: EvaluationResult) => {
-    setPrintResults([result]);
-    setIsPrintModalOpen(true);
+    setIsAutoPrintSingle(true);
+    setViewingDetailReport(result);
   };
 
   const handlePrintBatchHistory = () => {
@@ -1118,7 +1119,10 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
                       </td>
                       <td className="p-3 text-right whitespace-nowrap space-x-1.5">
                         <button
-                          onClick={() => setViewingDetailReport(h)}
+                          onClick={() => {
+                            setIsAutoPrintSingle(false);
+                            setViewingDetailReport(h);
+                          }}
                           title="Xem chi tiết báo cáo và định hướng học sinh"
                           className="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs inline-flex items-center gap-1.5 cursor-pointer transition-colors"
                         >
@@ -2821,7 +2825,11 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
       {viewingDetailReport && (
         <PrintReportModal
           result={viewingDetailReport}
-          onClose={() => setViewingDetailReport(null)}
+          autoPrint={isAutoPrintSingle}
+          onClose={() => {
+            setViewingDetailReport(null);
+            setIsAutoPrintSingle(false);
+          }}
         />
       )}
     </div>
