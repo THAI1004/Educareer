@@ -56,31 +56,14 @@ export const Grade10SubjectCombinationCard: React.FC<Grade10SubjectCombinationCa
         </div>
       </div>
 
-      {/* Primary Plan - Highlighted (Phương án 1 - Ưu tiên số 1) */}
-      <div className="bg-emerald-50/70 border-2 border-emerald-500/80 rounded-2xl p-5 sm:p-6 shadow-sm relative">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-emerald-600 text-white font-black text-xs tracking-wider uppercase shadow-xs w-fit">
-            <CheckCircle2 className="w-4 h-4" />
-            {primaryPlan.priorityLabel}
-          </span>
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-xs sm:text-sm text-slate-600 font-semibold">Tổ hợp xét tuyển ĐH mục tiêu:</span>
-            <span className="text-base sm:text-lg font-black font-mono text-emerald-800 bg-white px-4 py-1.5 rounded-2xl border-2 border-emerald-400 shadow-sm">
-              {primaryPlan.code} ({primaryPlan.name})
-            </span>
-          </div>
-        </div>
-      </div>
-
-      {/* Advisory Footer Note */}
-      <div className="p-4 rounded-2xl bg-amber-50/60 border border-amber-200/80 text-xs text-amber-900 space-y-1">
-        <p className="font-semibold flex items-center gap-1.5 text-amber-800">
-          <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-          <span>Ghi chú cho học sinh lớp 9 lên lớp 10:</span>
-        </p>
-        <p className="text-slate-600 leading-relaxed pl-5">
-          {compulsorySubjectsNote} {advisoryNote}
-        </p>
+      {/* Target Combination Bar */}
+      <div className="bg-emerald-50/70 border-2 border-emerald-500/80 rounded-2xl p-5 sm:p-6 shadow-sm relative flex items-center justify-between flex-wrap gap-4">
+        <span className="text-sm sm:text-base text-slate-700 font-bold">
+          Tổ hợp xét tuyển ĐH mục tiêu:
+        </span>
+        <span className="text-base sm:text-lg font-black font-mono text-emerald-800 bg-white px-5 py-2 rounded-2xl border-2 border-emerald-400 shadow-sm">
+          {primaryPlan.code} ({primaryPlan.name})
+        </span>
       </div>
     </div>
   );
