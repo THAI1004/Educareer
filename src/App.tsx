@@ -660,16 +660,16 @@ export default function App() {
       </main>
 
       {/* Footer matching exact project specifications */}
-      <footer className="mt-16 bg-white border-t border-slate-200 py-6 text-xs text-slate-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-          <p className="font-medium text-slate-600">
+      <footer className="mt-12 bg-white border-t border-slate-200/80 pt-6 pb-20 md:pb-6 text-xs text-slate-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+          <p className="font-semibold text-slate-600 text-xs sm:text-sm">
             © 2026–2027 Đề Tài NCKH KHKT • Trường THPT Thành Sen, Tỉnh Hà Tĩnh
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-[11px] sm:text-xs text-slate-500">
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] text-slate-400">
             <span>Chuẩn dữ liệu mã ngành Bộ GD&ĐT</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span>Định hướng tuyển sinh 2026</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span>Mô hình tích hợp DISC & Holland RIASEC</span>
           </div>
         </div>

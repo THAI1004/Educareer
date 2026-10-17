@@ -937,36 +937,41 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
           </div>
 
           {/* Pagination */}
-          <div className="flex items-center justify-between pt-2">
-            <span className="text-xs text-slate-500">
-              Tổng số: <strong>{userTotal}</strong> người dùng • Trang <strong>{userPage}</strong>/
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-slate-100">
+            <span className="text-xs text-slate-500 text-center sm:text-left">
+              Tổng số: <strong className="text-slate-800">{userTotal}</strong> người dùng • Trang <strong className="text-slate-800">{userPage}</strong>/
               {Math.ceil(userTotal / 10) || 1}
             </span>
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1 sm:gap-1.5 flex-wrap justify-center">
               <button
                 disabled={userPage <= 1}
                 onClick={() => setUserPage((p) => p - 1)}
-                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-40 cursor-pointer hover:bg-slate-50"
+                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-30 cursor-pointer hover:bg-slate-50 transition-colors"
+                title="Trang trước"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
-              {Array.from({ length: Math.ceil(userTotal / 10) || 1 }).map((_, idx) => (
+              {Array.from({ length: Math.min(Math.ceil(userTotal / 10) || 1, 5) }).map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setUserPage(idx + 1)}
-                  className={`w-7 h-7 rounded-xl text-xs font-bold cursor-pointer transition-all ${
+                  className={`w-7 h-7 sm:w-8 sm:h-8 rounded-xl text-xs font-bold cursor-pointer transition-all ${
                     userPage === idx + 1
-                      ? 'bg-rose-600 text-white'
+                      ? 'bg-rose-600 text-white shadow-xs'
                       : 'border border-slate-200 text-slate-600 hover:bg-slate-50'
                   }`}
                 >
                   {idx + 1}
                 </button>
               ))}
+              {Math.ceil(userTotal / 10) > 5 && (
+                <span className="px-1 text-slate-400 text-xs">...</span>
+              )}
               <button
                 disabled={userPage >= Math.ceil(userTotal / 10)}
                 onClick={() => setUserPage((p) => p + 1)}
-                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-40 cursor-pointer hover:bg-slate-50"
+                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-30 cursor-pointer hover:bg-slate-50 transition-colors"
+                title="Trang sau"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
@@ -1127,36 +1132,41 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
           </div>
 
           {/* Pagination */}
-          <div className="flex items-center justify-between pt-2">
-            <span className="text-xs text-slate-500">
-              Tổng số: <strong>{historyTotal}</strong> kết quả thi • Trang <strong>{historyPage}</strong>/
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-slate-100">
+            <span className="text-xs text-slate-500 text-center sm:text-left">
+              Tổng số: <strong className="text-slate-800">{historyTotal}</strong> kết quả thi • Trang <strong className="text-slate-800">{historyPage}</strong>/
               {Math.ceil(historyTotal / 10) || 1}
             </span>
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1 sm:gap-1.5 flex-wrap justify-center">
               <button
                 disabled={historyPage <= 1}
                 onClick={() => setHistoryPage((p) => p - 1)}
-                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-40 cursor-pointer hover:bg-slate-50"
+                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-30 cursor-pointer hover:bg-slate-50 transition-colors"
+                title="Trang trước"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
-              {Array.from({ length: Math.ceil(historyTotal / 10) || 1 }).map((_, idx) => (
+              {Array.from({ length: Math.min(Math.ceil(historyTotal / 10) || 1, 5) }).map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setHistoryPage(idx + 1)}
-                  className={`w-7 h-7 rounded-xl text-xs font-bold cursor-pointer transition-all ${
+                  className={`w-7 h-7 sm:w-8 sm:h-8 rounded-xl text-xs font-bold cursor-pointer transition-all ${
                     historyPage === idx + 1
-                      ? 'bg-orange-500 text-white'
+                      ? 'bg-orange-500 text-white shadow-xs'
                       : 'border border-slate-200 text-slate-600 hover:bg-slate-50'
                   }`}
                 >
                   {idx + 1}
                 </button>
               ))}
+              {Math.ceil(historyTotal / 10) > 5 && (
+                <span className="px-1 text-slate-400 text-xs">...</span>
+              )}
               <button
                 disabled={historyPage >= Math.ceil(historyTotal / 10)}
                 onClick={() => setHistoryPage((p) => p + 1)}
-                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-40 cursor-pointer hover:bg-slate-50"
+                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-30 cursor-pointer hover:bg-slate-50 transition-colors"
+                title="Trang sau"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
@@ -1362,36 +1372,41 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
           </div>
 
           {/* Pagination */}
-          <div className="flex items-center justify-between pt-2">
-            <span className="text-xs text-slate-500">
-              Tổng số: <strong>{questionTotal}</strong> câu hỏi • Trang <strong>{questionPage}</strong>/
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-slate-100">
+            <span className="text-xs text-slate-500 text-center sm:text-left">
+              Tổng số: <strong className="text-slate-800">{questionTotal}</strong> câu hỏi • Trang <strong className="text-slate-800">{questionPage}</strong>/
               {Math.ceil(questionTotal / 10) || 1}
             </span>
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1 sm:gap-1.5 flex-wrap justify-center">
               <button
                 disabled={questionPage <= 1}
                 onClick={() => setQuestionPage((p) => p - 1)}
-                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-40 cursor-pointer hover:bg-slate-50"
+                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-30 cursor-pointer hover:bg-slate-50 transition-colors"
+                title="Trang trước"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
-              {Array.from({ length: Math.min(Math.ceil(questionTotal / 10) || 1, 7) }).map((_, idx) => (
+              {Array.from({ length: Math.min(Math.ceil(questionTotal / 10) || 1, 5) }).map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setQuestionPage(idx + 1)}
-                  className={`w-7 h-7 rounded-xl text-xs font-bold cursor-pointer transition-all ${
+                  className={`w-7 h-7 sm:w-8 sm:h-8 rounded-xl text-xs font-bold cursor-pointer transition-all ${
                     questionPage === idx + 1
-                      ? 'bg-amber-500 text-white'
+                      ? 'bg-amber-500 text-white shadow-xs'
                       : 'border border-slate-200 text-slate-600 hover:bg-slate-50'
                   }`}
                 >
                   {idx + 1}
                 </button>
               ))}
+              {Math.ceil(questionTotal / 10) > 5 && (
+                <span className="px-1 text-slate-400 text-xs">...</span>
+              )}
               <button
                 disabled={questionPage >= Math.ceil(questionTotal / 10)}
                 onClick={() => setQuestionPage((p) => p + 1)}
-                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-40 cursor-pointer hover:bg-slate-50"
+                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-30 cursor-pointer hover:bg-slate-50 transition-colors"
+                title="Trang sau"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
@@ -1753,36 +1768,41 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
           </div>
 
           {/* Pagination Majors */}
-          <div className="flex items-center justify-between pt-2">
-            <span className="text-xs text-slate-500">
-              Tổng số: <strong>{majorsTotal}</strong> ngành học • Trang <strong>{majorsPage}</strong>/
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-slate-100">
+            <span className="text-xs text-slate-500 text-center sm:text-left">
+              Tổng số: <strong className="text-slate-800">{majorsTotal}</strong> ngành học • Trang <strong className="text-slate-800">{majorsPage}</strong>/
               {Math.ceil(majorsTotal / 10) || 1}
             </span>
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1 sm:gap-1.5 flex-wrap justify-center">
               <button
                 disabled={majorsPage <= 1}
                 onClick={() => setMajorsPage((p) => p - 1)}
-                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-40 cursor-pointer hover:bg-slate-50"
+                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-30 cursor-pointer hover:bg-slate-50 transition-colors"
+                title="Trang trước"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
-              {Array.from({ length: Math.min(Math.ceil(majorsTotal / 10) || 1, 7) }).map((_, idx) => (
+              {Array.from({ length: Math.min(Math.ceil(majorsTotal / 10) || 1, 5) }).map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setMajorsPage(idx + 1)}
-                  className={`w-7 h-7 rounded-xl text-xs font-bold cursor-pointer transition-all ${
+                  className={`w-7 h-7 sm:w-8 sm:h-8 rounded-xl text-xs font-bold cursor-pointer transition-all ${
                     majorsPage === idx + 1
-                      ? 'bg-emerald-600 text-white'
+                      ? 'bg-emerald-600 text-white shadow-xs'
                       : 'border border-slate-200 text-slate-600 hover:bg-slate-50'
                   }`}
                 >
                   {idx + 1}
                 </button>
               ))}
+              {Math.ceil(majorsTotal / 10) > 5 && (
+                <span className="px-1 text-slate-400 text-xs">...</span>
+              )}
               <button
                 disabled={majorsPage >= Math.ceil(majorsTotal / 10)}
                 onClick={() => setMajorsPage((p) => p + 1)}
-                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-40 cursor-pointer hover:bg-slate-50"
+                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-30 cursor-pointer hover:bg-slate-50 transition-colors"
+                title="Trang sau"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
@@ -1922,36 +1942,41 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
           </div>
 
           {/* Pagination Careers */}
-          <div className="flex items-center justify-between pt-2">
-            <span className="text-xs text-slate-500">
-              Tổng số: <strong>{careersTotal}</strong> nghề nghiệp • Trang <strong>{careersPage}</strong>/
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-slate-100">
+            <span className="text-xs text-slate-500 text-center sm:text-left">
+              Tổng số: <strong className="text-slate-800">{careersTotal}</strong> nghề nghiệp • Trang <strong className="text-slate-800">{careersPage}</strong>/
               {Math.ceil(careersTotal / 10) || 1}
             </span>
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1 sm:gap-1.5 flex-wrap justify-center">
               <button
                 disabled={careersPage <= 1}
                 onClick={() => setCareersPage((p) => p - 1)}
-                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-40 cursor-pointer hover:bg-slate-50"
+                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-30 cursor-pointer hover:bg-slate-50 transition-colors"
+                title="Trang trước"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
-              {Array.from({ length: Math.min(Math.ceil(careersTotal / 10) || 1, 7) }).map((_, idx) => (
+              {Array.from({ length: Math.min(Math.ceil(careersTotal / 10) || 1, 5) }).map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCareersPage(idx + 1)}
-                  className={`w-7 h-7 rounded-xl text-xs font-bold cursor-pointer transition-all ${
+                  className={`w-7 h-7 sm:w-8 sm:h-8 rounded-xl text-xs font-bold cursor-pointer transition-all ${
                     careersPage === idx + 1
-                      ? 'bg-sky-600 text-white'
+                      ? 'bg-sky-600 text-white shadow-xs'
                       : 'border border-slate-200 text-slate-600 hover:bg-slate-50'
                   }`}
                 >
                   {idx + 1}
                 </button>
               ))}
+              {Math.ceil(careersTotal / 10) > 5 && (
+                <span className="px-1 text-slate-400 text-xs">...</span>
+              )}
               <button
                 disabled={careersPage >= Math.ceil(careersTotal / 10)}
                 onClick={() => setCareersPage((p) => p + 1)}
-                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-40 cursor-pointer hover:bg-slate-50"
+                className="p-1.5 rounded-xl border border-slate-200 disabled:opacity-30 cursor-pointer hover:bg-slate-50 transition-colors"
+                title="Trang sau"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
