@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
   Users,
-  Clock,
   BookOpen,
   Layers,
   GraduationCap,
@@ -37,7 +36,6 @@ import type {
   HollandGroup,
   DISCGroup,
   AssessmentQuestion,
-  TestSessionLive,
   QuestionTier
 } from '../types/career.ts';
 import { PrintBatchReportsModal } from './PrintBatchReportsModal.tsx';
@@ -48,9 +46,9 @@ interface AdminDashboardProps {
 }
 
 export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) => {
-  // Navigation subtabs
+  // Navigation subtabs (Đã bỏ theo dõi trực tiếp)
   const [activeTab, setActiveTab] = useState<
-    'users' | 'sessions' | 'history' | 'questions' | 'holland' | 'disc' | 'majors' | 'careers'
+    'users' | 'history' | 'questions' | 'holland' | 'disc' | 'majors' | 'careers'
   >('users');
 
   // Print modal
@@ -75,12 +73,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
   const [editingUser, setEditingUser] = useState<UserProfile | null>(null);
 
   // --------------------------------------------------------------------------
-  // TAB 2: LIVE TEST SESSIONS (Thời gian thực)
-  // --------------------------------------------------------------------------
-  const [liveSessions, setLiveSessions] = useState<TestSessionLive[]>([]);
-
-  // --------------------------------------------------------------------------
-  // TAB 3: TEST HISTORY STATE
+  // TAB 2: TEST HISTORY STATE (Lịch Sử Thi Holland & DISC)
   // --------------------------------------------------------------------------
   const [historyList, setHistoryList] = useState<EvaluationResult[]>([]);
   const [historyTotal, setHistoryTotal] = useState(0);
@@ -159,21 +152,6 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
         .finally(() => setIsLoading(false));
     }
   }, [activeTab, userPage, userSearch, userRoleFilter, userStatusFilter, refreshTrigger]);
-
-  // Fetch Live Sessions
-  useEffect(() => {
-    if (activeTab === 'sessions') {
-      const loadSessions = () => {
-        fetch('/api/sessions/live')
-          .then((res) => res.json())
-          .then(setLiveSessions)
-          .catch(console.error);
-      };
-      loadSessions();
-      const interval = setInterval(loadSessions, 3000); // 3s polling for real-time
-      return () => clearInterval(interval);
-    }
-  }, [activeTab, refreshTrigger]);
 
   // Fetch History
   useEffect(() => {
@@ -741,7 +719,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
             Trung Tâm Điều Hành & Giám Sát EduCareer THPT
           </h2>
           <p className="text-sm text-rose-100 max-w-2xl mt-1">
-            Quản trị học sinh, theo dõi bài thi trực tiếp thời gian thực, quản lý ngân hàng câu hỏi 3 mốc (20, 50, 70) và danh mục ngành nghề đào tạo.
+            Quản trị học sinh, lịch sử thi Holland & DISC, quản lý ngân hàng câu hỏi 3 mốc (20, 50, 70) và danh mục ngành nghề đào tạo.
           </p>
         </div>
 
@@ -756,48 +734,54 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
         </div>
       </div>
 
-      {/* Navigation Subtabs */}
-      <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin">
-        {[
-          { id: 'users', label: 'Quản Lý User', icon: Users, count: userTotal },
-          { id: 'sessions', label: 'Theo Dõi Trực Tiếp', icon: Clock, count: liveSessions.length, pulse: true },
-          { id: 'history', label: 'Lịch Sử Thi THPT', icon: GraduationCap, count: historyTotal },
-          { id: 'questions', label: 'Ngân Hàng Câu Hỏi', icon: HelpCircle, count: questionTotal },
-          { id: 'holland', label: 'Nhóm Holland', icon: BookOpen },
-          { id: 'disc', label: 'Nhóm DISC', icon: Layers },
-          { id: 'majors', label: 'Ngành Đào Tạo & Đầu Ra', icon: School, count: majorsTotal },
-          { id: 'careers', label: 'Nghề Nghiệp & Ma Trận', icon: Briefcase, count: careersTotal }
-        ].map((tab) => {
-          const Icon = tab.icon;
-          const isActive = activeTab === tab.id;
-          return (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id as any)}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all cursor-pointer ${
-                isActive
-                  ? 'bg-rose-600 text-white shadow-md shadow-rose-600/30'
-                  : 'bg-white text-slate-700 hover:bg-rose-50 hover:text-rose-700 border border-slate-200'
-              }`}
-            >
-              <Icon className="w-4 h-4" />
-              <span>{tab.label}</span>
-              {tab.pulse && tab.count > 0 && (
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping ml-0.5" />
-              )}
-              {tab.count !== undefined && (
-                <span
-                  className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ${
-                    isActive ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-600'
-                  }`}
-                >
-                  {tab.count}
-                </span>
-              )}
-            </button>
-          );
-        })}
-      </div>
+      {/* Main Layout: Vertical Sidebar + Content Area */}
+      <div className="flex flex-col lg:flex-row gap-6 items-start">
+        {/* Vertical Sidebar Navigation (Menu Dọc) */}
+        <aside className="w-full lg:w-72 bg-white rounded-3xl p-3 border border-slate-200 shadow-sm shrink-0 space-y-1">
+          <div className="px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">
+            Menu Quản Trị Hệ Thống
+          </div>
+          {[
+            { id: 'users', label: 'Quản Lý User', icon: Users, count: userTotal },
+            { id: 'history', label: 'Lịch Sử Thi Holland & DISC', icon: GraduationCap, count: historyTotal },
+            { id: 'questions', label: 'Ngân Hàng Câu Hỏi', icon: HelpCircle, count: questionTotal },
+            { id: 'holland', label: 'Nhóm Holland', icon: BookOpen },
+            { id: 'disc', label: 'Nhóm DISC', icon: Layers },
+            { id: 'majors', label: 'Ngành Đào Tạo & Đầu Ra', icon: School, count: majorsTotal },
+            { id: 'careers', label: 'Nghề Nghiệp & Ma Trận', icon: Briefcase, count: careersTotal }
+          ].map((tab) => {
+            const Icon = tab.icon;
+            const isActive = activeTab === tab.id;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id as any)}
+                className={`w-full flex items-center justify-between px-3.5 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-left ${
+                  isActive
+                    ? 'bg-[#FF5722] text-white shadow-md shadow-[#FF5722]/30'
+                    : 'text-slate-700 hover:bg-slate-50 hover:text-[#FF5722]'
+                }`}
+              >
+                <div className="flex items-center gap-3 min-w-0">
+                  <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-white' : 'text-slate-500'}`} />
+                  <span className="truncate">{tab.label}</span>
+                </div>
+                {tab.count !== undefined && (
+                  <span
+                    className={`text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0 ml-2 ${
+                      isActive ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-600'
+                    }`}
+                  >
+                    {tab.count}
+                  </span>
+                )}
+              </button>
+            );
+          })}
+        </aside>
+
+        {/* Content Area */}
+        <div className="flex-1 w-full min-w-0">
 
       {/* ========================================================================= */}
       {/* 1. USERS TAB */}
@@ -1010,112 +994,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
       )}
 
       {/* ========================================================================= */}
-      {/* 2. REAL-TIME TEST SESSIONS TAB */}
-      {/* ========================================================================= */}
-      {activeTab === 'sessions' && (
-        <div className="bg-white rounded-3xl p-5 sm:p-6 border border-slate-200 shadow-xs space-y-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="font-heading font-bold text-slate-900 text-base sm:text-lg flex items-center gap-2">
-                <Clock className="w-5 h-5 text-emerald-600" />
-                <span>Theo Dõi & Giám Sát Bài Thi Học Sinh Trực Tiếp (Thời Gian Thực)</span>
-              </h3>
-              <p className="text-xs text-slate-500">
-                Tự động cập nhật mỗi 3 giây • Nắm bắt học sinh đang làm bài, tiến độ Holland/DISC theo mốc
-              </p>
-            </div>
-            <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Đang kết nối thời gian thực</span>
-            </span>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {liveSessions.map((s) => {
-              const hollandPercent = Math.round(
-                (s.answered_holland / (s.total_holland || 1)) * 100
-              );
-              const discPercent = Math.round(
-                (s.answered_disc / (s.total_disc || 1)) * 100
-              );
-              const isFinished = s.status === 'completed';
-
-              return (
-                <div
-                  key={s.session_id}
-                  className={`p-4 rounded-3xl border-2 transition-all ${
-                    isFinished
-                      ? 'border-emerald-200 bg-emerald-50/30'
-                      : 'border-orange-200 bg-white shadow-xs'
-                  }`}
-                >
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <span className="text-xs font-bold text-slate-800 truncate">
-                      {s.student_name}
-                    </span>
-                    <span
-                      className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
-                        isFinished
-                          ? 'bg-emerald-100 text-emerald-800'
-                          : 'bg-orange-100 text-orange-800 animate-pulse'
-                      }`}
-                    >
-                      {isFinished ? 'Hoàn thành' : 'Đang làm bài'}
-                    </span>
-                  </div>
-
-                  <p className="text-[11px] text-slate-500 truncate mb-3">
-                    Email: {s.user_email} • Mốc {s.tier} câu
-                  </p>
-
-                  {/* Progress Bars */}
-                  <div className="space-y-2 text-xs">
-                    <div>
-                      <div className="flex justify-between text-[11px] text-slate-600 mb-1">
-                        <span>Holland ({s.answered_holland}/{s.total_holland})</span>
-                        <span className="font-bold">{hollandPercent}%</span>
-                      </div>
-                      <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
-                        <div
-                          className="bg-amber-500 h-full rounded-full"
-                          style={{ width: `${hollandPercent}%` }}
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <div className="flex justify-between text-[11px] text-slate-600 mb-1">
-                        <span>DISC ({s.answered_disc}/{s.total_disc})</span>
-                        <span className="font-bold">{discPercent}%</span>
-                      </div>
-                      <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
-                        <div
-                          className="bg-sky-500 h-full rounded-full"
-                          style={{ width: `${discPercent}%` }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-3 pt-2.5 border-t border-slate-100 text-[10px] text-slate-400 flex justify-between">
-                    <span>Phiên: {s.session_id.slice(0, 8)}...</span>
-                    <span>Cập nhật: {new Date(s.updated_at).toLocaleTimeString('vi-VN')}</span>
-                  </div>
-                </div>
-              );
-            })}
-
-            {liveSessions.length === 0 && (
-              <div className="col-span-full p-8 text-center text-slate-400 bg-slate-50 rounded-3xl">
-                Chưa có thí sinh nào đang thực hiện bài thi thời gian thực
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-
-      {/* ========================================================================= */}
-      {/* 3. TEST HISTORY TAB & CERTIFICATE PRINTING */}
+      {/* 2. TEST HISTORY TAB & CERTIFICATE PRINTING (Lịch Sử Thi Holland & DISC) */}
       {/* ========================================================================= */}
       {activeTab === 'history' && (
         <div className="bg-white rounded-3xl p-5 sm:p-6 border border-slate-200 shadow-xs space-y-4">
@@ -1123,10 +1002,10 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
             <div>
               <h3 className="font-heading font-bold text-slate-900 text-base sm:text-lg flex items-center gap-2">
                 <GraduationCap className="w-5 h-5 text-orange-600" />
-                <span>Lịch Sử Bài Test & Báo Cáo Định Hướng Học Sinh</span>
+                <span>Lịch Sử Thi Holland & DISC & Báo Cáo Định Hướng Học Sinh</span>
               </h3>
               <p className="text-xs text-slate-500">
-                Xem chi tiết kết quả, in phiếu đánh giá riêng lẻ hoặc chọn in hàng loạt cho cả lớp
+                Xem chi tiết kết quả bài thi Holland & DISC, in phiếu đánh giá riêng lẻ hoặc chọn in hàng loạt cho cả lớp
               </p>
             </div>
 
@@ -2011,6 +1890,9 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
           </div>
         </div>
       )}
+
+        </div> {/* Close Content Area */}
+      </div> {/* Close Main Layout flex */}
 
       {/* ========================================================================= */}
       {/* MODALS */}
