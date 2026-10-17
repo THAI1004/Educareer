@@ -633,7 +633,15 @@ export default function App() {
             onOpenLogin={() => setIsAuthModalOpen(true)}
             onSelectResult={(item: EvaluationResult) => {
               setEvaluationResult(item);
+              setAssessmentStatus('completed');
+              if (item.tier) setSelectedTier(item.tier);
+              if (item.studentName) setStudentName(item.studentName);
+              if (item.answers) setAnswers(item.answers);
               setActiveTab('counseling');
+              setTimeout(() => {
+                const el = document.getElementById('evaluation-results-section');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }, 150);
             }}
             onDeleteResult={(id: string) => {
               setHistory((prev) => prev.filter((h) => h.id !== id));

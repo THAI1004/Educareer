@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import type { EvaluationResult, UserProfile } from '../types/career.ts';
 import { DISC_TRAITS_INFO } from '../data/careerMatrix.ts';
+import { PrintReportModal } from './PrintReportModal.tsx';
 
 interface HistoryViewProps {
   history: EvaluationResult[];
@@ -41,6 +42,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
   onPrintResult
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [viewingReport, setViewingReport] = useState<EvaluationResult | null>(null);
 
   const filteredHistory = history.filter((item) => {
     if (!item) return false;
@@ -248,8 +250,9 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
                   <div className="flex items-center gap-2 shrink-0 self-end lg:self-center">
                     <button
                       type="button"
-                      onClick={() => onSelectResult(item)}
+                      onClick={() => setViewingReport(item)}
                       className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sky-50 text-sky-800 hover:bg-sky-600 hover:text-white font-bold text-xs transition-all cursor-pointer"
+                      title="Xem lại chi tiết kết quả đánh giá"
                     >
                       <Eye className="w-3.5 h-3.5" />
                       <span>Xem lại</span>
@@ -282,6 +285,14 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
           </>
         )}
       </div>
+
+      {/* Modal xem lại chi tiết kết quả đánh giá không bị thoát khỏi màn hình */}
+      {viewingReport && (
+        <PrintReportModal
+          result={viewingReport}
+          onClose={() => setViewingReport(null)}
+        />
+      )}
     </div>
   );
 };
