@@ -39,6 +39,7 @@ import type {
   QuestionTier
 } from '../types/career.ts';
 import { PrintBatchReportsModal } from './PrintBatchReportsModal.tsx';
+import { PrintReportModal } from './PrintReportModal.tsx';
 import { formatImageUrl } from '../utils/imageHelper.ts';
 
 interface AdminDashboardProps {
@@ -51,9 +52,10 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
     'users' | 'history' | 'questions' | 'holland' | 'disc' | 'majors' | 'careers'
   >('users');
 
-  // Print modal
+  // Print & View details modals
   const [printResults, setPrintResults] = useState<EvaluationResult[]>([]);
   const [isPrintModalOpen, setIsPrintModalOpen] = useState(false);
+  const [viewingDetailReport, setViewingDetailReport] = useState<EvaluationResult | null>(null);
 
   // Common Loading & Error states
   const [isLoading, setIsLoading] = useState(false);
@@ -1073,7 +1075,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
                   <th className="p-3 whitespace-nowrap">Holland & DISC</th>
                   <th className="p-3 whitespace-nowrap">Ngành Tư Vấn</th>
                   <th className="p-3 whitespace-nowrap">Thời Gian Thi</th>
-                  <th className="p-3 text-right whitespace-nowrap">In Phiếu</th>
+                  <th className="p-3 text-right whitespace-nowrap">Thao Tác</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
@@ -1114,11 +1116,19 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
                       <td className="p-3 text-xs text-slate-500 whitespace-nowrap">
                         {new Date(h.testDate).toLocaleDateString('vi-VN')}
                       </td>
-                      <td className="p-3 text-right whitespace-nowrap">
+                      <td className="p-3 text-right whitespace-nowrap space-x-1.5">
+                        <button
+                          onClick={() => setViewingDetailReport(h)}
+                          title="Xem chi tiết báo cáo và định hướng học sinh"
+                          className="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs inline-flex items-center gap-1.5 cursor-pointer transition-colors"
+                        >
+                          <Eye className="w-3.5 h-3.5 text-slate-600" />
+                          <span>Chi Tiết</span>
+                        </button>
                         <button
                           onClick={() => handlePrintSingleHistory(h)}
                           title="In chi tiết phiếu kết quả học sinh này"
-                          className="px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-orange-800 font-bold text-xs flex items-center gap-1.5 ml-auto cursor-pointer"
+                          className="px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-orange-800 font-bold text-xs inline-flex items-center gap-1.5 cursor-pointer transition-colors"
                         >
                           <Printer className="w-3.5 h-3.5 text-orange-600" />
                           <span>In Phiếu</span>
@@ -2793,6 +2803,26 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
             </div>
           </form>
         </div>
+      )}
+
+      {/* Print Batch Reports Modal */}
+      {isPrintModalOpen && printResults.length > 0 && (
+        <PrintBatchReportsModal
+          isOpen={isPrintModalOpen}
+          results={printResults}
+          onClose={() => {
+            setIsPrintModalOpen(false);
+            setPrintResults([]);
+          }}
+        />
+      )}
+
+      {/* Print / View Single Report Detail Modal */}
+      {viewingDetailReport && (
+        <PrintReportModal
+          result={viewingDetailReport}
+          onClose={() => setViewingDetailReport(null)}
+        />
       )}
     </div>
   );
