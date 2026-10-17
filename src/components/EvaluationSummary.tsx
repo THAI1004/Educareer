@@ -198,9 +198,12 @@ export const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
               <p className="text-xs sm:text-sm text-sky-800 font-semibold max-w-2xl">
                 &ldquo;{analysis.tagline}&rdquo;
               </p>
+              {/* Mô tả chi tiết - Đã comment bớt theo yêu cầu */}
+              {/*
               <p className="text-xs sm:text-sm text-slate-600 mt-2 max-w-3xl leading-relaxed">
                 {analysis.summary}
               </p>
+              */}
             </div>
 
             {/* Quick action button to scroll down to recommendations */}
@@ -217,11 +220,11 @@ export const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
             </div>
           </div>
 
-          {/* 4 DISC Progress Cards with Illustrated Thumbnails */}
+          {/* 4 DISC Progress Cards */}
           <div className="mt-6">
             <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3 flex items-center gap-1.5">
               <TrendingUp className="w-3.5 h-3.5 text-sky-600" />
-              Tỷ Lệ Phân Bổ 4 Nhóm Hành Vi DISC (Kèm Ảnh Minh Họa Trực Quan)
+              Tỷ Lệ Phân Bổ 4 Nhóm Hành Vi DISC
             </h4>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -405,11 +408,8 @@ export const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
           </div>
           <div>
             <h4 className="text-xs sm:text-sm font-heading font-bold text-slate-900">
-              Lựa Chọn & Đối Chiếu Ngành Học Đại Học Sau Khi Có Kết Quả Test
+              Lựa Chọn & Đối Chiếu Ngành Học Đại Học
             </h4>
-            <p className="text-[11px] text-slate-500">
-              Bạn có thể chọn ngành học đại học bạn đang học hoặc dự kiến đăng ký xét tuyển để đối chiếu mức độ tương thích với kết quả test.
-            </p>
           </div>
         </div>
 
@@ -430,7 +430,7 @@ export const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
             </div>
             <span className="text-sky-700 font-medium flex items-center gap-1">
               <ShieldCheck className="w-3.5 h-3.5 text-sky-600" />
-              Đã đồng bộ hóa với danh sách nghề nghiệp gợi ý ở Bước 3
+              Đã đồng bộ hóa với gợi ý nghề nghiệp
             </span>
           </div>
         </div>

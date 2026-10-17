@@ -141,14 +141,14 @@ export const TestStatusCard: React.FC<TestStatusCardProps> = ({
 
         {/* Student Name Input & Login Status Indicator */}
         <div className="flex items-center gap-2.5 flex-wrap sm:flex-nowrap">
-          {!isLoggedIn && (
+          {/* {!isLoggedIn && (
             <button
               onClick={onRequireLogin}
               className="text-xs font-bold px-3 py-1.5 rounded-xl bg-orange-100 text-orange-800 hover:bg-orange-200 transition-colors cursor-pointer"
             >
               🔒 Cần đăng nhập để làm bài
             </button>
-          )}
+          )} */}
 
           <div className="flex items-center gap-2 w-full sm:w-auto">
             <label htmlFor="student-name-input" className="text-xs font-semibold text-slate-600 shrink-0 flex items-center gap-1">
@@ -167,7 +167,8 @@ export const TestStatusCard: React.FC<TestStatusCardProps> = ({
         </div>
       </div>
 
-      {/* Sequential rule banner */}
+      {/* Sequential rule banner (Commented out to reduce wordiness) */}
+      {/*
       <div className="bg-amber-50/70 border border-amber-200/90 rounded-2xl p-3.5 flex items-center gap-3 text-xs text-amber-900">
         <div className="w-6 h-6 rounded-xl bg-orange-500 text-white flex items-center justify-center shrink-0 font-bold text-xs shadow-2xs">
           1→2
@@ -176,6 +177,7 @@ export const TestStatusCard: React.FC<TestStatusCardProps> = ({
           <strong>Quy tắc tuần tự THPT:</strong> Học sinh cần hoàn thành đủ <strong>Bài Test 1 (Holland {hollandTotal} câu)</strong> trước, sau đó hệ thống sẽ tự động mở khóa <strong>Bài Test 2 (DISC {discTotal} câu)</strong>. Hoàn thành đầy đủ cả 2 bài để mở khóa ma trận ngành đại học và chứng nhận kết quả.
         </p>
       </div>
+      */}
 
       {/* 2 Distinct Test Cards: Holland & DISC */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -199,17 +201,13 @@ export const TestStatusCard: React.FC<TestStatusCardProps> = ({
               </div>
             </div>
 
-            <h4 className="text-base font-bold text-slate-900 font-heading mb-1.5 flex items-center gap-2">
+            <h4 className="text-base font-bold text-slate-900 font-heading mb-3 flex items-center gap-2">
               <Compass className="w-5 h-5 text-amber-600" />
               <span>Trắc Nghiệm Sở Thích Holland (RIASEC)</span>
             </h4>
 
-            <p className="text-xs text-slate-600 mb-4 leading-relaxed">
-              Xác định 6 nhóm khuynh hướng tính cách nghề nghiệp: Kỹ thuật (R), Nghiên cứu (I), Nghệ thuật (A), Xã hội (S), Quản trị (E), Quy chuẩn (C).
-            </p>
-
             {/* Progress Bar */}
-            <div className="w-full bg-slate-100 rounded-full h-2 overflow-hidden mb-3">
+            <div className="w-full bg-slate-100 rounded-full h-2 overflow-hidden mb-4">
               <div
                 className="bg-amber-500 h-full rounded-full transition-all duration-300"
                 style={{ width: `${Math.round((hollandAnsweredCount / hollandTotal) * 100)}%` }}
@@ -257,18 +255,14 @@ export const TestStatusCard: React.FC<TestStatusCardProps> = ({
               </div>
             </div>
 
-            <h4 className="text-base font-bold text-slate-900 font-heading mb-1.5 flex items-center gap-2">
+            <h4 className="text-base font-bold text-slate-900 font-heading mb-3 flex items-center gap-2">
               <Layers className="w-5 h-5 text-sky-600" />
               <span>Trắc Nghiệm Hành Vi & Tính Cách DISC</span>
               {!isHollandDone && <Lock className="w-4 h-4 text-slate-400 ml-auto" />}
             </h4>
 
-            <p className="text-xs text-slate-600 mb-4 leading-relaxed">
-              Phân tích 4 phong cách ứng xử cốt lõi: Quyết đoán (D), Ảnh hưởng (I), Kiên định (S), Tuân thủ (C) để định vị môi trường đại học lý tưởng.
-            </p>
-
             {/* Progress Bar */}
-            <div className="w-full bg-slate-100 rounded-full h-2 overflow-hidden mb-3">
+            <div className="w-full bg-slate-100 rounded-full h-2 overflow-hidden mb-4">
               <div
                 className="bg-sky-500 h-full rounded-full transition-all duration-300"
                 style={{ width: `${Math.round((discAnsweredCount / discTotal) * 100)}%` }}
