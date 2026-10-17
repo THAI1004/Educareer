@@ -18,7 +18,7 @@ export const Grade10SubjectCombinationCard: React.FC<Grade10SubjectCombinationCa
   studentName,
   selectedMajorName
 }) => {
-  const recommendations = getGrade10Recommendations(primaryHolland, primaryDisc, recommendedCareers);
+  const recommendations = getGrade10Recommendations(primaryHolland, primaryDisc, recommendedCareers, selectedMajorName);
   const { primaryPlan, secondaryPlan, alternativePlan, compulsorySubjectsNote, advisoryNote } = recommendations;
 
   return (

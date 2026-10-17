@@ -70,13 +70,21 @@ export const ADMISSION_COMBINATION_DETAILS: Record<string, { subjects: string; s
 export function getGrade10Recommendations(
   holland: HollandCode,
   disc: DISCCode,
-  recommendedCareers: CareerMatrixItem[] = []
+  recommendedCareers: CareerMatrixItem[] = [],
+  selectedMajorName?: string
 ): Grade10Recommendation {
   // Collect all admission combinations from recommended careers
   const combFrequency: Record<string, number> = {};
   recommendedCareers.forEach((c) => {
+    // If career matches student's selected major, give it high priority weight
+    const isMajorMatch = selectedMajorName && (
+      c.universityMajor.toLowerCase().includes(selectedMajorName.toLowerCase()) ||
+      selectedMajorName.toLowerCase().includes(c.universityMajor.toLowerCase())
+    );
+    const weight = isMajorMatch ? 10 : 1;
+
     (c.admissionCombinations || []).forEach((code) => {
-      combFrequency[code] = (combFrequency[code] || 0) + 1;
+      combFrequency[code] = (combFrequency[code] || 0) + weight;
     });
   });
 

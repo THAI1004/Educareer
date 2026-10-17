@@ -241,7 +241,8 @@ export const PrintReportModal: React.FC<PrintReportModalProps> = ({ result, onCl
             const g10 = getGrade10Recommendations(
               result.primaryHolland || 'R',
               result.primaryDisc || 'D',
-              result.recommendedCareers || []
+              result.recommendedCareers || [],
+              result.finalMajorName || result.initialMajorName
             );
             return (
               <div className="mb-4 p-3 rounded-xl border border-emerald-300 bg-emerald-50/50 break-inside-avoid">
