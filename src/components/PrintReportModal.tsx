@@ -255,30 +255,18 @@ export const PrintReportModal: React.FC<PrintReportModalProps> = ({ result, onCl
                   </span>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 text-xs">
-                  <div className="bg-white p-2.5 rounded-lg border border-emerald-300">
-                    <span className="text-[10px] font-extrabold px-1.5 py-0.5 rounded bg-emerald-600 text-white block w-fit mb-1">
+                <div className="bg-white p-3 rounded-lg border border-emerald-300">
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-[10px] font-extrabold px-1.5 py-0.5 rounded bg-emerald-600 text-white block w-fit">
                       {g10.primaryPlan.priorityLabel}
                     </span>
-                    <p className="font-black text-emerald-950 font-mono text-xs">
-                      {g10.primaryPlan.code} ({g10.primaryPlan.name})
-                    </p>
-                    <p className="text-[11px] text-slate-600 mt-1">
-                      <strong>4 môn lựa chọn:</strong> {g10.primaryPlan.fourSelectiveSubjects.join(', ')}
-                    </p>
-                  </div>
-
-                  <div className="bg-white p-2.5 rounded-lg border border-slate-200">
-                    <span className="text-[10px] font-extrabold px-1.5 py-0.5 rounded bg-sky-600 text-white block w-fit mb-1">
-                      {g10.secondaryPlan.priorityLabel}
+                    <span className="text-xs font-black text-emerald-950 font-mono">
+                      Tổ hợp mục tiêu: {g10.primaryPlan.code} ({g10.primaryPlan.name})
                     </span>
-                    <p className="font-bold text-slate-800 font-mono text-xs">
-                      {g10.secondaryPlan.code} ({g10.secondaryPlan.name})
-                    </p>
-                    <p className="text-[11px] text-slate-600 mt-1">
-                      <strong>4 môn lựa chọn:</strong> {g10.secondaryPlan.fourSelectiveSubjects.join(', ')}
-                    </p>
                   </div>
+                  <p className="text-[11px] text-slate-700 mt-1">
+                    <strong>4 Môn lựa chọn vào lớp 10 khuyên dùng:</strong> {g10.primaryPlan.fourSelectiveSubjects.join(', ')}
+                  </p>
                 </div>
 
                 <p className="text-[10px] text-slate-500 mt-2 italic">

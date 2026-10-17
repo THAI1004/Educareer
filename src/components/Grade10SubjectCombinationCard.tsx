@@ -97,82 +97,11 @@ export const Grade10SubjectCombinationCard: React.FC<Grade10SubjectCombinationCa
         </div>
       </div>
 
-      {/* Secondary & Alternative Plans */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Phương án 2 */}
-        <div className="bg-white rounded-2xl border border-sky-200 p-5 shadow-2xs hover:border-sky-300 transition-colors flex flex-col justify-between">
-          <div>
-            <div className="flex items-center justify-between gap-2 mb-3">
-              <span className="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-sky-50 text-sky-800 border border-sky-200">
-                {secondaryPlan.priorityLabel}
-              </span>
-              <span className="text-sm font-black font-mono text-sky-700 bg-sky-50 px-2.5 py-0.5 rounded-lg border border-sky-200">
-                {secondaryPlan.code}
-              </span>
-            </div>
-            <h4 className="text-sm sm:text-base font-bold text-slate-900 mb-1">
-              {secondaryPlan.code} ({secondaryPlan.name})
-            </h4>
-            <p className="text-xs text-slate-500 mb-3 leading-relaxed">
-              {secondaryPlan.description}
-            </p>
-          </div>
-
-          <div className="pt-3 border-t border-slate-100">
-            <span className="text-[11px] font-bold text-slate-500 uppercase block mb-1.5">
-              4 Môn lựa chọn gợi ý:
-            </span>
-            <div className="flex flex-wrap gap-1.5">
-              {secondaryPlan.fourSelectiveSubjects.map((s, i) => (
-                <span key={i} className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 font-medium text-xs">
-                  {s}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Phương án 3 (Dự phòng) */}
-        {alternativePlan && (
-          <div className="bg-white rounded-2xl border border-indigo-200 p-5 shadow-2xs hover:border-indigo-300 transition-colors flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between gap-2 mb-3">
-                <span className="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-indigo-50 text-indigo-800 border border-indigo-200">
-                  {alternativePlan.priorityLabel}
-                </span>
-                <span className="text-sm font-black font-mono text-indigo-700 bg-indigo-50 px-2.5 py-0.5 rounded-lg border border-indigo-200">
-                  {alternativePlan.code}
-                </span>
-              </div>
-              <h4 className="text-sm sm:text-base font-bold text-slate-900 mb-1">
-                {alternativePlan.code} ({alternativePlan.name})
-              </h4>
-              <p className="text-xs text-slate-500 mb-3 leading-relaxed">
-                {alternativePlan.description}
-              </p>
-            </div>
-
-            <div className="pt-3 border-t border-slate-100">
-              <span className="text-[11px] font-bold text-slate-500 uppercase block mb-1.5">
-                4 Môn lựa chọn gợi ý:
-              </span>
-              <div className="flex flex-wrap gap-1.5">
-                {alternativePlan.fourSelectiveSubjects.map((s, i) => (
-                  <span key={i} className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 font-medium text-xs">
-                    {s}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-
       {/* Advisory Footer Note */}
       <div className="p-4 rounded-2xl bg-amber-50/60 border border-amber-200/80 text-xs text-amber-900 space-y-1">
         <p className="font-semibold flex items-center gap-1.5 text-amber-800">
           <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-          <span>Ghi chú quan trọng cho phụ huynh & học sinh lớp 9 lên lớp 10:</span>
+          <span>Ghi chú cho học sinh lớp 9 lên lớp 10:</span>
         </p>
         <p className="text-slate-600 leading-relaxed pl-5">
           {compulsorySubjectsNote} {advisoryNote}
