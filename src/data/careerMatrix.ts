@@ -1,511 +1,5541 @@
 import type { CareerMatrixItem, UniversityMajor, DISCCode, HollandCode } from '../types/career.ts';
 
 export const CAREER_MATRIX_DATA: CareerMatrixItem[] = [
-  // --- R – KỸ THUẬT & D – Quyết đoán ---
   {
-    id: 'rd-1',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'D',
-    discLabel: 'D – Quyết đoán',
-    jobTitle: 'Chỉ huy công trường',
-    universityMajor: 'Kỹ thuật xây dựng',
-    majorCode: '7580201',
-    admissionCombinations: ['A00', 'A01', 'D07'],
-    description: 'Chỉ đạo trực tiếp thi công toàn bộ công trình, giám sát an toàn tiến độ, quyết định xử lý sự cố kỹ thuật tại công trường.',
-    keySkills: ['Quản lý dự án xây dựng', 'Chỉ huy thi công', 'Xử lý khủng hoảng kỹ thuật', 'Đọc bản vẽ AutoCAD/Revit'],
-    suitableRoles: ['Chỉ huy trưởng công trình', 'Giám đốc ban quản lý dự án', 'Kỹ sư quản lý tiến độ'],
-    topUniversities: ['ĐH Xây dựng Hà Nội', 'ĐH Bách Khoa TP.HCM', 'ĐH Giao thông Vận tải', 'ĐH Kiến trúc'],
-    averageSalaryRange: '18 - 40 triệu VNĐ/tháng',
-    growthPotential: 'Rất cao'
+    "id": "cm_rd_1",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Chỉ huy công trường",
+    "universityMajor": "Kỹ thuật xây dựng",
+    "majorCode": "7580201",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D07",
+      "C01"
+    ],
+    "description": "Vị trí Chỉ huy công trường thuộc chuyên ngành đào tạo Kỹ thuật xây dựng. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Đọc bản vẽ kỹ thuật & mô hình BIM/AutoCAD",
+      "Giám sát an toàn công trình",
+      "Quản lý tiến độ dự án",
+      "Xử lý tình huống kỹ thuật"
+    ],
+    "suitableRoles": [
+      "Chỉ huy công trường",
+      "Chuyên viên cao cấp Chỉ huy công trường",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
   },
   {
-    id: 'rd-2',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'D',
-    discLabel: 'D – Quyết đoán',
-    jobTitle: 'Kỹ sư vận hành sản xuất',
-    universityMajor: 'Kỹ thuật cơ khí',
-    majorCode: '7520103',
-    admissionCombinations: ['A00', 'A01'],
-    description: 'Tổ chức, điều phối dây chuyền thiết bị máy móc công nghiệp, tối ưu năng suất ca kíp, ra quyết định khắc phục sự cố máy nhanh chóng.',
-    keySkills: ['Quản lý dây chuyền công nghiệp', 'Bảo trì phòng ngừa (TPM)', 'Vận hành hệ thống thủy lực khí nén', 'Tối ưu OEE'],
-    suitableRoles: ['Trưởng phòng sản xuất', 'Kỹ sư điều hành xưởng', 'Quản đốc nhà máy'],
-    topUniversities: ['ĐH Bách Khoa Hà Nội', 'ĐH Bách Khoa TP.HCM', 'ĐH Sư phạm Kỹ thuật TP.HCM', 'ĐH Công nghiệp Hà Nội'],
-    averageSalaryRange: '16 - 35 triệu VNĐ/tháng',
-    growthPotential: 'Rất cao'
+    "id": "cm_rd_2",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Kỹ sư vận hành sản xuất",
+    "universityMajor": "Kỹ thuật cơ khí",
+    "majorCode": "7520103",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "C01",
+      "X06",
+      "X07",
+      "X26",
+      "D07"
+    ],
+    "description": "Vị trí Kỹ sư vận hành sản xuất thuộc chuyên ngành đào tạo Kỹ thuật cơ khí. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Kỹ sư vận hành sản xuất",
+      "Chuyên viên cao cấp Kỹ sư vận hành sản xuất",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Sư phạm Kỹ thuật TP.HCM",
+      "ĐH Giao thông Vận tải"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
   },
   {
-    id: 'rd-3',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'D',
-    discLabel: 'D – Quyết đoán',
-    jobTitle: 'Quản lý thi công điện',
-    universityMajor: 'Kỹ thuật điện',
-    majorCode: '7520201',
-    admissionCombinations: ['A00', 'A01', 'D07'],
-    description: 'Chỉ đạo thi công lắp đặt hệ thống cơ điện công trình (M&E), trạm biến áp, phân phối tải điện công nghiệp.',
-    keySkills: ['Thiết kế thi công M&E', 'An toàn điện cao thế/hạ thế', 'Quản lý tổ đội thi công', 'Tiêu chuẩn IEC'],
-    suitableRoles: ['Chỉ huy trưởng cơ điện M&E', 'Kỹ sư trưởng hệ thống điện', 'Trưởng ban cơ điện tòa nhà'],
-    topUniversities: ['ĐH Bách Khoa Hà Nội', 'ĐH Điện lực', 'ĐH Bách Khoa - ĐH Đà Nẵng', 'ĐH Sư phạm Kỹ thuật TP.HCM'],
-    averageSalaryRange: '18 - 38 triệu VNĐ/tháng',
-    growthPotential: 'Cao'
+    "id": "cm_rd_3",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Quản lý thi công điện",
+    "universityMajor": "Kỹ thuật điện",
+    "majorCode": "7520201",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "C01",
+      "X06",
+      "X07",
+      "X26",
+      "D07"
+    ],
+    "description": "Vị trí Quản lý thi công điện thuộc chuyên ngành đào tạo Kỹ thuật điện. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Quản lý thi công điện",
+      "Chuyên viên cao cấp Quản lý thi công điện",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Sư phạm Kỹ thuật TP.HCM",
+      "ĐH Giao thông Vận tải"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
   },
   {
-    id: 'rd-4',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'D',
-    discLabel: 'D – Quyết đoán',
-    jobTitle: 'Điều phối vận tải',
-    universityMajor: 'Logistics và quản lý chuỗi cung ứng',
-    majorCode: '7510605',
-    admissionCombinations: ['A00', 'A01', 'D01'],
-    description: 'Lập kế hoạch lộ trình, quyết định điều động đội tàu xe, giải quyết thông quan và tắc nghẽn luồng hàng dưới áp lực thời gian cao.',
-    keySkills: ['Tối ưu tuyến đường vận tải', 'Quản trị đội xe TMS/WMS', 'Xử lý tình huống giao vận khẩn', 'Đàm phán nhà xe'],
-    suitableRoles: ['Trưởng phòng điều độ vận tải', 'Fleet Operations Manager', 'Supply Chain Dispatcher'],
-    topUniversities: ['ĐH Giao thông Vận tải', 'ĐH Kinh tế Quốc dân', 'ĐH Hàng hải Việt Nam', 'ĐH Quốc tế - ĐHQG TP.HCM'],
-    averageSalaryRange: '15 - 32 triệu VNĐ/tháng',
-    growthPotential: 'Rất cao'
+    "id": "cm_rd_4",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Điều phối dự án logistics kỹ thuật",
+    "universityMajor": "Logistics và quản lý chuỗi cung ứng",
+    "majorCode": "7510605",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "C01",
+      "X06",
+      "X07",
+      "X26",
+      "X01",
+      "C03",
+      "X25",
+      "D07"
+    ],
+    "description": "Vị trí Điều phối dự án logistics kỹ thuật thuộc chuyên ngành đào tạo Logistics và quản lý chuỗi cung ứng. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Điều phối dự án logistics kỹ thuật",
+      "Chuyên viên cao cấp Điều phối dự án logistics kỹ thuật",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
   },
   {
-    id: 'rd-5',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'D',
-    discLabel: 'D – Quyết đoán',
-    jobTitle: 'Kỹ sư robot công nghiệp',
-    universityMajor: 'Kỹ thuật điều khiển và tự động hóa',
-    majorCode: '7520216',
-    admissionCombinations: ['A00', 'A01', 'D07'],
-    description: 'Thiết kế, tích hợp và triển khai hệ thống cánh tay robot và dây chuyền tự động hóa thông minh (Industry 4.0).',
-    keySkills: ['Lập trình Robot PLC/SCADA', 'Thị giác máy tính công nghiệp', 'Tích hợp hệ thống điều khiển', 'Cảm biến & truyền thông công nghiệp'],
-    suitableRoles: ['Robotics Lead Engineer', 'Kỹ sư tích hợp hệ thống tự động hóa', 'R&D Automation Manager'],
-    topUniversities: ['ĐH Bách Khoa Hà Nội', 'ĐH Bách Khoa TP.HCM', 'ĐH Sư phạm Kỹ thuật TP.HCM', 'Học viện Kỹ thuật Quân sự'],
-    averageSalaryRange: '20 - 45 triệu VNĐ/tháng',
-    growthPotential: 'Rất cao'
+    "id": "cm_rd_5",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Kỹ sư robot công nghiệp",
+    "universityMajor": "Kỹ thuật điều khiển và tự động hóa",
+    "majorCode": "7520216",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "C01",
+      "X06",
+      "X07",
+      "X26",
+      "X01",
+      "C03",
+      "X25",
+      "D07"
+    ],
+    "description": "Vị trí Kỹ sư robot công nghiệp thuộc chuyên ngành đào tạo Kỹ thuật điều khiển và tự động hóa. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Kỹ sư robot công nghiệp",
+      "Chuyên viên cao cấp Kỹ sư robot công nghiệp",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Công nghệ - ĐHQGHN",
+      "ĐH CNTT - ĐHQG TP.HCM"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
   },
   {
-    id: 'rd-6',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'D',
-    discLabel: 'D – Quyết đoán',
-    jobTitle: 'Kỹ sư công trình giao thông',
-    universityMajor: 'Kỹ thuật xây dựng công trình giao thông',
-    majorCode: '7580205',
-    admissionCombinations: ['A00', 'A01'],
-    description: 'Chỉ huy xây dựng cầu đường, hầm chui, cảng biển sân bay; xử lý nền móng và tiến độ dự án hạ tầng trọng điểm quốc gia.',
-    keySkills: ['Thiết kế đường ô tô & cầu lớn', 'Khảo sát địa chất công trình', 'Điều hành thi công mặt đường', 'Nghiệm thu khối lượng dự án'],
-    suitableRoles: ['Chỉ huy gói thầu cầu đường', 'Kỹ sư tư vấn giám sát', 'Chuyên viên kỹ thuật Ban QLDA'],
-    topUniversities: ['ĐH Giao thông Vận tải', 'ĐH Xây dựng Hà Nội', 'ĐH Bách Khoa TP.HCM', 'ĐH GTVT TP.HCM'],
-    averageSalaryRange: '16 - 35 triệu VNĐ/tháng',
-    growthPotential: 'Cao'
-  },
-
-  // --- R – KỸ THUẬT & I – Ảnh hưởng ---
-  {
-    id: 'ri-1',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'I',
-    discLabel: 'I – Ảnh hưởng',
-    jobTitle: 'Chuyên viên tư vấn thiết bị kỹ thuật',
-    universityMajor: 'Công nghệ kỹ thuật cơ khí',
-    majorCode: '7510201',
-    admissionCombinations: ['A00', 'A01'],
-    description: 'Gặp gỡ khách hàng, thuyết trình giải pháp máy móc thiết bị cơ khí, chứng minh hiệu quả đầu tư và thuyết phục doanh nghiệp mua hàng.',
-    keySkills: ['Kỹ năng tư vấn giải pháp (Pre-sales)', 'Giao tiếp & thuyết trình kỹ thuật', 'Hiểu biết sâu máy CNC/thiết bị nặng', 'Chăm sóc khách hàng B2B'],
-    suitableRoles: ['Technical Sales Engineer', 'Chuyên viên tư vấn thiết bị cơ khí', 'Account Manager thiết bị công nghiệp'],
-    topUniversities: ['ĐH Sư phạm Kỹ thuật TP.HCM', 'ĐH Bách Khoa Hà Nội', 'ĐH Công nghiệp Hà Nội', 'ĐH Bách Khoa Đà Nẵng'],
-    averageSalaryRange: '18 - 45 triệu VNĐ/tháng (có hoa hồng)',
-    growthPotential: 'Rất cao'
-  },
-  {
-    id: 'ri-2',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'I',
-    discLabel: 'I – Ảnh hưởng',
-    jobTitle: 'Kỹ sư hỗ trợ khách hàng',
-    universityMajor: 'Kỹ thuật điện tử - viễn thông',
-    majorCode: '7520207',
-    admissionCombinations: ['A00', 'A01'],
-    description: 'Làm việc trực tiếp với khách hàng doanh nghiệp để đào tạo sử dụng thiết bị viễn thông, mạng, xử lý thắc mắc và xây dựng mối quan hệ tin cậy.',
-    keySkills: ['Customer Support Engineering', 'Xử lý lỗi mạng viễn thông/IoT', 'Giao tiếp đồng cảm & kiên nhẫn', 'Đào tạo kỹ thuật người dùng'],
-    suitableRoles: ['Field Application Engineer (FAE)', 'Kỹ sư dịch vụ sau bán hàng', 'Trưởng nhóm CSKH kỹ thuật'],
-    topUniversities: ['Học viện Công nghệ Bưu chính Viễn thông', 'ĐH Bách Khoa Hà Nội', 'ĐH Bách Khoa TP.HCM', 'ĐH Công nghệ - ĐHQGHN'],
-    averageSalaryRange: '15 - 30 triệu VNĐ/tháng',
-    growthPotential: 'Cao'
+    "id": "cm_rd_6",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Kỹ sư công trình giao thông",
+    "universityMajor": "Kỹ thuật xây dựng công trình giao thông",
+    "majorCode": "7580205",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "C01",
+      "X06",
+      "X07",
+      "X26",
+      "X01",
+      "C03",
+      "X25",
+      "D07"
+    ],
+    "description": "Vị trí Kỹ sư công trình giao thông thuộc chuyên ngành đào tạo Kỹ thuật xây dựng công trình giao thông. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Đọc bản vẽ kỹ thuật & mô hình BIM/AutoCAD",
+      "Giám sát an toàn công trình",
+      "Quản lý tiến độ dự án",
+      "Xử lý tình huống kỹ thuật"
+    ],
+    "suitableRoles": [
+      "Kỹ sư công trình giao thông",
+      "Chuyên viên cao cấp Kỹ sư công trình giao thông",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
   },
   {
-    id: 'ri-3',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'I',
-    discLabel: 'I – Ảnh hưởng',
-    jobTitle: 'Chuyên viên kinh doanh ô tô',
-    universityMajor: 'Công nghệ kỹ thuật ô tô',
-    majorCode: '7510205',
-    admissionCombinations: ['A00', 'A01'],
-    description: 'Tư vấn các dòng xe hơi, tính năng an toàn, động cơ Hybrid/EV cho khách hàng; tổ chức sự kiện lái thử xe và duy trì mạng lưới đối tác.',
-    keySkills: ['Kiến thức công nghệ ô tô & EV', 'Nghệ thuật đàm phán chốt sale', 'Xây dựng thương hiệu cá nhân', 'Dịch vụ hậu mãi ô tô cao cấp'],
-    suitableRoles: ['Chuyên viên tư vấn ô tô hạng sang', 'Trưởng phòng kinh doanh đại lý 3S', 'Chuyên gia sản phẩm (Product Genius)'],
-    topUniversities: ['ĐH Sư phạm Kỹ thuật TP.HCM', 'ĐH Giao thông Vận tải', 'ĐH Bách Khoa Hà Nội', 'ĐH Công nghiệp TP.HCM'],
-    averageSalaryRange: '20 - 50+ triệu VNĐ/tháng',
-    growthPotential: 'Rất cao'
+    "id": "cm_ri_1",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên tư vấn thiết bị kỹ thuật",
+    "universityMajor": "Công nghệ kỹ thuật cơ khí",
+    "majorCode": "7510201",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "C01",
+      "X06",
+      "D01",
+      "D07"
+    ],
+    "description": "Vị trí Chuyên viên tư vấn thiết bị kỹ thuật thuộc chuyên ngành đào tạo Công nghệ kỹ thuật cơ khí. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên tư vấn thiết bị kỹ thuật",
+      "Chuyên viên cao cấp Chuyên viên tư vấn thiết bị kỹ thuật",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Sư phạm Kỹ thuật TP.HCM",
+      "ĐH Giao thông Vận tải"
+    ],
+    "averageSalaryRange": "16 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
   },
   {
-    id: 'ri-4',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'I',
-    discLabel: 'I – Ảnh hưởng',
-    jobTitle: 'Hướng dẫn viên trải nghiệm nông nghiệp',
-    universityMajor: 'Nông nghiệp công nghệ cao',
-    majorCode: '7620118',
-    admissionCombinations: ['A00', 'B00', 'D07'],
-    description: 'Thiết kế và dẫn dắt tour trải nghiệm thực tế tại các nông trại công nghệ cao, truyền cảm hứng về canh tác hữu cơ, thủy canh cho du khách và học sinh.',
-    keySkills: ['Hoạt náo & dẫn tour trải nghiệm', 'Hiểu biết mô hình nông nghiệp thông minh', 'Kể chuyện (Storytelling)', 'Tổ chức sự kiện nông nghiệp sinh thái'],
-    suitableRoles: ['Quản lý trải nghiệm Farmstay', 'Điều phối viên giáo dục nông nghiệp xanh', 'Chuyên viên PR nông trại sinh thái'],
-    topUniversities: ['Học viện Nông nghiệp Việt Nam', 'ĐH Nông Lâm TP.HCM', 'ĐH Cần Thơ', 'ĐH Lâm nghiệp'],
-    averageSalaryRange: '12 - 25 triệu VNĐ/tháng',
-    growthPotential: 'Cao'
+    "id": "cm_ri_2",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Kỹ sư hỗ trợ khách hàng",
+    "universityMajor": "Kỹ thuật điện tử - viễn thông",
+    "majorCode": "7520207",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "C01",
+      "X06",
+      "D01",
+      "D07"
+    ],
+    "description": "Vị trí Kỹ sư hỗ trợ khách hàng thuộc chuyên ngành đào tạo Kỹ thuật điện tử - viễn thông. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Kỹ sư hỗ trợ khách hàng",
+      "Chuyên viên cao cấp Kỹ sư hỗ trợ khách hàng",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Sư phạm Kỹ thuật TP.HCM",
+      "ĐH Giao thông Vận tải"
+    ],
+    "averageSalaryRange": "16 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
   },
   {
-    id: 'ri-5',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'I',
-    discLabel: 'I – Ảnh hưởng',
-    jobTitle: 'Chuyên viên tư vấn công nghệ nông nghiệp',
-    universityMajor: 'Nông nghiệp công nghệ cao',
-    majorCode: '7620118',
-    admissionCombinations: ['A00', 'B00', 'D07'],
-    description: 'Chuyển giao các giải pháp nhà màng thông minh, hệ thống tưới nhỏ giọt tự động và cảm biến IoT cho bà con nông dân và hợp tác xã.',
-    keySkills: ['Chuyển giao công nghệ nông nghiệp', 'Giao tiếp gần gũi với nông dân/HTX', 'Tư vấn quy trình VietGAP/GlobalGAP', 'Trình diễn mô hình mẫu'],
-    suitableRoles: ['Chuyên viên khuyến nông hiện đại', 'Agritech Consultant', 'Đại diện kỹ thuật vùng của tập đoàn nông nghiệp'],
-    topUniversities: ['Học viện Nông nghiệp Việt Nam', 'ĐH Nông Lâm TP.HCM', 'ĐH Cần Thơ', 'ĐH Nông Lâm Thái Nguyên'],
-    averageSalaryRange: '15 - 32 triệu VNĐ/tháng',
-    growthPotential: 'Rất cao'
+    "id": "cm_ri_3",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên kinh doanh ô tô",
+    "universityMajor": "Công nghệ kỹ thuật ô tô",
+    "majorCode": "7510205",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "C01",
+      "X06",
+      "D01",
+      "X07",
+      "D07"
+    ],
+    "description": "Vị trí Chuyên viên kinh doanh ô tô thuộc chuyên ngành đào tạo Công nghệ kỹ thuật ô tô. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên kinh doanh ô tô",
+      "Chuyên viên cao cấp Chuyên viên kinh doanh ô tô",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Sư phạm Kỹ thuật TP.HCM",
+      "ĐH Giao thông Vận tải"
+    ],
+    "averageSalaryRange": "16 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
   },
   {
-    id: 'ri-6',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'I',
-    discLabel: 'I – Ảnh hưởng',
-    jobTitle: 'Chuyên viên tư vấn giải pháp năng lượng',
-    universityMajor: 'Kỹ thuật năng lượng',
-    majorCode: '7520114',
-    admissionCombinations: ['A00', 'A01', 'D07'],
-    description: 'Khảo sát nhu cầu tiêu thụ điện, tư vấn giải pháp điện mặt trời áp mái, điện gió, lưu trữ năng lượng xanh cho doanh nghiệp và nhà máy.',
-    keySkills: ['Phân tích hiệu quả kinh tế năng lượng', 'Tư vấn giải pháp Net Zero', 'Thuyết phục khách hàng đầu tư ESG', 'Tính toán hoàn vốn ROI'],
-    suitableRoles: ['Energy Solutions Specialist', 'Renewable Energy Project Consultant', 'Chuyên viên tư vấn điện xanh B2B'],
-    topUniversities: ['ĐH Bách Khoa Hà Nội', 'ĐH Điện lực', 'ĐH Bách Khoa TP.HCM', 'ĐH Bách Khoa Đà Nẵng'],
-    averageSalaryRange: '18 - 40 triệu VNĐ/tháng',
-    growthPotential: 'Rất cao'
-  },
-
-  // --- R – KỸ THUẬT & S – Ổn định ---
-  {
-    id: 'rs-1',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'S',
-    discLabel: 'S – Ổn định',
-    jobTitle: 'Kỹ thuật viên bảo trì',
-    universityMajor: 'Công nghệ kỹ thuật cơ khí',
-    majorCode: '7510201',
-    admissionCombinations: ['A00', 'A01'],
-    description: 'Thực hiện kiểm tra định kỳ, tra dầu, thay thế linh kiện hao mòn, giữ cho toàn bộ hệ thống máy móc nhà máy vận hành êm ái, an toàn và bền bỉ.',
-    keySkills: ['Bảo trì định kỳ máy cơ khí', 'Tính kiên trì tỉ mỉ', 'Đọc hiểu cẩm nang bảo dưỡng máy', 'An toàn lao động cơ khí'],
-    suitableRoles: ['Kỹ thuật viên bảo trì chính', 'Tổ trưởng tổ bảo dưỡng', 'Chuyên viên cơ điện nhà máy'],
-    topUniversities: ['ĐH Công nghiệp Hà Nội', 'ĐH Sư phạm Kỹ thuật TP.HCM', 'ĐH Công nghiệp TP.HCM', 'CĐ Kỹ thuật Cao Thắng'],
-    averageSalaryRange: '12 - 22 triệu VNĐ/tháng',
-    growthPotential: 'Ổn định'
-  },
-  {
-    id: 'rs-2',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'S',
-    discLabel: 'S – Ổn định',
-    jobTitle: 'Kỹ thuật viên hệ thống điện',
-    universityMajor: 'Công nghệ kỹ thuật điện, điện tử',
-    majorCode: '7510301',
-    admissionCombinations: ['A00', 'A01'],
-    description: 'Theo dõi chỉ số bảng điện, đảm bảo nguồn điện cho tòa nhà/xưởng sản xuất luôn liên tục, sẵn sàng ứng cứu khi xảy ra nhảy áp hoặc mất nguồn.',
-    keySkills: ['Đo kiểm điện áp và dòng tải', 'Bảo trì máy phát điện & UPS', 'Lắp ráp tủ điện công nghiệp', 'Tuân thủ quy trình an toàn'],
-    suitableRoles: ['Nhân viên quản lý trạm điện', 'Kỹ thuật viên điện tòa nhà', 'Kỹ thuật viên trạm biến áp'],
-    topUniversities: ['ĐH Điện lực', 'ĐH Sư phạm Kỹ thuật TP.HCM', 'ĐH Công nghiệp Hà Nội', 'ĐH Giao thông Vận tải'],
-    averageSalaryRange: '12 - 24 triệu VNĐ/tháng',
-    growthPotential: 'Ổn định'
+    "id": "cm_ri_4",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Điều phối trải nghiệm nông nghiệp",
+    "universityMajor": "Nông nghiệp công nghệ cao",
+    "majorCode": "7620118",
+    "admissionCombinations": [
+      "A00",
+      "B00",
+      "D07",
+      "B03",
+      "C03",
+      "C04",
+      "X16",
+      "B08"
+    ],
+    "description": "Vị trí Điều phối trải nghiệm nông nghiệp thuộc chuyên ngành đào tạo Nông nghiệp công nghệ cao. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Điều phối trải nghiệm nông nghiệp",
+      "Chuyên viên cao cấp Điều phối trải nghiệm nông nghiệp",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "Học viện Nông nghiệp VN",
+      "ĐH Nông Lâm TP.HCM",
+      "ĐH Cần Thơ",
+      "ĐH Lâm nghiệp"
+    ],
+    "averageSalaryRange": "16 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
   },
   {
-    id: 'rs-3',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'S',
-    discLabel: 'S – Ổn định',
-    jobTitle: 'Chuyên viên vận hành trang trại',
-    universityMajor: 'Chăn nuôi',
-    majorCode: '7620105',
-    admissionCombinations: ['A00', 'B00', 'D07'],
-    description: 'Chăm sóc đều đặn đàn gia súc gia cầm, quản lý khẩu phần ăn, tiêm phòng định kỳ và giám sát vệ sinh môi trường chăn nuôi khép kín.',
-    keySkills: ['Theo dõi sức khỏe vật nuôi', 'Vận hành hệ thống chuồng trại tự động', 'Kiên nhẫn & yêu thiên nhiên', 'Kiểm soát an toàn sinh học'],
-    suitableRoles: ['Trưởng trại chăn nuôi', 'Kỹ thuật viên thú y trang trại', 'Chuyên viên quản lý dinh dưỡng vật nuôi'],
-    topUniversities: ['Học viện Nông nghiệp Việt Nam', 'ĐH Nông Lâm TP.HCM', 'ĐH Cần Thơ', 'ĐH Tây Nguyên'],
-    averageSalaryRange: '13 - 26 triệu VNĐ/tháng',
-    growthPotential: 'Ổn định'
+    "id": "cm_ri_5",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên tư vấn công nghệ nông nghiệp",
+    "universityMajor": "Công nghệ nông nghiệp",
+    "majorCode": "7620119",
+    "admissionCombinations": [
+      "A00",
+      "B00",
+      "D07",
+      "B03",
+      "C03",
+      "C04",
+      "X16",
+      "B08"
+    ],
+    "description": "Vị trí Chuyên viên tư vấn công nghệ nông nghiệp thuộc chuyên ngành đào tạo Công nghệ nông nghiệp. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên tư vấn công nghệ nông nghiệp",
+      "Chuyên viên cao cấp Chuyên viên tư vấn công nghệ nông nghiệp",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "Học viện Nông nghiệp VN",
+      "ĐH Nông Lâm TP.HCM",
+      "ĐH Cần Thơ",
+      "ĐH Lâm nghiệp"
+    ],
+    "averageSalaryRange": "16 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
   },
   {
-    id: 'rs-4',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'S',
-    discLabel: 'S – Ổn định',
-    jobTitle: 'Kỹ thuật viên môi trường',
-    universityMajor: 'Công nghệ kỹ thuật môi trường',
-    majorCode: '7510406',
-    admissionCombinations: ['A00', 'B00', 'D07'],
-    description: 'Lấy mẫu nước thải, khí thải, vận hành hệ thống xử lý nước và rác thải công nghiệp, đảm bảo chỉ số xả thải đạt quy chuẩn nhà nước.',
-    keySkills: ['Vận hành trạm xử lý nước thải', 'Lấy mẫu và phân tích chỉ tiêu môi trường', 'Ghi chép nhật ký vận hành', 'Bảo dưỡng bơm lọc bể hóa chất'],
-    suitableRoles: ['Kỹ thuật viên trạm xử lý nước thải', 'Nhân viên giám sát quan trắc môi trường', 'Chuyên viên HSE phụ trách môi trường'],
-    topUniversities: ['ĐH Tài nguyên và Môi trường Hà Nội', 'ĐH Khoa học Tự nhiên - ĐHQG TP.HCM', 'ĐH Bách Khoa TP.HCM', 'ĐH Nông Lâm TP.HCM'],
-    averageSalaryRange: '12 - 25 triệu VNĐ/tháng',
-    growthPotential: 'Ổn định'
+    "id": "cm_ri_6",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên tư vấn giải pháp năng lượng",
+    "universityMajor": "Kỹ thuật năng lượng",
+    "majorCode": "7520114",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D07",
+      "A02",
+      "C01",
+      "X06",
+      "X07",
+      "B00"
+    ],
+    "description": "Vị trí Chuyên viên tư vấn giải pháp năng lượng thuộc chuyên ngành đào tạo Kỹ thuật năng lượng. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên tư vấn giải pháp năng lượng",
+      "Chuyên viên cao cấp Chuyên viên tư vấn giải pháp năng lượng",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Sư phạm Kỹ thuật TP.HCM",
+      "ĐH Giao thông Vận tải"
+    ],
+    "averageSalaryRange": "16 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
   },
   {
-    id: 'rs-5',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'S',
-    discLabel: 'S – Ổn định',
-    jobTitle: 'Kỹ thuật viên thiết bị y tế',
-    universityMajor: 'Kỹ thuật y sinh',
-    majorCode: '7520212',
-    admissionCombinations: ['A00', 'A01', 'B00'],
-    description: 'Chăm sóc và bảo dưỡng máy chụp X-quang, MRI, máy thở, theo dõi hiệu chuẩn máy tại bệnh viện để các bác sĩ an tâm khám chữa bệnh.',
-    keySkills: ['Hiệu chuẩn thiết bị y tế', 'Cẩn thận tỉ mỉ độ chính xác cao', 'Bảo trì máy móc hỗ trợ sự sống', 'Thấu hiểu môi trường bệnh viện'],
-    suitableRoles: ['Kỹ sư thiết bị y tế bệnh viện', 'Chuyên viên dịch vụ kỹ thuật hãng y tế', 'Kỹ thuật viên hiệu chuẩn phòng mổ'],
-    topUniversities: ['ĐH Bách Khoa Hà Nội', 'ĐH Quốc tế - ĐHQG TP.HCM', 'ĐH Bách Khoa TP.HCM', 'ĐH Y Hà Nội (Phối hợp kỹ thuật)'],
-    averageSalaryRange: '14 - 28 triệu VNĐ/tháng',
-    growthPotential: 'Cao'
+    "id": "cm_rs_1",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Kỹ thuật viên bảo trì",
+    "universityMajor": "Công nghệ kỹ thuật cơ khí",
+    "majorCode": "7510201",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "C01",
+      "X06",
+      "D01",
+      "D07"
+    ],
+    "description": "Vị trí Kỹ thuật viên bảo trì thuộc chuyên ngành đào tạo Công nghệ kỹ thuật cơ khí. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Kỹ thuật viên bảo trì",
+      "Chuyên viên cao cấp Kỹ thuật viên bảo trì",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Sư phạm Kỹ thuật TP.HCM",
+      "ĐH Giao thông Vận tải"
+    ],
+    "averageSalaryRange": "14 - 28 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
   },
   {
-    id: 'rs-6',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'S',
-    discLabel: 'S – Ổn định',
-    jobTitle: 'Kỹ sư nuôi trồng thủy sản',
-    universityMajor: 'Nuôi trồng thủy sản',
-    majorCode: '7620301',
-    admissionCombinations: ['A00', 'B00', 'D07'],
-    description: 'Theo dõi chất lượng nguồn nước ao hồ, độ mặn, pH, chế độ dinh dưỡng cho tôm, cá; duy trì quy trình ổn định suốt vụ nuôi trồng.',
-    keySkills: ['Quản lý môi trường ao nuôi', 'Kiểm soát dịch bệnh thủy sản', 'Kiên trì theo dõi vụ mùa', 'Ứng dụng vi sinh vật có lợi'],
-    suitableRoles: ['Kỹ sư quản lý ao tôm công nghệ cao', 'Trưởng trạm sản xuất giống cá', 'Kỹ thuật viên trại nuôi thủy hải sản'],
-    topUniversities: ['ĐH Thủy sản Nha Trang', 'ĐH Cần Thơ', 'Học viện Nông nghiệp Việt Nam', 'ĐH Nông Lâm TP.HCM'],
-    averageSalaryRange: '13 - 26 triệu VNĐ/tháng',
-    growthPotential: 'Ổn định'
-  },
-
-  // --- R – KỸ THUẬT & C – Tuân thủ ---
-  {
-    id: 'rc-1',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'C',
-    discLabel: 'C – Tuân thủ',
-    jobTitle: 'Kỹ sư kiểm định chất lượng',
-    universityMajor: 'Kỹ thuật cơ khí',
-    majorCode: '7520103',
-    admissionCombinations: ['A00', 'A01'],
-    description: 'Dùng thước kẹp, máy đo quang học, máy siêu âm khuyết tật kim loại để kiểm tra từng sản phẩm xuất xưởng, đảm bảo tuân thủ 100% dung sai kỹ thuật.',
-    keySkills: ['Đo lường cơ khí chính xác', 'Quy trình QA/QC & ISO 9001', 'Đọc hiểu bản vẽ dung sai GD&T', 'Lập báo cáo không phù hợp (NCR)'],
-    suitableRoles: ['Kỹ sư QA/QC cơ khí', 'Thanh tra kiểm định chất lượng xuất khẩu', 'Trưởng phòng đo lường kỹ thuật'],
-    topUniversities: ['ĐH Bách Khoa Hà Nội', 'ĐH Bách Khoa TP.HCM', 'ĐH Sư phạm Kỹ thuật TP.HCM', 'ĐH Công nghiệp Hà Nội'],
-    averageSalaryRange: '15 - 30 triệu VNĐ/tháng',
-    growthPotential: 'Cao'
-  },
-  {
-    id: 'rc-2',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'C',
-    discLabel: 'C – Tuân thủ',
-    jobTitle: 'Chuyên viên an toàn lao động',
-    universityMajor: 'Bảo hộ lao động',
-    majorCode: '7860101',
-    admissionCombinations: ['A00', 'A01', 'B00'],
-    description: 'Xây dựng nội quy an toàn, kiểm tra thiết bị bảo hộ, kiểm định giàn giáo dây điện và phòng cháy chữa cháy, nghiêm cấm mọi vi phạm quy chuẩn.',
-    keySkills: ['Luật an toàn vệ sinh lao động', 'Đánh giá nguy cơ rủi ro rủi ro (HIRA)', 'Kiểm tra hiện trường khắt khe', 'Huấn luyện an toàn nhà xưởng'],
-    suitableRoles: ['HSE Officer công trường', 'Chuyên viên an toàn nhà máy hóa chất', 'Trưởng ban an toàn sức khỏe môi trường'],
-    topUniversities: ['ĐH Công đoàn', 'ĐH Tôn Đức Thắng', 'ĐH Mỏ - Địa chất', 'ĐH Sư phạm Kỹ thuật TP.HCM'],
-    averageSalaryRange: '16 - 32 triệu VNĐ/tháng',
-    growthPotential: 'Cao'
+    "id": "cm_rs_2",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Kỹ thuật viên hệ thống điện",
+    "universityMajor": "Công nghệ kỹ thuật điện, điện tử",
+    "majorCode": "7510301",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "C01",
+      "X06",
+      "D01",
+      "D07"
+    ],
+    "description": "Vị trí Kỹ thuật viên hệ thống điện thuộc chuyên ngành đào tạo Công nghệ kỹ thuật điện, điện tử. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Kỹ thuật viên hệ thống điện",
+      "Chuyên viên cao cấp Kỹ thuật viên hệ thống điện",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Sư phạm Kỹ thuật TP.HCM",
+      "ĐH Giao thông Vận tải"
+    ],
+    "averageSalaryRange": "14 - 28 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
   },
   {
-    id: 'rc-3',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'C',
-    discLabel: 'C – Tuân thủ',
-    jobTitle: 'Kỹ sư thiết kế máy',
-    universityMajor: 'Kỹ thuật cơ điện tử',
-    majorCode: '7520114',
-    admissionCombinations: ['A00', 'A01'],
-    description: 'Sử dụng phần mềm SolidWorks, NX, Inventor để mô hình hóa 3D chi tiết máy, tính toán sức bền vật liệu và thiết kế bản vẽ chuẩn xác tuyệt đối.',
-    keySkills: ['Thiết kế CAD/CAM/CAE 3D', 'Tính toán ứng suất & sức bền', 'Quy chuẩn tiêu chuẩn DIN/JIS', 'Mô phỏng động lực học cơ cấu'],
-    suitableRoles: ['Mechanical Design Engineer', 'R&D Mechatronics Engineer', 'Kỹ sư mô phỏng sức bền FEA'],
-    topUniversities: ['ĐH Bách Khoa Hà Nội', 'ĐH Bách Khoa TP.HCM', 'ĐH Sư phạm Kỹ thuật TP.HCM', 'ĐH Bách Khoa Đà Nẵng'],
-    averageSalaryRange: '18 - 38 triệu VNĐ/tháng',
-    growthPotential: 'Rất cao'
+    "id": "cm_rs_3",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Chuyên viên vận hành trang trại",
+    "universityMajor": "Chăn nuôi",
+    "majorCode": "7620105",
+    "admissionCombinations": [
+      "A00",
+      "B00",
+      "B03",
+      "C02",
+      "B08",
+      "X04"
+    ],
+    "description": "Vị trí Chuyên viên vận hành trang trại thuộc chuyên ngành đào tạo Chăn nuôi. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên vận hành trang trại",
+      "Chuyên viên cao cấp Chuyên viên vận hành trang trại",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "Học viện Nông nghiệp VN",
+      "ĐH Nông Lâm TP.HCM",
+      "ĐH Cần Thơ",
+      "ĐH Lâm nghiệp"
+    ],
+    "averageSalaryRange": "14 - 28 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
   },
   {
-    id: 'rc-4',
-    holland: 'R',
-    hollandLabel: 'R – KỸ THUẬT',
-    disc: 'C',
-    discLabel: 'C – Tuân thủ',
-    jobTitle: 'Kỹ thuật viên đo đạc',
-    universityMajor: 'Kỹ thuật trắc địa - bản đồ',
-    majorCode: '7520503',
-    admissionCombinations: ['A00', 'A01'],
-    description: 'Sử dụng máy toàn đạc điện tử, GPS RTK, Flycam khảo sát địa hình thực địa, ghi nhận tọa độ chính xác từng milimet để phục vụ quy hoạch bản đồ.',
-    keySkills: ['Vận hành máy toàn đạc điện tử & GPS', 'Xử lý số liệu GIS & MicroStation', 'Tính toán cao độ và lưới tọa độ', 'Lập bản đồ địa chính'],
-    suitableRoles: ['Kỹ sư trắc địa công trình', 'Chuyên viên khảo sát địa hình địa chính', 'Kỹ thuật viên quan trắc lún nghiêng'],
-    topUniversities: ['ĐH Mỏ - Địa chất', 'ĐH Tài nguyên và Môi trường', 'ĐH Bách Khoa TP.HCM', 'ĐH Khoa học Tự nhiên'],
-    averageSalaryRange: '13 - 26 triệu VNĐ/tháng',
-    growthPotential: 'Ổn định'
-  },
-
-  // --- Các nhóm mở rộng (để hỗ trợ sinh viên khi làm bài test ra các nhóm Holland khác) ---
-  {
-    id: 'id-1',
-    holland: 'I',
-    hollandLabel: 'I – NGHIÊN CỨU',
-    disc: 'D',
-    discLabel: 'D – Quyết đoán',
-    jobTitle: 'Kiến trúc sư giải pháp phần mềm',
-    universityMajor: 'Khoa học máy tính / Công nghệ phần mềm',
-    majorCode: '7480101',
-    admissionCombinations: ['A00', 'A01', 'D01', 'D07'],
-    description: 'Quyết định kiến trúc hệ thống công nghệ lớn, công nghệ lõi AI, dẫn dắt đội ngũ kỹ thuật giải quyết bài toán phức tạp.',
-    keySkills: ['Thiết kế kiến trúc Cloud & Microservices', 'Lập trình thuật toán nâng cao', 'Lãnh đạo nhóm công nghệ', 'Phân tích hệ thống'],
-    suitableRoles: ['Solution Architect', 'Tech Lead', 'Giám đốc công nghệ CTO'],
-    topUniversities: ['ĐH Bách Khoa Hà Nội', 'ĐH Bách Khoa TP.HCM', 'ĐH Công nghệ - ĐHQGHN', 'ĐH CNTT - ĐHQG TP.HCM'],
-    averageSalaryRange: '30 - 70+ triệu VNĐ/tháng',
-    growthPotential: 'Rất cao'
-  },
-  {
-    id: 'ii-1',
-    holland: 'I',
-    hollandLabel: 'I – NGHIÊN CỨU',
-    disc: 'I',
-    discLabel: 'I – Ảnh hưởng',
-    jobTitle: 'Chuyên gia phân tích dữ liệu kinh doanh',
-    universityMajor: 'Khoa học dữ liệu / Hệ thống thông tin',
-    majorCode: '7480109',
-    admissionCombinations: ['A00', 'A01', 'D01', 'D07'],
-    description: 'Khai phá dữ liệu lớn và trực quan hóa thành các câu chuyện dữ liệu sinh động, thuyết phục ban lãnh đạo ra quyết định chiến lược.',
-    keySkills: ['Data Storytelling & Dashboard', 'SQL, Python phân tích dữ liệu', 'Kỹ năng trình bày và thuyết phục', 'Tư duy nghiệp vụ kinh doanh'],
-    suitableRoles: ['Business Intelligence Analyst (BI)', 'Data Scientist', 'Chuyên viên phân tích khách hàng'],
-    topUniversities: ['ĐH Kinh tế Quốc dân', 'ĐH Ngoại Thương', 'ĐH Bách Khoa', 'ĐH Kinh tế TP.HCM'],
-    averageSalaryRange: '20 - 45 triệu VNĐ/tháng',
-    growthPotential: 'Rất cao'
+    "id": "cm_rs_4",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Kỹ thuật viên môi trường",
+    "universityMajor": "Công nghệ kỹ thuật môi trường",
+    "majorCode": "7510406",
+    "admissionCombinations": [
+      "A00",
+      "B00",
+      "D07",
+      "C01",
+      "C02",
+      "D01",
+      "A02"
+    ],
+    "description": "Vị trí Kỹ thuật viên môi trường thuộc chuyên ngành đào tạo Công nghệ kỹ thuật môi trường. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Kỹ thuật viên môi trường",
+      "Chuyên viên cao cấp Kỹ thuật viên môi trường",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "Học viện Nông nghiệp VN",
+      "ĐH Nông Lâm TP.HCM",
+      "ĐH Cần Thơ",
+      "ĐH Lâm nghiệp"
+    ],
+    "averageSalaryRange": "14 - 28 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
   },
   {
-    id: 'ic-1',
-    holland: 'I',
-    hollandLabel: 'I – NGHIÊN CỨU',
-    disc: 'C',
-    discLabel: 'C – Tuân thủ',
-    jobTitle: 'Dược sĩ nghiên cứu & thử nghiệm lâm sàng',
-    universityMajor: 'Dược học',
-    majorCode: '7720201',
-    admissionCombinations: ['A00', 'B00'],
-    description: 'Tuân thủ nghiêm ngặt quy trình nghiên cứu điều chế thuốc, kiểm tra độc tính, thử nghiệm lâm sàng và hồ sơ cấp phép.',
-    keySkills: ['Hóa phân tích dược phẩm', 'Thực hành phòng thí nghiệm tốt (GLP)', 'Soát xét hồ sơ thuốc', 'Kiên trì phân tích mẫu vi lượng'],
-    suitableRoles: ['Dược sĩ R&D', 'Chuyên viên thử nghiệm lâm sàng CRA', 'Kiểm nghiệm viên dược phẩm'],
-    topUniversities: ['ĐH Dược Hà Nội', 'ĐH Y Dược TP.HCM', 'Khoa Y Dược - ĐHQGHN', 'ĐH Y Dược Huế'],
-    averageSalaryRange: '18 - 36 triệu VNĐ/tháng',
-    growthPotential: 'Cao'
+    "id": "cm_rs_5",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Kỹ thuật viên thiết bị y tế",
+    "universityMajor": "Kỹ thuật y sinh",
+    "majorCode": "7520212",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "B00",
+      "B08",
+      "C02",
+      "A02"
+    ],
+    "description": "Vị trí Kỹ thuật viên thiết bị y tế thuộc chuyên ngành đào tạo Kỹ thuật y sinh. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kiến thức lâm sàng & dược lý",
+      "Kỹ năng chăm sóc người bệnh",
+      "Thao tác xét nghiệm chuẩn mực",
+      "Đạo đức nghề y"
+    ],
+    "suitableRoles": [
+      "Kỹ thuật viên thiết bị y tế",
+      "Chuyên viên cao cấp Kỹ thuật viên thiết bị y tế",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "14 - 28 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
   },
   {
-    id: 'ed-1',
-    holland: 'E',
-    hollandLabel: 'E – QUẢN LÝ',
-    disc: 'D',
-    discLabel: 'D – Quyết đoán',
-    jobTitle: 'Giám đốc kinh doanh dự án',
-    universityMajor: 'Quản trị kinh doanh',
-    majorCode: '7340101',
-    admissionCombinations: ['A00', 'A01', 'D01', 'D07'],
-    description: 'Định hình chiến lược phát triển thị trường, đàm phán hợp đồng giá trị lớn, quyết định mục tiêu doanh số và dẫn dắt đội ngũ.',
-    keySkills: ['Hoạch định chiến lược kinh doanh', 'Đàm phán hợp đồng lớn', 'Tư duy mục tiêu quyết liệt', 'Quản trị đội ngũ bán hàng'],
-    suitableRoles: ['Business Development Director', 'Head of Sales', 'CEO Startup'],
-    topUniversities: ['ĐH Ngoại thương', 'ĐH Kinh tế Quốc dân', 'ĐH Kinh tế TP.HCM', 'Học viện Tài chính'],
-    averageSalaryRange: '30 - 80+ triệu VNĐ/tháng',
-    growthPotential: 'Rất cao'
+    "id": "cm_rs_6",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Kỹ sư nuôi trồng thủy sản",
+    "universityMajor": "Nuôi trồng thủy sản",
+    "majorCode": "7620301",
+    "admissionCombinations": [
+      "A00",
+      "B00",
+      "D07",
+      "B03",
+      "D01",
+      "C02",
+      "B08",
+      "D08"
+    ],
+    "description": "Vị trí Kỹ sư nuôi trồng thủy sản thuộc chuyên ngành đào tạo Nuôi trồng thủy sản. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kiến thức lâm sàng & dược lý",
+      "Kỹ năng chăm sóc người bệnh",
+      "Thao tác xét nghiệm chuẩn mực",
+      "Đạo đức nghề y"
+    ],
+    "suitableRoles": [
+      "Kỹ sư nuôi trồng thủy sản",
+      "Chuyên viên cao cấp Kỹ sư nuôi trồng thủy sản",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "14 - 28 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
   },
   {
-    id: 'ei-1',
-    holland: 'E',
-    hollandLabel: 'E – QUẢN LÝ',
-    disc: 'I',
-    discLabel: 'I – Ảnh hưởng',
-    jobTitle: 'Giám đốc truyền thông & tiếp thị (Marketing)',
-    universityMajor: 'Marketing / Truyền thông đa phương tiện',
-    majorCode: '7340115',
-    admissionCombinations: ['A00', 'A01', 'D01', 'D07'],
-    description: 'Sáng tạo chiến dịch thương hiệu lan tỏa cảm xúc, thu hút cộng đồng, dẫn dắt các sự kiện ra mắt sản phẩm hoành tráng.',
-    keySkills: ['Sáng tạo nội dung lan tỏa', 'Quan hệ công chúng (PR)', 'Tổ chức sự kiện đỉnh cao', 'Giao tiếp truyền cảm hứng'],
-    suitableRoles: ['Marketing Director', 'PR Manager', 'Creative Director'],
-    topUniversities: ['ĐH Kinh tế Quốc dân', 'ĐH Ngoại Thương', 'Học viện Báo chí & Tuyên truyền', 'ĐH Khoa học Xã hội & Nhân văn'],
-    averageSalaryRange: '25 - 60 triệu VNĐ/tháng',
-    growthPotential: 'Rất cao'
+    "id": "cm_rc_1",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Kỹ sư kiểm định chất lượng",
+    "universityMajor": "Kỹ thuật cơ khí",
+    "majorCode": "7520103",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "C01",
+      "X06",
+      "X07",
+      "X26",
+      "D07"
+    ],
+    "description": "Vị trí Kỹ sư kiểm định chất lượng thuộc chuyên ngành đào tạo Kỹ thuật cơ khí. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Kỹ sư kiểm định chất lượng",
+      "Chuyên viên cao cấp Kỹ sư kiểm định chất lượng",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Sư phạm Kỹ thuật TP.HCM",
+      "ĐH Giao thông Vận tải"
+    ],
+    "averageSalaryRange": "18 - 38 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
   },
   {
-    id: 'sc-1',
-    holland: 'S',
-    hollandLabel: 'S – XÃ HỘI',
-    disc: 'S',
-    discLabel: 'S – Ổn định',
-    jobTitle: 'Bác sĩ điều trị đa khoa / Chuyên khoa',
-    universityMajor: 'Y khoa',
-    majorCode: '7720101',
-    admissionCombinations: ['B00'],
-    description: 'Thăm khám, lắng nghe bệnh nhân, chữa bệnh bằng tình yêu thương và sự kiên trì, đảm bảo sức khỏe cộng đồng.',
-    keySkills: ['Lòng nhân ái y đức', 'Chẩn đoán lâm sàng', 'Giao tiếp trấn an bệnh nhân', 'Cẩn trọng trong đơn thuốc'],
-    suitableRoles: ['Bác sĩ điều trị', 'Bác sĩ gia đình', 'Bác sĩ chuyên khoa nội/ngoại'],
-    topUniversities: ['ĐH Y Hà Nội', 'ĐH Y Dược TP.HCM', 'ĐH Y khoa Phạm Ngọc Thạch', 'ĐH Y Dược Cần Thơ'],
-    averageSalaryRange: '20 - 50 triệu VNĐ/tháng',
-    growthPotential: 'Cao'
+    "id": "cm_rc_2",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Chuyên viên an toàn lao động",
+    "universityMajor": "Bảo hộ lao động",
+    "majorCode": "7860101",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "B00",
+      "C01",
+      "C02"
+    ],
+    "description": "Vị trí Chuyên viên an toàn lao động thuộc chuyên ngành đào tạo Bảo hộ lao động. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên an toàn lao động",
+      "Chuyên viên cao cấp Chuyên viên an toàn lao động",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Sư phạm Kỹ thuật TP.HCM",
+      "ĐH Giao thông Vận tải"
+    ],
+    "averageSalaryRange": "18 - 38 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
   },
   {
-    id: 'cc-1',
-    holland: 'C',
-    hollandLabel: 'C – NGHIỆP VỤ',
-    disc: 'C',
-    discLabel: 'C – Tuân thủ',
-    jobTitle: 'Kiểm toán viên độc lập',
-    universityMajor: 'Kiểm toán / Kế toán',
-    majorCode: '7340302',
-    admissionCombinations: ['A00', 'A01', 'D01', 'D07'],
-    description: 'Soát xét tính chính xác của sổ sách tài chính, quy chuẩn thuế và chuẩn mực kế toán (VAS/IFRS), đảm bảo minh bạch tuyệt đối.',
-    keySkills: ['Chuẩn mực kiểm toán quốc tế', 'Phân tích báo cáo tài chính', 'Tính chính xác bảo mật cao', 'Chứng chỉ CPA/ACCA'],
-    suitableRoles: ['Senior Auditor Big 4', 'Trưởng ban kiểm soát nội bộ', 'Kế toán trưởng'],
-    topUniversities: ['ĐH Kinh tế Quốc dân', 'Học viện Tài chính', 'ĐH Kinh tế TP.HCM', 'ĐH Ngoại thương'],
-    averageSalaryRange: '18 - 45 triệu VNĐ/tháng',
-    growthPotential: 'Cao'
+    "id": "cm_rc_3",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Kỹ sư thiết kế máy",
+    "universityMajor": "Kỹ thuật cơ điện tử",
+    "majorCode": "7520114",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "C01",
+      "X06"
+    ],
+    "description": "Vị trí Kỹ sư thiết kế máy thuộc chuyên ngành đào tạo Kỹ thuật cơ điện tử. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Kỹ sư thiết kế máy",
+      "Chuyên viên cao cấp Kỹ sư thiết kế máy",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Sư phạm Kỹ thuật TP.HCM",
+      "ĐH Giao thông Vận tải"
+    ],
+    "averageSalaryRange": "18 - 38 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_rc_4",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Kỹ thuật viên khảo sát địa hình",
+    "universityMajor": "Kỹ thuật trắc địa - bản đồ",
+    "majorCode": "7520503",
+    "admissionCombinations": [
+      "C01",
+      "D01",
+      "B03",
+      "C02",
+      "C04",
+      "A00"
+    ],
+    "description": "Vị trí Kỹ thuật viên khảo sát địa hình thuộc chuyên ngành đào tạo Kỹ thuật trắc địa - bản đồ. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Kỹ thuật viên khảo sát địa hình",
+      "Chuyên viên cao cấp Kỹ thuật viên khảo sát địa hình",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Xây dựng Hà Nội",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Kiến trúc TP.HCM"
+    ],
+    "averageSalaryRange": "18 - 38 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_rc_5",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Kỹ sư quản lý chất lượng thực phẩm",
+    "universityMajor": "Công nghệ thực phẩm",
+    "majorCode": "7540101",
+    "admissionCombinations": [
+      "A00",
+      "B00",
+      "D07",
+      "C02",
+      "A02"
+    ],
+    "description": "Vị trí Kỹ sư quản lý chất lượng thực phẩm thuộc chuyên ngành đào tạo Công nghệ thực phẩm. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Kỹ sư quản lý chất lượng thực phẩm",
+      "Chuyên viên cao cấp Kỹ sư quản lý chất lượng thực phẩm",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "Học viện Nông nghiệp VN",
+      "ĐH Nông Lâm TP.HCM",
+      "ĐH Cần Thơ",
+      "ĐH Lâm nghiệp"
+    ],
+    "averageSalaryRange": "18 - 38 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_rc_6",
+    "holland": "R",
+    "hollandLabel": "R – KỸ THUẬT",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Kỹ sư trắc địa bản đồ",
+    "universityMajor": "Kỹ thuật trắc địa - bản đồ",
+    "majorCode": "7520503",
+    "admissionCombinations": [
+      "C01",
+      "D01",
+      "B03",
+      "C02",
+      "C04",
+      "A00"
+    ],
+    "description": "Vị trí Kỹ sư trắc địa bản đồ thuộc chuyên ngành đào tạo Kỹ thuật trắc địa - bản đồ. Định hướng phát triển tối ưu theo nhóm R – KỸ THUẬT kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Kỹ sư trắc địa bản đồ",
+      "Chuyên viên cao cấp Kỹ sư trắc địa bản đồ",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Xây dựng Hà Nội",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Kiến trúc TP.HCM"
+    ],
+    "averageSalaryRange": "18 - 38 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_id_1",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Trưởng nhóm nghiên cứu dữ liệu",
+    "universityMajor": "Khoa học dữ liệu",
+    "majorCode": "7460108",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "X26",
+      "C01"
+    ],
+    "description": "Vị trí Trưởng nhóm nghiên cứu dữ liệu thuộc chuyên ngành đào tạo Khoa học dữ liệu. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Tư duy lập trình & thuật toán",
+      "Phân tích cơ sở dữ liệu",
+      "Bảo mật hệ thống",
+      "Quản trị giải pháp công nghệ"
+    ],
+    "suitableRoles": [
+      "Trưởng nhóm nghiên cứu dữ liệu",
+      "Chuyên viên cao cấp Trưởng nhóm nghiên cứu dữ liệu",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Công nghệ - ĐHQGHN",
+      "ĐH CNTT - ĐHQG TP.HCM"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_id_2",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Chuyên gia an ninh mạng",
+    "universityMajor": "An toàn thông tin",
+    "majorCode": "7480202",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "X26",
+      "C01",
+      "X06"
+    ],
+    "description": "Vị trí Chuyên gia an ninh mạng thuộc chuyên ngành đào tạo An toàn thông tin. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Tư duy lập trình & thuật toán",
+      "Phân tích cơ sở dữ liệu",
+      "Bảo mật hệ thống",
+      "Quản trị giải pháp công nghệ"
+    ],
+    "suitableRoles": [
+      "Chuyên gia an ninh mạng",
+      "Chuyên viên cao cấp Chuyên gia an ninh mạng",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Công nghệ - ĐHQGHN",
+      "ĐH CNTT - ĐHQG TP.HCM"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_id_3",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Nhà nghiên cứu công nghệ sinh học",
+    "universityMajor": "Công nghệ sinh học",
+    "majorCode": "7420201",
+    "admissionCombinations": [
+      "A00",
+      "B00",
+      "D07",
+      "B03",
+      "B08",
+      "A02"
+    ],
+    "description": "Vị trí Nhà nghiên cứu công nghệ sinh học thuộc chuyên ngành đào tạo Công nghệ sinh học. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Nhà nghiên cứu công nghệ sinh học",
+      "Chuyên viên cao cấp Nhà nghiên cứu công nghệ sinh học",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "Học viện Nông nghiệp VN",
+      "ĐH Nông Lâm TP.HCM",
+      "ĐH Cần Thơ",
+      "ĐH Lâm nghiệp"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_id_4",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Chuyên gia phân tích tài chính",
+    "universityMajor": "Tài chính - Ngân hàng",
+    "majorCode": "7340201",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C01"
+    ],
+    "description": "Vị trí Chuyên gia phân tích tài chính thuộc chuyên ngành đào tạo Tài chính - Ngân hàng. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích báo cáo tài chính",
+      "Kiểm soát số liệu chi tiết",
+      "Nắm vững chuẩn mực kế toán/thuế",
+      "Sử dụng phần mềm ERP"
+    ],
+    "suitableRoles": [
+      "Chuyên gia phân tích tài chính",
+      "Chuyên viên cao cấp Chuyên gia phân tích tài chính",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_id_5",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Bác sĩ định hướng chuyên khoa ngoại (cần đào tạo chuyên khoa)",
+    "universityMajor": "Y khoa",
+    "majorCode": "7720101",
+    "admissionCombinations": [
+      "B00",
+      "B08",
+      "D07",
+      "A02",
+      "B03",
+      "X16"
+    ],
+    "description": "Vị trí Bác sĩ định hướng chuyên khoa ngoại (cần đào tạo chuyên khoa) thuộc chuyên ngành đào tạo Y khoa. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kiến thức lâm sàng & dược lý",
+      "Kỹ năng chăm sóc người bệnh",
+      "Thao tác xét nghiệm chuẩn mực",
+      "Đạo đức nghề y"
+    ],
+    "suitableRoles": [
+      "Bác sĩ định hướng chuyên khoa ngoại (cần đào tạo chuyên khoa)",
+      "Chuyên viên cao cấp Bác sĩ định hướng chuyên khoa ngoại (cần đào tạo chuyên khoa)",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_id_6",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Bác sĩ y học dự phòng",
+    "universityMajor": "Y học dự phòng",
+    "majorCode": "7720110",
+    "admissionCombinations": [
+      "B00",
+      "B08",
+      "D07",
+      "A02",
+      "B03",
+      "X16"
+    ],
+    "description": "Vị trí Bác sĩ y học dự phòng thuộc chuyên ngành đào tạo Y học dự phòng. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kiến thức lâm sàng & dược lý",
+      "Kỹ năng chăm sóc người bệnh",
+      "Thao tác xét nghiệm chuẩn mực",
+      "Đạo đức nghề y"
+    ],
+    "suitableRoles": [
+      "Bác sĩ y học dự phòng",
+      "Chuyên viên cao cấp Bác sĩ y học dự phòng",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ii_1",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên truyền thông khoa học",
+    "universityMajor": "Truyền thông đa phương tiện",
+    "majorCode": "7320104",
+    "admissionCombinations": [
+      "A01",
+      "D01",
+      "D14",
+      "D07"
+    ],
+    "description": "Vị trí Chuyên viên truyền thông khoa học thuộc chuyên ngành đào tạo Truyền thông đa phương tiện. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên truyền thông khoa học",
+      "Chuyên viên cao cấp Chuyên viên truyền thông khoa học",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "16 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ii_2",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Tư vấn giải pháp công nghệ",
+    "universityMajor": "Công nghệ thông tin",
+    "majorCode": "7480201",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "X26",
+      "C01",
+      "X06"
+    ],
+    "description": "Vị trí Tư vấn giải pháp công nghệ thuộc chuyên ngành đào tạo Công nghệ thông tin. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Tư duy lập trình & thuật toán",
+      "Phân tích cơ sở dữ liệu",
+      "Bảo mật hệ thống",
+      "Quản trị giải pháp công nghệ"
+    ],
+    "suitableRoles": [
+      "Tư vấn giải pháp công nghệ",
+      "Chuyên viên cao cấp Tư vấn giải pháp công nghệ",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Công nghệ - ĐHQGHN",
+      "ĐH CNTT - ĐHQG TP.HCM"
+    ],
+    "averageSalaryRange": "16 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ii_3",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên nghiên cứu thị trường",
+    "universityMajor": "Marketing",
+    "majorCode": "7340115",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C01",
+      "C03"
+    ],
+    "description": "Vị trí Chuyên viên nghiên cứu thị trường thuộc chuyên ngành đào tạo Marketing. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Chuyên viên nghiên cứu thị trường",
+      "Chuyên viên cao cấp Chuyên viên nghiên cứu thị trường",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "16 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ii_4",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Giảng viên khoa học (cần đào tạo sau đại học theo yêu cầu vị trí)",
+    "universityMajor": "Sư phạm Vật lý",
+    "majorCode": "7140211",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "C01",
+      "A02",
+      "X06"
+    ],
+    "description": "Vị trí Giảng viên khoa học (cần đào tạo sau đại học theo yêu cầu vị trí) thuộc chuyên ngành đào tạo Sư phạm Vật lý. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng sư phạm & truyền đạt",
+      "Thiết kế bài giảng tương tác",
+      "Thấu hiểu tâm lý người học",
+      "Ứng dụng công nghệ giáo dục"
+    ],
+    "suitableRoles": [
+      "Giảng viên khoa học (cần đào tạo sau đại học theo yêu cầu vị trí)",
+      "Chuyên viên cao cấp Giảng viên khoa học (cần đào tạo sau đại học theo yêu cầu vị trí)",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "16 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ii_5",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Bác sĩ tư vấn và giáo dục sức khỏe cộng đồng",
+    "universityMajor": "Y khoa",
+    "majorCode": "7720101",
+    "admissionCombinations": [
+      "B00",
+      "B08",
+      "D07",
+      "A02",
+      "B03",
+      "X16"
+    ],
+    "description": "Vị trí Bác sĩ tư vấn và giáo dục sức khỏe cộng đồng thuộc chuyên ngành đào tạo Y khoa. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kiến thức lâm sàng & dược lý",
+      "Kỹ năng chăm sóc người bệnh",
+      "Thao tác xét nghiệm chuẩn mực",
+      "Đạo đức nghề y"
+    ],
+    "suitableRoles": [
+      "Bác sĩ tư vấn và giáo dục sức khỏe cộng đồng",
+      "Chuyên viên cao cấp Bác sĩ tư vấn và giáo dục sức khỏe cộng đồng",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "16 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ii_6",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên truyền thông và tư vấn công nghệ di truyền",
+    "universityMajor": "Công nghệ sinh học",
+    "majorCode": "7420201",
+    "admissionCombinations": [
+      "A00",
+      "B00",
+      "D07",
+      "B03",
+      "B08",
+      "A02"
+    ],
+    "description": "Vị trí Chuyên viên truyền thông và tư vấn công nghệ di truyền thuộc chuyên ngành đào tạo Công nghệ sinh học. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên truyền thông và tư vấn công nghệ di truyền",
+      "Chuyên viên cao cấp Chuyên viên truyền thông và tư vấn công nghệ di truyền",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "Học viện Nông nghiệp VN",
+      "ĐH Nông Lâm TP.HCM",
+      "ĐH Cần Thơ",
+      "ĐH Lâm nghiệp"
+    ],
+    "averageSalaryRange": "16 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_is_1",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Chuyên viên xét nghiệm",
+    "universityMajor": "Kỹ thuật xét nghiệm y học",
+    "majorCode": "7720601",
+    "admissionCombinations": [
+      "A00",
+      "B00",
+      "D07",
+      "D08",
+      "A01"
+    ],
+    "description": "Vị trí Chuyên viên xét nghiệm thuộc chuyên ngành đào tạo Kỹ thuật xét nghiệm y học. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kiến thức lâm sàng & dược lý",
+      "Kỹ năng chăm sóc người bệnh",
+      "Thao tác xét nghiệm chuẩn mực",
+      "Đạo đức nghề y"
+    ],
+    "suitableRoles": [
+      "Chuyên viên xét nghiệm",
+      "Chuyên viên cao cấp Chuyên viên xét nghiệm",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "14 - 28 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_is_2",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Nhà nghiên cứu sinh học",
+    "universityMajor": "Sinh học",
+    "majorCode": "7420101",
+    "admissionCombinations": [
+      "A00",
+      "B00",
+      "D07",
+      "D08",
+      "A01"
+    ],
+    "description": "Vị trí Nhà nghiên cứu sinh học thuộc chuyên ngành đào tạo Sinh học. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Nhà nghiên cứu sinh học",
+      "Chuyên viên cao cấp Nhà nghiên cứu sinh học",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "Học viện Nông nghiệp VN",
+      "ĐH Nông Lâm TP.HCM",
+      "ĐH Cần Thơ",
+      "ĐH Lâm nghiệp"
+    ],
+    "averageSalaryRange": "14 - 28 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_is_3",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Chuyên viên phân tích dữ liệu",
+    "universityMajor": "Khoa học dữ liệu",
+    "majorCode": "7460108",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "X26",
+      "C01"
+    ],
+    "description": "Vị trí Chuyên viên phân tích dữ liệu thuộc chuyên ngành đào tạo Khoa học dữ liệu. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Tư duy lập trình & thuật toán",
+      "Phân tích cơ sở dữ liệu",
+      "Bảo mật hệ thống",
+      "Quản trị giải pháp công nghệ"
+    ],
+    "suitableRoles": [
+      "Chuyên viên phân tích dữ liệu",
+      "Chuyên viên cao cấp Chuyên viên phân tích dữ liệu",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Công nghệ - ĐHQGHN",
+      "ĐH CNTT - ĐHQG TP.HCM"
+    ],
+    "averageSalaryRange": "14 - 28 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_is_4",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Dược sĩ nghiên cứu",
+    "universityMajor": "Dược học",
+    "majorCode": "7720201",
+    "admissionCombinations": [
+      "A00",
+      "B00",
+      "D07"
+    ],
+    "description": "Vị trí Dược sĩ nghiên cứu thuộc chuyên ngành đào tạo Dược học. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kiến thức lâm sàng & dược lý",
+      "Kỹ năng chăm sóc người bệnh",
+      "Thao tác xét nghiệm chuẩn mực",
+      "Đạo đức nghề y"
+    ],
+    "suitableRoles": [
+      "Dược sĩ nghiên cứu",
+      "Chuyên viên cao cấp Dược sĩ nghiên cứu",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "14 - 28 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_is_5",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Bác sĩ đa khoa",
+    "universityMajor": "Y khoa",
+    "majorCode": "7720101",
+    "admissionCombinations": [
+      "B00",
+      "B08",
+      "D07",
+      "A02",
+      "B03",
+      "X16"
+    ],
+    "description": "Vị trí Bác sĩ đa khoa thuộc chuyên ngành đào tạo Y khoa. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kiến thức lâm sàng & dược lý",
+      "Kỹ năng chăm sóc người bệnh",
+      "Thao tác xét nghiệm chuẩn mực",
+      "Đạo đức nghề y"
+    ],
+    "suitableRoles": [
+      "Bác sĩ đa khoa",
+      "Chuyên viên cao cấp Bác sĩ đa khoa",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "14 - 28 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_is_6",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Bác sĩ định hướng chuyên khoa nhi (cần đào tạo chuyên khoa)",
+    "universityMajor": "Y khoa",
+    "majorCode": "7720101",
+    "admissionCombinations": [
+      "B00",
+      "B08",
+      "D07",
+      "A02",
+      "B03",
+      "X16"
+    ],
+    "description": "Vị trí Bác sĩ định hướng chuyên khoa nhi (cần đào tạo chuyên khoa) thuộc chuyên ngành đào tạo Y khoa. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kiến thức lâm sàng & dược lý",
+      "Kỹ năng chăm sóc người bệnh",
+      "Thao tác xét nghiệm chuẩn mực",
+      "Đạo đức nghề y"
+    ],
+    "suitableRoles": [
+      "Bác sĩ định hướng chuyên khoa nhi (cần đào tạo chuyên khoa)",
+      "Chuyên viên cao cấp Bác sĩ định hướng chuyên khoa nhi (cần đào tạo chuyên khoa)",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "14 - 28 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_ic_1",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Kiểm toán viên",
+    "universityMajor": "Kiểm toán",
+    "majorCode": "7340302",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "X26"
+    ],
+    "description": "Vị trí Kiểm toán viên thuộc chuyên ngành đào tạo Kiểm toán. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích báo cáo tài chính",
+      "Kiểm soát số liệu chi tiết",
+      "Nắm vững chuẩn mực kế toán/thuế",
+      "Sử dụng phần mềm ERP"
+    ],
+    "suitableRoles": [
+      "Kiểm toán viên",
+      "Chuyên viên cao cấp Kiểm toán viên",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 38 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ic_2",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Chuyên viên phân tích hệ thống",
+    "universityMajor": "Hệ thống thông tin",
+    "majorCode": "7480104",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "X26"
+    ],
+    "description": "Vị trí Chuyên viên phân tích hệ thống thuộc chuyên ngành đào tạo Hệ thống thông tin. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Tư duy lập trình & thuật toán",
+      "Phân tích cơ sở dữ liệu",
+      "Bảo mật hệ thống",
+      "Quản trị giải pháp công nghệ"
+    ],
+    "suitableRoles": [
+      "Chuyên viên phân tích hệ thống",
+      "Chuyên viên cao cấp Chuyên viên phân tích hệ thống",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Công nghệ - ĐHQGHN",
+      "ĐH CNTT - ĐHQG TP.HCM"
+    ],
+    "averageSalaryRange": "18 - 38 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ic_3",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Chuyên viên kiểm nghiệm thực phẩm",
+    "universityMajor": "Công nghệ thực phẩm",
+    "majorCode": "7540101",
+    "admissionCombinations": [
+      "A00",
+      "B00",
+      "D07",
+      "C02",
+      "A02",
+      "B03",
+      "C03"
+    ],
+    "description": "Vị trí Chuyên viên kiểm nghiệm thực phẩm thuộc chuyên ngành đào tạo Công nghệ thực phẩm. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên kiểm nghiệm thực phẩm",
+      "Chuyên viên cao cấp Chuyên viên kiểm nghiệm thực phẩm",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "Học viện Nông nghiệp VN",
+      "ĐH Nông Lâm TP.HCM",
+      "ĐH Cần Thơ",
+      "ĐH Lâm nghiệp"
+    ],
+    "averageSalaryRange": "18 - 38 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ic_4",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Nhà thống kê",
+    "universityMajor": "Thống kê",
+    "majorCode": "7460201",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "D03"
+    ],
+    "description": "Vị trí Nhà thống kê thuộc chuyên ngành đào tạo Thống kê. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Nhà thống kê",
+      "Chuyên viên cao cấp Nhà thống kê",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 38 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ic_5",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Bác sĩ định hướng chẩn đoán hình ảnh (cần đào tạo chuyên khoa)",
+    "universityMajor": "Y khoa",
+    "majorCode": "7720101",
+    "admissionCombinations": [
+      "B00",
+      "B08",
+      "D07",
+      "A02",
+      "B03",
+      "X16"
+    ],
+    "description": "Vị trí Bác sĩ định hướng chẩn đoán hình ảnh (cần đào tạo chuyên khoa) thuộc chuyên ngành đào tạo Y khoa. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kiến thức lâm sàng & dược lý",
+      "Kỹ năng chăm sóc người bệnh",
+      "Thao tác xét nghiệm chuẩn mực",
+      "Đạo đức nghề y"
+    ],
+    "suitableRoles": [
+      "Bác sĩ định hướng chẩn đoán hình ảnh (cần đào tạo chuyên khoa)",
+      "Chuyên viên cao cấp Bác sĩ định hướng chẩn đoán hình ảnh (cần đào tạo chuyên khoa)",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "18 - 38 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ic_6",
+    "holland": "I",
+    "hollandLabel": "I – NGHIÊN CỨU",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Bác sĩ định hướng giải phẫu bệnh (cần đào tạo chuyên khoa)",
+    "universityMajor": "Y khoa",
+    "majorCode": "7720101",
+    "admissionCombinations": [
+      "B00",
+      "B08",
+      "D07",
+      "A02",
+      "B03",
+      "X16"
+    ],
+    "description": "Vị trí Bác sĩ định hướng giải phẫu bệnh (cần đào tạo chuyên khoa) thuộc chuyên ngành đào tạo Y khoa. Định hướng phát triển tối ưu theo nhóm I – NGHIÊN CỨU kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kiến thức lâm sàng & dược lý",
+      "Kỹ năng chăm sóc người bệnh",
+      "Thao tác xét nghiệm chuẩn mực",
+      "Đạo đức nghề y"
+    ],
+    "suitableRoles": [
+      "Bác sĩ định hướng giải phẫu bệnh (cần đào tạo chuyên khoa)",
+      "Chuyên viên cao cấp Bác sĩ định hướng giải phẫu bệnh (cần đào tạo chuyên khoa)",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "18 - 38 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ad_1",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Giám đốc sáng tạo",
+    "universityMajor": "Thiết kế đồ họa",
+    "majorCode": "7210403",
+    "admissionCombinations": [
+      "H00",
+      "H01",
+      "V00"
+    ],
+    "description": "Vị trí Giám đốc sáng tạo thuộc chuyên ngành đào tạo Thiết kế đồ họa. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Sử dụng phần mềm sáng tạo chuyên dụng",
+      "Tư duy bố cục & thẩm mỹ thị giác",
+      "Phát triển ý tưởng sáng tạo",
+      "Trình bày giải pháp thị giác"
+    ],
+    "suitableRoles": [
+      "Giám đốc sáng tạo",
+      "Chuyên viên cao cấp Giám đốc sáng tạo",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Mỹ thuật Công nghiệp",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Sân khấu Điện ảnh",
+      "ĐH Mỹ thuật TP.HCM"
+    ],
+    "averageSalaryRange": "18 - 42 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ad_2",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Đạo diễn chương trình",
+    "universityMajor": "Đạo diễn sân khấu",
+    "majorCode": "7210227",
+    "admissionCombinations": [
+      "S00",
+      "S01"
+    ],
+    "description": "Vị trí Đạo diễn chương trình thuộc chuyên ngành đào tạo Đạo diễn sân khấu. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Đạo diễn chương trình",
+      "Chuyên viên cao cấp Đạo diễn chương trình",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Mỹ thuật Công nghiệp",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Sân khấu Điện ảnh",
+      "ĐH Mỹ thuật TP.HCM"
+    ],
+    "averageSalaryRange": "18 - 42 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ad_3",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Quản lý sản xuất nội dung",
+    "universityMajor": "Truyền thông đa phương tiện",
+    "majorCode": "7320104",
+    "admissionCombinations": [
+      "A01",
+      "D01",
+      "D14",
+      "D07"
+    ],
+    "description": "Vị trí Quản lý sản xuất nội dung thuộc chuyên ngành đào tạo Truyền thông đa phương tiện. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Quản lý sản xuất nội dung",
+      "Chuyên viên cao cấp Quản lý sản xuất nội dung",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 42 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ad_4",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Kiến trúc sư trưởng",
+    "universityMajor": "Kiến trúc",
+    "majorCode": "7580101",
+    "admissionCombinations": [
+      "V00",
+      "V01",
+      "V02"
+    ],
+    "description": "Vị trí Kiến trúc sư trưởng thuộc chuyên ngành đào tạo Kiến trúc. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Kiến trúc sư trưởng",
+      "Chuyên viên cao cấp Kiến trúc sư trưởng",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Mỹ thuật Công nghiệp",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Sân khấu Điện ảnh",
+      "ĐH Mỹ thuật TP.HCM"
+    ],
+    "averageSalaryRange": "18 - 42 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ad_5",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Giám đốc mỹ thuật (cần kinh nghiệm)",
+    "universityMajor": "Thiết kế đồ họa",
+    "majorCode": "7210403",
+    "admissionCombinations": [
+      "H00",
+      "H01",
+      "V00 (TÙY TRƯỜNG)"
+    ],
+    "description": "Vị trí Giám đốc mỹ thuật (cần kinh nghiệm) thuộc chuyên ngành đào tạo Thiết kế đồ họa. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Sử dụng phần mềm sáng tạo chuyên dụng",
+      "Tư duy bố cục & thẩm mỹ thị giác",
+      "Phát triển ý tưởng sáng tạo",
+      "Trình bày giải pháp thị giác"
+    ],
+    "suitableRoles": [
+      "Giám đốc mỹ thuật (cần kinh nghiệm)",
+      "Chuyên viên cao cấp Giám đốc mỹ thuật (cần kinh nghiệm)",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Mỹ thuật Công nghiệp",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Sân khấu Điện ảnh",
+      "ĐH Mỹ thuật TP.HCM"
+    ],
+    "averageSalaryRange": "18 - 42 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ad_6",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Nhà sản xuất phim",
+    "universityMajor": "Điện ảnh và truyền hình",
+    "majorCode": "7210235",
+    "admissionCombinations": [
+      "S00",
+      "S01 (TÙY TRƯỜNG)"
+    ],
+    "description": "Vị trí Nhà sản xuất phim thuộc chuyên ngành đào tạo Điện ảnh và truyền hình. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Nhà sản xuất phim",
+      "Chuyên viên cao cấp Nhà sản xuất phim",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Mỹ thuật Công nghiệp",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Sân khấu Điện ảnh",
+      "ĐH Mỹ thuật TP.HCM"
+    ],
+    "averageSalaryRange": "18 - 42 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ai_1",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Nhà sáng tạo nội dung",
+    "universityMajor": "Truyền thông đa phương tiện",
+    "majorCode": "7320104",
+    "admissionCombinations": [
+      "A01",
+      "D01",
+      "D14",
+      "D07"
+    ],
+    "description": "Vị trí Nhà sáng tạo nội dung thuộc chuyên ngành đào tạo Truyền thông đa phương tiện. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Nhà sáng tạo nội dung",
+      "Chuyên viên cao cấp Nhà sáng tạo nội dung",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 42 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ai_2",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên quảng cáo",
+    "universityMajor": "Marketing",
+    "majorCode": "7340115",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "C03",
+      "D07"
+    ],
+    "description": "Vị trí Chuyên viên quảng cáo thuộc chuyên ngành đào tạo Marketing. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Chuyên viên quảng cáo",
+      "Chuyên viên cao cấp Chuyên viên quảng cáo",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 42 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ai_3",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Diễn viên",
+    "universityMajor": "Diễn viên kịch, điện ảnh - truyền hình",
+    "majorCode": "7210234",
+    "admissionCombinations": [
+      "S00",
+      "S01"
+    ],
+    "description": "Vị trí Diễn viên thuộc chuyên ngành đào tạo Diễn viên kịch, điện ảnh - truyền hình. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Diễn viên",
+      "Chuyên viên cao cấp Diễn viên",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Mỹ thuật Công nghiệp",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Sân khấu Điện ảnh",
+      "ĐH Mỹ thuật TP.HCM"
+    ],
+    "averageSalaryRange": "18 - 42 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ai_4",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Người dẫn chương trình",
+    "universityMajor": "Báo chí",
+    "majorCode": "7320101",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "D15",
+      "C03"
+    ],
+    "description": "Vị trí Người dẫn chương trình thuộc chuyên ngành đào tạo Báo chí. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Người dẫn chương trình",
+      "Chuyên viên cao cấp Người dẫn chương trình",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "18 - 42 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ai_5",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Nhà thiết kế thời trang",
+    "universityMajor": "Thiết kế thời trang",
+    "majorCode": "7210404",
+    "admissionCombinations": [
+      "H00",
+      "H01",
+      "D01 (TÙY TRƯỜNG)"
+    ],
+    "description": "Vị trí Nhà thiết kế thời trang thuộc chuyên ngành đào tạo Thiết kế thời trang. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Sử dụng phần mềm sáng tạo chuyên dụng",
+      "Tư duy bố cục & thẩm mỹ thị giác",
+      "Phát triển ý tưởng sáng tạo",
+      "Trình bày giải pháp thị giác"
+    ],
+    "suitableRoles": [
+      "Nhà thiết kế thời trang",
+      "Chuyên viên cao cấp Nhà thiết kế thời trang",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Mỹ thuật Công nghiệp",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Sân khấu Điện ảnh",
+      "ĐH Mỹ thuật TP.HCM"
+    ],
+    "averageSalaryRange": "18 - 42 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ai_6",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên thiết kế truyền thông",
+    "universityMajor": "Thiết kế đồ họa",
+    "majorCode": "7210403",
+    "admissionCombinations": [
+      "H00",
+      "H01",
+      "V00 (TÙY TRƯỜNG)"
+    ],
+    "description": "Vị trí Chuyên viên thiết kế truyền thông thuộc chuyên ngành đào tạo Thiết kế đồ họa. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Sử dụng phần mềm sáng tạo chuyên dụng",
+      "Tư duy bố cục & thẩm mỹ thị giác",
+      "Phát triển ý tưởng sáng tạo",
+      "Trình bày giải pháp thị giác"
+    ],
+    "suitableRoles": [
+      "Chuyên viên thiết kế truyền thông",
+      "Chuyên viên cao cấp Chuyên viên thiết kế truyền thông",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Mỹ thuật Công nghiệp",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Sân khấu Điện ảnh",
+      "ĐH Mỹ thuật TP.HCM"
+    ],
+    "averageSalaryRange": "18 - 42 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_as_1",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Giáo viên mỹ thuật",
+    "universityMajor": "Sư phạm Mỹ thuật",
+    "majorCode": "7140222",
+    "admissionCombinations": [
+      "H00",
+      "H01"
+    ],
+    "description": "Vị trí Giáo viên mỹ thuật thuộc chuyên ngành đào tạo Sư phạm Mỹ thuật. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Sử dụng phần mềm sáng tạo chuyên dụng",
+      "Tư duy bố cục & thẩm mỹ thị giác",
+      "Phát triển ý tưởng sáng tạo",
+      "Trình bày giải pháp thị giác"
+    ],
+    "suitableRoles": [
+      "Giáo viên mỹ thuật",
+      "Chuyên viên cao cấp Giáo viên mỹ thuật",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Mỹ thuật Công nghiệp",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Sân khấu Điện ảnh",
+      "ĐH Mỹ thuật TP.HCM"
+    ],
+    "averageSalaryRange": "14 - 30 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_as_2",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Nhà thiết kế nội thất",
+    "universityMajor": "Thiết kế nội thất",
+    "majorCode": "7580108",
+    "admissionCombinations": [
+      "H00",
+      "H01",
+      "V00"
+    ],
+    "description": "Vị trí Nhà thiết kế nội thất thuộc chuyên ngành đào tạo Thiết kế nội thất. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Sử dụng phần mềm sáng tạo chuyên dụng",
+      "Tư duy bố cục & thẩm mỹ thị giác",
+      "Phát triển ý tưởng sáng tạo",
+      "Trình bày giải pháp thị giác"
+    ],
+    "suitableRoles": [
+      "Nhà thiết kế nội thất",
+      "Chuyên viên cao cấp Nhà thiết kế nội thất",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Mỹ thuật Công nghiệp",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Sân khấu Điện ảnh",
+      "ĐH Mỹ thuật TP.HCM"
+    ],
+    "averageSalaryRange": "14 - 30 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_as_3",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Họa sĩ minh họa",
+    "universityMajor": "Thiết kế đồ họa",
+    "majorCode": "7210403",
+    "admissionCombinations": [
+      "H00",
+      "H01"
+    ],
+    "description": "Vị trí Họa sĩ minh họa thuộc chuyên ngành đào tạo Thiết kế đồ họa. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Sử dụng phần mềm sáng tạo chuyên dụng",
+      "Tư duy bố cục & thẩm mỹ thị giác",
+      "Phát triển ý tưởng sáng tạo",
+      "Trình bày giải pháp thị giác"
+    ],
+    "suitableRoles": [
+      "Họa sĩ minh họa",
+      "Chuyên viên cao cấp Họa sĩ minh họa",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Mỹ thuật Công nghiệp",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Sân khấu Điện ảnh",
+      "ĐH Mỹ thuật TP.HCM"
+    ],
+    "averageSalaryRange": "14 - 30 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_as_4",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Biên tập viên nội dung văn hóa – nghệ thuật",
+    "universityMajor": "Ngôn ngữ học",
+    "majorCode": "7229020",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14"
+    ],
+    "description": "Vị trí Biên tập viên nội dung văn hóa – nghệ thuật thuộc chuyên ngành đào tạo Ngôn ngữ học. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Biên tập viên nội dung văn hóa – nghệ thuật",
+      "Chuyên viên cao cấp Biên tập viên nội dung văn hóa – nghệ thuật",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "14 - 30 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_as_5",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Giáo viên âm nhạc",
+    "universityMajor": "Sư phạm Âm nhạc",
+    "majorCode": "7140221",
+    "admissionCombinations": [
+      "N00",
+      "N01 (TÙY TRƯỜNG)"
+    ],
+    "description": "Vị trí Giáo viên âm nhạc thuộc chuyên ngành đào tạo Sư phạm Âm nhạc. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng sư phạm & truyền đạt",
+      "Thiết kế bài giảng tương tác",
+      "Thấu hiểu tâm lý người học",
+      "Ứng dụng công nghệ giáo dục"
+    ],
+    "suitableRoles": [
+      "Giáo viên âm nhạc",
+      "Chuyên viên cao cấp Giáo viên âm nhạc",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Mỹ thuật Công nghiệp",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Sân khấu Điện ảnh",
+      "ĐH Mỹ thuật TP.HCM"
+    ],
+    "averageSalaryRange": "14 - 30 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_as_6",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Chuyên viên hỗ trợ hoạt động nghệ thuật trị liệu (cần đào tạo chuyên biệt)",
+    "universityMajor": "Tâm lý học",
+    "majorCode": "7310401",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "B00 (TÙY TRƯỜNG)"
+    ],
+    "description": "Vị trí Chuyên viên hỗ trợ hoạt động nghệ thuật trị liệu (cần đào tạo chuyên biệt) thuộc chuyên ngành đào tạo Tâm lý học. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên hỗ trợ hoạt động nghệ thuật trị liệu (cần đào tạo chuyên biệt)",
+      "Chuyên viên cao cấp Chuyên viên hỗ trợ hoạt động nghệ thuật trị liệu (cần đào tạo chuyên biệt)",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "14 - 30 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ac_1",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Biên tập viên xuất bản",
+    "universityMajor": "Xuất bản",
+    "majorCode": "7320107",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "D15",
+      "C03"
+    ],
+    "description": "Vị trí Biên tập viên xuất bản thuộc chuyên ngành đào tạo Xuất bản. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Biên tập viên xuất bản",
+      "Chuyên viên cao cấp Biên tập viên xuất bản",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "14 - 30 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ac_2",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Thiết kế giao diện người dùng",
+    "universityMajor": "Thiết kế đồ họa",
+    "majorCode": "7210403",
+    "admissionCombinations": [
+      "H00",
+      "H01",
+      "V00"
+    ],
+    "description": "Vị trí Thiết kế giao diện người dùng thuộc chuyên ngành đào tạo Thiết kế đồ họa. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Sử dụng phần mềm sáng tạo chuyên dụng",
+      "Tư duy bố cục & thẩm mỹ thị giác",
+      "Phát triển ý tưởng sáng tạo",
+      "Trình bày giải pháp thị giác"
+    ],
+    "suitableRoles": [
+      "Thiết kế giao diện người dùng",
+      "Chuyên viên cao cấp Thiết kế giao diện người dùng",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Mỹ thuật Công nghiệp",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Sân khấu Điện ảnh",
+      "ĐH Mỹ thuật TP.HCM"
+    ],
+    "averageSalaryRange": "14 - 30 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ac_3",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Kỹ thuật viên dựng phim",
+    "universityMajor": "Công nghệ điện ảnh, truyền hình",
+    "majorCode": "7210236",
+    "admissionCombinations": [
+      "A01",
+      "D01",
+      "H00"
+    ],
+    "description": "Vị trí Kỹ thuật viên dựng phim thuộc chuyên ngành đào tạo Công nghệ điện ảnh, truyền hình. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Kỹ thuật viên dựng phim",
+      "Chuyên viên cao cấp Kỹ thuật viên dựng phim",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Mỹ thuật Công nghiệp",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Sân khấu Điện ảnh",
+      "ĐH Mỹ thuật TP.HCM"
+    ],
+    "averageSalaryRange": "14 - 30 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ac_4",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Nhà thiết kế sản phẩm",
+    "universityMajor": "Thiết kế công nghiệp",
+    "majorCode": "7210402",
+    "admissionCombinations": [
+      "H00",
+      "H01",
+      "V00"
+    ],
+    "description": "Vị trí Nhà thiết kế sản phẩm thuộc chuyên ngành đào tạo Thiết kế công nghiệp. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Sử dụng phần mềm sáng tạo chuyên dụng",
+      "Tư duy bố cục & thẩm mỹ thị giác",
+      "Phát triển ý tưởng sáng tạo",
+      "Trình bày giải pháp thị giác"
+    ],
+    "suitableRoles": [
+      "Nhà thiết kế sản phẩm",
+      "Chuyên viên cao cấp Nhà thiết kế sản phẩm",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Mỹ thuật Công nghiệp",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Sân khấu Điện ảnh",
+      "ĐH Mỹ thuật TP.HCM"
+    ],
+    "averageSalaryRange": "14 - 30 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ac_5",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Nhà thiết kế hoạt hình",
+    "universityMajor": "Thiết kế đồ họa",
+    "majorCode": "7210403",
+    "admissionCombinations": [
+      "H00",
+      "H01",
+      "V00 (TÙY TRƯỜNG)"
+    ],
+    "description": "Vị trí Nhà thiết kế hoạt hình thuộc chuyên ngành đào tạo Thiết kế đồ họa. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Sử dụng phần mềm sáng tạo chuyên dụng",
+      "Tư duy bố cục & thẩm mỹ thị giác",
+      "Phát triển ý tưởng sáng tạo",
+      "Trình bày giải pháp thị giác"
+    ],
+    "suitableRoles": [
+      "Nhà thiết kế hoạt hình",
+      "Chuyên viên cao cấp Nhà thiết kế hoạt hình",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Mỹ thuật Công nghiệp",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Sân khấu Điện ảnh",
+      "ĐH Mỹ thuật TP.HCM"
+    ],
+    "averageSalaryRange": "14 - 30 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ac_6",
+    "holland": "A",
+    "hollandLabel": "A – NGHỆ THUẬT",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Chuyên viên thiết kế kỹ thuật số",
+    "universityMajor": "Thiết kế đa phương tiện",
+    "majorCode": "7210405",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01 (TÙY TRƯỜNG)"
+    ],
+    "description": "Vị trí Chuyên viên thiết kế kỹ thuật số thuộc chuyên ngành đào tạo Thiết kế đa phương tiện. Định hướng phát triển tối ưu theo nhóm A – NGHỆ THUẬT kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Sử dụng phần mềm sáng tạo chuyên dụng",
+      "Tư duy bố cục & thẩm mỹ thị giác",
+      "Phát triển ý tưởng sáng tạo",
+      "Trình bày giải pháp thị giác"
+    ],
+    "suitableRoles": [
+      "Chuyên viên thiết kế kỹ thuật số",
+      "Chuyên viên cao cấp Chuyên viên thiết kế kỹ thuật số",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Mỹ thuật Công nghiệp",
+      "ĐH Kiến trúc Hà Nội",
+      "ĐH Sân khấu Điện ảnh",
+      "ĐH Mỹ thuật TP.HCM"
+    ],
+    "averageSalaryRange": "14 - 30 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_sd_1",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Quản lý chương trình giáo dục (cần kinh nghiệm)",
+    "universityMajor": "Quản lý giáo dục",
+    "majorCode": "7140114",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "D15",
+      "C03"
+    ],
+    "description": "Vị trí Quản lý chương trình giáo dục (cần kinh nghiệm) thuộc chuyên ngành đào tạo Quản lý giáo dục. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng sư phạm & truyền đạt",
+      "Thiết kế bài giảng tương tác",
+      "Thấu hiểu tâm lý người học",
+      "Ứng dụng công nghệ giáo dục"
+    ],
+    "suitableRoles": [
+      "Quản lý chương trình giáo dục (cần kinh nghiệm)",
+      "Chuyên viên cao cấp Quản lý chương trình giáo dục (cần kinh nghiệm)",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "18 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_sd_2",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Quản lý dự án cộng đồng",
+    "universityMajor": "Công tác xã hội",
+    "majorCode": "7760101",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "D15",
+      "C03"
+    ],
+    "description": "Vị trí Quản lý dự án cộng đồng thuộc chuyên ngành đào tạo Công tác xã hội. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Quản lý dự án cộng đồng",
+      "Chuyên viên cao cấp Quản lý dự án cộng đồng",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "18 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_sd_3",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Trưởng bộ phận nhân sự",
+    "universityMajor": "Quản trị nhân lực",
+    "majorCode": "7340404",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "D09",
+      "X25",
+      "X26",
+      "X01"
+    ],
+    "description": "Vị trí Trưởng bộ phận nhân sự thuộc chuyên ngành đào tạo Quản trị nhân lực. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Trưởng bộ phận nhân sự",
+      "Chuyên viên cao cấp Trưởng bộ phận nhân sự",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_sd_4",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Điều phối chương trình y tế",
+    "universityMajor": "Y tế công cộng",
+    "majorCode": "7720701",
+    "admissionCombinations": [
+      "B00",
+      "D07",
+      "D08",
+      "D01",
+      "A02",
+      "B08"
+    ],
+    "description": "Vị trí Điều phối chương trình y tế thuộc chuyên ngành đào tạo Y tế công cộng. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kiến thức lâm sàng & dược lý",
+      "Kỹ năng chăm sóc người bệnh",
+      "Thao tác xét nghiệm chuẩn mực",
+      "Đạo đức nghề y"
+    ],
+    "suitableRoles": [
+      "Điều phối chương trình y tế",
+      "Chuyên viên cao cấp Điều phối chương trình y tế",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "18 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_sd_5",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Quản lý dịch vụ điều dưỡng",
+    "universityMajor": "Điều dưỡng",
+    "majorCode": "7720301",
+    "admissionCombinations": [
+      "B00",
+      "D07",
+      "D08",
+      "D01",
+      "A02",
+      "B08"
+    ],
+    "description": "Vị trí Quản lý dịch vụ điều dưỡng thuộc chuyên ngành đào tạo Điều dưỡng. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kiến thức lâm sàng & dược lý",
+      "Kỹ năng chăm sóc người bệnh",
+      "Thao tác xét nghiệm chuẩn mực",
+      "Đạo đức nghề y"
+    ],
+    "suitableRoles": [
+      "Quản lý dịch vụ điều dưỡng",
+      "Chuyên viên cao cấp Quản lý dịch vụ điều dưỡng",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "18 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_sd_6",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Điều hành cơ sở giáo dục (cần kinh nghiệm)",
+    "universityMajor": "Quản lý giáo dục",
+    "majorCode": "7140114",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "C03",
+      "A00",
+      "C04",
+      "D15"
+    ],
+    "description": "Vị trí Điều hành cơ sở giáo dục (cần kinh nghiệm) thuộc chuyên ngành đào tạo Quản lý giáo dục. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng sư phạm & truyền đạt",
+      "Thiết kế bài giảng tương tác",
+      "Thấu hiểu tâm lý người học",
+      "Ứng dụng công nghệ giáo dục"
+    ],
+    "suitableRoles": [
+      "Điều hành cơ sở giáo dục (cần kinh nghiệm)",
+      "Chuyên viên cao cấp Điều hành cơ sở giáo dục (cần kinh nghiệm)",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "18 - 35 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_si_1",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên quan hệ công chúng",
+    "universityMajor": "Quan hệ công chúng",
+    "majorCode": "7320108",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "X78",
+      "X26",
+      "X01",
+      "C03"
+    ],
+    "description": "Vị trí Chuyên viên quan hệ công chúng thuộc chuyên ngành đào tạo Quan hệ công chúng. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên quan hệ công chúng",
+      "Chuyên viên cao cấp Chuyên viên quan hệ công chúng",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_si_2",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Giáo viên tiếng Anh",
+    "universityMajor": "Sư phạm Tiếng Anh",
+    "majorCode": "7140231",
+    "admissionCombinations": [
+      "D01",
+      "D14",
+      "D15"
+    ],
+    "description": "Vị trí Giáo viên tiếng Anh thuộc chuyên ngành đào tạo Sư phạm Tiếng Anh. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng sư phạm & truyền đạt",
+      "Thiết kế bài giảng tương tác",
+      "Thấu hiểu tâm lý người học",
+      "Ứng dụng công nghệ giáo dục"
+    ],
+    "suitableRoles": [
+      "Giáo viên tiếng Anh",
+      "Chuyên viên cao cấp Giáo viên tiếng Anh",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_si_3",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Tư vấn và điều phối tuyển sinh",
+    "universityMajor": "Quản lý giáo dục",
+    "majorCode": "7140114",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "C03",
+      "A00",
+      "C04",
+      "D15"
+    ],
+    "description": "Vị trí Tư vấn và điều phối tuyển sinh thuộc chuyên ngành đào tạo Quản lý giáo dục. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng sư phạm & truyền đạt",
+      "Thiết kế bài giảng tương tác",
+      "Thấu hiểu tâm lý người học",
+      "Ứng dụng công nghệ giáo dục"
+    ],
+    "suitableRoles": [
+      "Tư vấn và điều phối tuyển sinh",
+      "Chuyên viên cao cấp Tư vấn và điều phối tuyển sinh",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_si_4",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên đào tạo nhân sự",
+    "universityMajor": "Quản trị nhân lực",
+    "majorCode": "7340404",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "D09",
+      "X25",
+      "X26",
+      "X01"
+    ],
+    "description": "Vị trí Chuyên viên đào tạo nhân sự thuộc chuyên ngành đào tạo Quản trị nhân lực. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Chuyên viên đào tạo nhân sự",
+      "Chuyên viên cao cấp Chuyên viên đào tạo nhân sự",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_si_5",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên giáo dục sức khỏe",
+    "universityMajor": "Y tế công cộng",
+    "majorCode": "7720701",
+    "admissionCombinations": [
+      "B00",
+      "D07",
+      "D08",
+      "D01",
+      "A02",
+      "B08"
+    ],
+    "description": "Vị trí Chuyên viên giáo dục sức khỏe thuộc chuyên ngành đào tạo Y tế công cộng. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kiến thức lâm sàng & dược lý",
+      "Kỹ năng chăm sóc người bệnh",
+      "Thao tác xét nghiệm chuẩn mực",
+      "Đạo đức nghề y"
+    ],
+    "suitableRoles": [
+      "Chuyên viên giáo dục sức khỏe",
+      "Chuyên viên cao cấp Chuyên viên giáo dục sức khỏe",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_si_6",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Giáo viên giáo dục công dân",
+    "universityMajor": "Sư phạm Giáo dục công dân",
+    "majorCode": "7140228",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "X70",
+      "X01",
+      "X74",
+      "X78"
+    ],
+    "description": "Vị trí Giáo viên giáo dục công dân thuộc chuyên ngành đào tạo Sư phạm Giáo dục công dân. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng sư phạm & truyền đạt",
+      "Thiết kế bài giảng tương tác",
+      "Thấu hiểu tâm lý người học",
+      "Ứng dụng công nghệ giáo dục"
+    ],
+    "suitableRoles": [
+      "Giáo viên giáo dục công dân",
+      "Chuyên viên cao cấp Giáo viên giáo dục công dân",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_ss_1",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Giáo viên tiểu học",
+    "universityMajor": "Giáo dục tiểu học",
+    "majorCode": "7140202",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "A00",
+      "C03",
+      "A01"
+    ],
+    "description": "Vị trí Giáo viên tiểu học thuộc chuyên ngành đào tạo Giáo dục tiểu học. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng sư phạm & truyền đạt",
+      "Thiết kế bài giảng tương tác",
+      "Thấu hiểu tâm lý người học",
+      "Ứng dụng công nghệ giáo dục"
+    ],
+    "suitableRoles": [
+      "Giáo viên tiểu học",
+      "Chuyên viên cao cấp Giáo viên tiểu học",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_ss_2",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Nhân viên công tác xã hội",
+    "universityMajor": "Công tác xã hội",
+    "majorCode": "7760101",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "C03",
+      "X70"
+    ],
+    "description": "Vị trí Nhân viên công tác xã hội thuộc chuyên ngành đào tạo Công tác xã hội. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Nhân viên công tác xã hội",
+      "Chuyên viên cao cấp Nhân viên công tác xã hội",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_ss_3",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Điều dưỡng viên",
+    "universityMajor": "Điều dưỡng",
+    "majorCode": "7720301",
+    "admissionCombinations": [
+      "B00",
+      "D07",
+      "D08",
+      "A00",
+      "A02"
+    ],
+    "description": "Vị trí Điều dưỡng viên thuộc chuyên ngành đào tạo Điều dưỡng. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kiến thức lâm sàng & dược lý",
+      "Kỹ năng chăm sóc người bệnh",
+      "Thao tác xét nghiệm chuẩn mực",
+      "Đạo đức nghề y"
+    ],
+    "suitableRoles": [
+      "Điều dưỡng viên",
+      "Chuyên viên cao cấp Điều dưỡng viên",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_ss_4",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Chuyên viên tâm lý học đường",
+    "universityMajor": "Tâm lý học",
+    "majorCode": "7310401",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "C03",
+      "X70"
+    ],
+    "description": "Vị trí Chuyên viên tâm lý học đường thuộc chuyên ngành đào tạo Tâm lý học. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên tâm lý học đường",
+      "Chuyên viên cao cấp Chuyên viên tâm lý học đường",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_ss_5",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Hộ sinh",
+    "universityMajor": "Hộ sinh",
+    "majorCode": "7720302",
+    "admissionCombinations": [
+      "B00",
+      "B08",
+      "D07",
+      "A00",
+      "B03 (TÙY TRƯỜNG)"
+    ],
+    "description": "Vị trí Hộ sinh thuộc chuyên ngành đào tạo Hộ sinh. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Hộ sinh",
+      "Chuyên viên cao cấp Hộ sinh",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_ss_6",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Kỹ thuật viên phục hồi chức năng",
+    "universityMajor": "Kỹ thuật phục hồi chức năng",
+    "majorCode": "7720603",
+    "admissionCombinations": [
+      "B00",
+      "B08",
+      "D07",
+      "A00",
+      "B03 (TÙY TRƯỜNG)"
+    ],
+    "description": "Vị trí Kỹ thuật viên phục hồi chức năng thuộc chuyên ngành đào tạo Kỹ thuật phục hồi chức năng. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Kỹ thuật viên phục hồi chức năng",
+      "Chuyên viên cao cấp Kỹ thuật viên phục hồi chức năng",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_sc_1",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Chuyên viên tham vấn tâm lý",
+    "universityMajor": "Tâm lý học",
+    "majorCode": "7310401",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "C03",
+      "X70"
+    ],
+    "description": "Vị trí Chuyên viên tham vấn tâm lý thuộc chuyên ngành đào tạo Tâm lý học. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên tham vấn tâm lý",
+      "Chuyên viên cao cấp Chuyên viên tham vấn tâm lý",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_sc_2",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Chuyên viên chính sách xã hội",
+    "universityMajor": "Công tác xã hội",
+    "majorCode": "7760101",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "C03",
+      "X70"
+    ],
+    "description": "Vị trí Chuyên viên chính sách xã hội thuộc chuyên ngành đào tạo Công tác xã hội. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên chính sách xã hội",
+      "Chuyên viên cao cấp Chuyên viên chính sách xã hội",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_sc_3",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Giáo viên giáo dục đặc biệt",
+    "universityMajor": "Giáo dục đặc biệt",
+    "majorCode": "7140203",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "C03",
+      "X70"
+    ],
+    "description": "Vị trí Giáo viên giáo dục đặc biệt thuộc chuyên ngành đào tạo Giáo dục đặc biệt. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng sư phạm & truyền đạt",
+      "Thiết kế bài giảng tương tác",
+      "Thấu hiểu tâm lý người học",
+      "Ứng dụng công nghệ giáo dục"
+    ],
+    "suitableRoles": [
+      "Giáo viên giáo dục đặc biệt",
+      "Chuyên viên cao cấp Giáo viên giáo dục đặc biệt",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_sc_4",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Điều phối quản lý hồ sơ bệnh viện",
+    "universityMajor": "Quản lý bệnh viện",
+    "majorCode": "7720701",
+    "admissionCombinations": [
+      "B00",
+      "D01",
+      "D07",
+      "C01",
+      "C02",
+      "B08"
+    ],
+    "description": "Vị trí Điều phối quản lý hồ sơ bệnh viện thuộc chuyên ngành đào tạo Quản lý bệnh viện. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Điều phối quản lý hồ sơ bệnh viện",
+      "Chuyên viên cao cấp Điều phối quản lý hồ sơ bệnh viện",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_sc_5",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Chuyên viên quản lý thông tin y tế",
+    "universityMajor": "Y tế công cộng",
+    "majorCode": "7720701",
+    "admissionCombinations": [
+      "B00",
+      "D07",
+      "D08",
+      "D01",
+      "A02",
+      "B08"
+    ],
+    "description": "Vị trí Chuyên viên quản lý thông tin y tế thuộc chuyên ngành đào tạo Y tế công cộng. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kiến thức lâm sàng & dược lý",
+      "Kỹ năng chăm sóc người bệnh",
+      "Thao tác xét nghiệm chuẩn mực",
+      "Đạo đức nghề y"
+    ],
+    "suitableRoles": [
+      "Chuyên viên quản lý thông tin y tế",
+      "Chuyên viên cao cấp Chuyên viên quản lý thông tin y tế",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_sc_6",
+    "holland": "S",
+    "hollandLabel": "S – XÃ HỘI",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Chuyên viên công tác xã hội bệnh viện",
+    "universityMajor": "Công tác xã hội",
+    "majorCode": "7760101",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "C03",
+      "X70"
+    ],
+    "description": "Vị trí Chuyên viên công tác xã hội bệnh viện thuộc chuyên ngành đào tạo Công tác xã hội. Định hướng phát triển tối ưu theo nhóm S – XÃ HỘI kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên công tác xã hội bệnh viện",
+      "Chuyên viên cao cấp Chuyên viên công tác xã hội bệnh viện",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "12 - 25 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_ed_1",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Giám đốc kinh doanh (vị trí phát triển theo kinh nghiệm)",
+    "universityMajor": "Quản trị kinh doanh",
+    "majorCode": "7340101",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C03",
+      "C04"
+    ],
+    "description": "Vị trí Giám đốc kinh doanh (vị trí phát triển theo kinh nghiệm) thuộc chuyên ngành đào tạo Quản trị kinh doanh. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Giám đốc kinh doanh (vị trí phát triển theo kinh nghiệm)",
+      "Chuyên viên cao cấp Giám đốc kinh doanh (vị trí phát triển theo kinh nghiệm)",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "25 - 60 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ed_2",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Nhà sáng lập doanh nghiệp",
+    "universityMajor": "Quản trị kinh doanh",
+    "majorCode": "7340101",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C03",
+      "C04"
+    ],
+    "description": "Vị trí Nhà sáng lập doanh nghiệp thuộc chuyên ngành đào tạo Quản trị kinh doanh. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Nhà sáng lập doanh nghiệp",
+      "Chuyên viên cao cấp Nhà sáng lập doanh nghiệp",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "25 - 60 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ed_3",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Quản lý chuỗi cung ứng",
+    "universityMajor": "Logistics và quản lý chuỗi cung ứng",
+    "majorCode": "7510605",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "C01",
+      "X06",
+      "X07",
+      "X26",
+      "X01",
+      "C03",
+      "X25",
+      "D07"
+    ],
+    "description": "Vị trí Quản lý chuỗi cung ứng thuộc chuyên ngành đào tạo Logistics và quản lý chuỗi cung ứng. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Quản lý chuỗi cung ứng",
+      "Chuyên viên cao cấp Quản lý chuỗi cung ứng",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "25 - 60 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ed_4",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Quản lý dự án bất động sản",
+    "universityMajor": "Bất động sản",
+    "majorCode": "7340116",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "C03",
+      "C04",
+      "X01"
+    ],
+    "description": "Vị trí Quản lý dự án bất động sản thuộc chuyên ngành đào tạo Bất động sản. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Quản lý dự án bất động sản",
+      "Chuyên viên cao cấp Quản lý dự án bất động sản",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "25 - 60 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ed_5",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Điều hành cơ sở y tế (cần kinh nghiệm và điều kiện theo quy định)",
+    "universityMajor": "Quản lý bệnh viện",
+    "majorCode": "7720701",
+    "admissionCombinations": [
+      "B00",
+      "D01",
+      "D07",
+      "C01",
+      "C02",
+      "B08"
+    ],
+    "description": "Vị trí Điều hành cơ sở y tế (cần kinh nghiệm và điều kiện theo quy định) thuộc chuyên ngành đào tạo Quản lý bệnh viện. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Điều hành cơ sở y tế (cần kinh nghiệm và điều kiện theo quy định)",
+      "Chuyên viên cao cấp Điều hành cơ sở y tế (cần kinh nghiệm và điều kiện theo quy định)",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "25 - 60 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ed_6",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Quản lý dịch vụ chăm sóc sức khỏe",
+    "universityMajor": "Quản trị kinh doanh",
+    "majorCode": "7340101",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C03",
+      "C04"
+    ],
+    "description": "Vị trí Quản lý dịch vụ chăm sóc sức khỏe thuộc chuyên ngành đào tạo Quản trị kinh doanh. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Quản lý dịch vụ chăm sóc sức khỏe",
+      "Chuyên viên cao cấp Quản lý dịch vụ chăm sóc sức khỏe",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "25 - 60 triệu VNĐ/tháng",
+    "growthPotential": "Rất cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ei_1",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Quản lý phát triển thương hiệu",
+    "universityMajor": "Marketing",
+    "majorCode": "7340115",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C01",
+      "C03"
+    ],
+    "description": "Vị trí Quản lý phát triển thương hiệu thuộc chuyên ngành đào tạo Marketing. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Quản lý phát triển thương hiệu",
+      "Chuyên viên cao cấp Quản lý phát triển thương hiệu",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ei_2",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Quản lý phát triển đối tác",
+    "universityMajor": "Kinh doanh quốc tế",
+    "majorCode": "7340120",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "D09",
+      "C01",
+      "X01",
+      "C03"
+    ],
+    "description": "Vị trí Quản lý phát triển đối tác thuộc chuyên ngành đào tạo Kinh doanh quốc tế. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Quản lý phát triển đối tác",
+      "Chuyên viên cao cấp Quản lý phát triển đối tác",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ei_3",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Phụ trách kinh doanh khách hàng doanh nghiệp",
+    "universityMajor": "Quản trị kinh doanh",
+    "majorCode": "7340101",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C03",
+      "C04"
+    ],
+    "description": "Vị trí Phụ trách kinh doanh khách hàng doanh nghiệp thuộc chuyên ngành đào tạo Quản trị kinh doanh. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Phụ trách kinh doanh khách hàng doanh nghiệp",
+      "Chuyên viên cao cấp Phụ trách kinh doanh khách hàng doanh nghiệp",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ei_4",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Quản lý tổ chức sự kiện",
+    "universityMajor": "Quản trị sự kiện",
+    "majorCode": "7340125",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "C03",
+      "X01"
+    ],
+    "description": "Vị trí Quản lý tổ chức sự kiện thuộc chuyên ngành đào tạo Quản trị sự kiện. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Quản lý tổ chức sự kiện",
+      "Chuyên viên cao cấp Quản lý tổ chức sự kiện",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ei_5",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Phát triển kinh doanh sản phẩm dược",
+    "universityMajor": "Quản trị kinh doanh",
+    "majorCode": "7340101",
+    "admissionCombinations": [
+      "A00",
+      "B00",
+      "D07 (TÙY TRƯỜNG)"
+    ],
+    "description": "Vị trí Phát triển kinh doanh sản phẩm dược thuộc chuyên ngành đào tạo Quản trị kinh doanh. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Phát triển kinh doanh sản phẩm dược",
+      "Chuyên viên cao cấp Phát triển kinh doanh sản phẩm dược",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ei_6",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Phụ trách phát triển thị trường dịch vụ y tế",
+    "universityMajor": "Marketing",
+    "majorCode": "7340115",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C01",
+      "C03"
+    ],
+    "description": "Vị trí Phụ trách phát triển thị trường dịch vụ y tế thuộc chuyên ngành đào tạo Marketing. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Phụ trách phát triển thị trường dịch vụ y tế",
+      "Chuyên viên cao cấp Phụ trách phát triển thị trường dịch vụ y tế",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_es_1",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Quản lý quan hệ khách hàng",
+    "universityMajor": "Quản trị kinh doanh",
+    "majorCode": "7340101",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C03",
+      "C04"
+    ],
+    "description": "Vị trí Quản lý quan hệ khách hàng thuộc chuyên ngành đào tạo Quản trị kinh doanh. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Quản lý quan hệ khách hàng",
+      "Chuyên viên cao cấp Quản lý quan hệ khách hàng",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_es_2",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Điều phối hoạt động nhân sự",
+    "universityMajor": "Quản trị nhân lực",
+    "majorCode": "7340404",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07"
+    ],
+    "description": "Vị trí Điều phối hoạt động nhân sự thuộc chuyên ngành đào tạo Quản trị nhân lực. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Điều phối hoạt động nhân sự",
+      "Chuyên viên cao cấp Điều phối hoạt động nhân sự",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_es_3",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Điều phối kinh doanh dịch vụ du lịch",
+    "universityMajor": "Quản trị dịch vụ du lịch và lữ hành",
+    "majorCode": "7810103",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "D15",
+      "C04"
+    ],
+    "description": "Vị trí Điều phối kinh doanh dịch vụ du lịch thuộc chuyên ngành đào tạo Quản trị dịch vụ du lịch và lữ hành. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Điều phối kinh doanh dịch vụ du lịch",
+      "Chuyên viên cao cấp Điều phối kinh doanh dịch vụ du lịch",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_es_4",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Quản lý quan hệ khách hàng ngân hàng",
+    "universityMajor": "Tài chính - Ngân hàng",
+    "majorCode": "7340201",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C01"
+    ],
+    "description": "Vị trí Quản lý quan hệ khách hàng ngân hàng thuộc chuyên ngành đào tạo Tài chính - Ngân hàng. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích báo cáo tài chính",
+      "Kiểm soát số liệu chi tiết",
+      "Nắm vững chuẩn mực kế toán/thuế",
+      "Sử dụng phần mềm ERP"
+    ],
+    "suitableRoles": [
+      "Quản lý quan hệ khách hàng ngân hàng",
+      "Chuyên viên cao cấp Quản lý quan hệ khách hàng ngân hàng",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_es_5",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Quản lý trải nghiệm khách hàng khách sạn",
+    "universityMajor": "Quản trị khách sạn",
+    "majorCode": "7810101",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "C04",
+      "C00",
+      "D07",
+      "D15"
+    ],
+    "description": "Vị trí Quản lý trải nghiệm khách hàng khách sạn thuộc chuyên ngành đào tạo Quản trị khách sạn. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Quản lý trải nghiệm khách hàng khách sạn",
+      "Chuyên viên cao cấp Quản lý trải nghiệm khách hàng khách sạn",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_es_6",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Điều phối dịch vụ tư vấn bảo hiểm",
+    "universityMajor": "Bảo hiểm",
+    "majorCode": "7340203",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "X25"
+    ],
+    "description": "Vị trí Điều phối dịch vụ tư vấn bảo hiểm thuộc chuyên ngành đào tạo Bảo hiểm. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Điều phối dịch vụ tư vấn bảo hiểm",
+      "Chuyên viên cao cấp Điều phối dịch vụ tư vấn bảo hiểm",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ec_1",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Chuyên viên lập kế hoạch kinh doanh",
+    "universityMajor": "Quản trị kinh doanh",
+    "majorCode": "7340101",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C03",
+      "C04"
+    ],
+    "description": "Vị trí Chuyên viên lập kế hoạch kinh doanh thuộc chuyên ngành đào tạo Quản trị kinh doanh. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Chuyên viên lập kế hoạch kinh doanh",
+      "Chuyên viên cao cấp Chuyên viên lập kế hoạch kinh doanh",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ec_2",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Chuyên viên phân tích hiệu quả kinh doanh",
+    "universityMajor": "Quản trị kinh doanh",
+    "majorCode": "7340101",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C01",
+      "C03"
+    ],
+    "description": "Vị trí Chuyên viên phân tích hiệu quả kinh doanh thuộc chuyên ngành đào tạo Quản trị kinh doanh. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Chuyên viên phân tích hiệu quả kinh doanh",
+      "Chuyên viên cao cấp Chuyên viên phân tích hiệu quả kinh doanh",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ec_3",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Điều phối quản trị rủi ro doanh nghiệp",
+    "universityMajor": "Tài chính - Ngân hàng",
+    "majorCode": "7340201",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C01"
+    ],
+    "description": "Vị trí Điều phối quản trị rủi ro doanh nghiệp thuộc chuyên ngành đào tạo Tài chính - Ngân hàng. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích báo cáo tài chính",
+      "Kiểm soát số liệu chi tiết",
+      "Nắm vững chuẩn mực kế toán/thuế",
+      "Sử dụng phần mềm ERP"
+    ],
+    "suitableRoles": [
+      "Điều phối quản trị rủi ro doanh nghiệp",
+      "Chuyên viên cao cấp Điều phối quản trị rủi ro doanh nghiệp",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ec_4",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Điều phối vận hành xuất nhập khẩu",
+    "universityMajor": "Kinh doanh quốc tế",
+    "majorCode": "7340120",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "D09",
+      "C01",
+      "X01",
+      "C03"
+    ],
+    "description": "Vị trí Điều phối vận hành xuất nhập khẩu thuộc chuyên ngành đào tạo Kinh doanh quốc tế. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Điều phối vận hành xuất nhập khẩu",
+      "Chuyên viên cao cấp Điều phối vận hành xuất nhập khẩu",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ec_5",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Chuyên viên hoạch định đầu tư",
+    "universityMajor": "Tài chính - Ngân hàng",
+    "majorCode": "7340201",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C01"
+    ],
+    "description": "Vị trí Chuyên viên hoạch định đầu tư thuộc chuyên ngành đào tạo Tài chính - Ngân hàng. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích báo cáo tài chính",
+      "Kiểm soát số liệu chi tiết",
+      "Nắm vững chuẩn mực kế toán/thuế",
+      "Sử dụng phần mềm ERP"
+    ],
+    "suitableRoles": [
+      "Chuyên viên hoạch định đầu tư",
+      "Chuyên viên cao cấp Chuyên viên hoạch định đầu tư",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ec_6",
+    "holland": "E",
+    "hollandLabel": "E – QUẢN LÝ",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Điều phối quản trị vận hành cơ sở y tế",
+    "universityMajor": "Quản lý bệnh viện",
+    "majorCode": "7720701",
+    "admissionCombinations": [
+      "B00",
+      "D01",
+      "D07",
+      "C01",
+      "C02",
+      "B08"
+    ],
+    "description": "Vị trí Điều phối quản trị vận hành cơ sở y tế thuộc chuyên ngành đào tạo Quản lý bệnh viện. Định hướng phát triển tối ưu theo nhóm E – QUẢN LÝ kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Điều phối quản trị vận hành cơ sở y tế",
+      "Chuyên viên cao cấp Điều phối quản trị vận hành cơ sở y tế",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "18 - 40 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_cd_1",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Trưởng phòng tài chính",
+    "universityMajor": "Tài chính - Ngân hàng",
+    "majorCode": "7340201",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C01"
+    ],
+    "description": "Vị trí Trưởng phòng tài chính thuộc chuyên ngành đào tạo Tài chính - Ngân hàng. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích báo cáo tài chính",
+      "Kiểm soát số liệu chi tiết",
+      "Nắm vững chuẩn mực kế toán/thuế",
+      "Sử dụng phần mềm ERP"
+    ],
+    "suitableRoles": [
+      "Trưởng phòng tài chính",
+      "Chuyên viên cao cấp Trưởng phòng tài chính",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_cd_2",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Quản lý kiểm soát nội bộ",
+    "universityMajor": "Kiểm toán",
+    "majorCode": "7340302",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C01"
+    ],
+    "description": "Vị trí Quản lý kiểm soát nội bộ thuộc chuyên ngành đào tạo Kiểm toán. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích báo cáo tài chính",
+      "Kiểm soát số liệu chi tiết",
+      "Nắm vững chuẩn mực kế toán/thuế",
+      "Sử dụng phần mềm ERP"
+    ],
+    "suitableRoles": [
+      "Quản lý kiểm soát nội bộ",
+      "Chuyên viên cao cấp Quản lý kiểm soát nội bộ",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_cd_3",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Quản lý vận hành doanh nghiệp",
+    "universityMajor": "Quản trị kinh doanh",
+    "majorCode": "7340101",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C03",
+      "C04"
+    ],
+    "description": "Vị trí Quản lý vận hành doanh nghiệp thuộc chuyên ngành đào tạo Quản trị kinh doanh. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Quản lý vận hành doanh nghiệp",
+      "Chuyên viên cao cấp Quản lý vận hành doanh nghiệp",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_cd_4",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Trưởng bộ phận kế toán",
+    "universityMajor": "Kế toán",
+    "majorCode": "7340301",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C03",
+      "C04"
+    ],
+    "description": "Vị trí Trưởng bộ phận kế toán thuộc chuyên ngành đào tạo Kế toán. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích báo cáo tài chính",
+      "Kiểm soát số liệu chi tiết",
+      "Nắm vững chuẩn mực kế toán/thuế",
+      "Sử dụng phần mềm ERP"
+    ],
+    "suitableRoles": [
+      "Trưởng bộ phận kế toán",
+      "Chuyên viên cao cấp Trưởng bộ phận kế toán",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_cd_5",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Trưởng bộ phận quản trị rủi ro",
+    "universityMajor": "Tài chính - Ngân hàng",
+    "majorCode": "7340201",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C03",
+      "C04"
+    ],
+    "description": "Vị trí Trưởng bộ phận quản trị rủi ro thuộc chuyên ngành đào tạo Tài chính - Ngân hàng. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích báo cáo tài chính",
+      "Kiểm soát số liệu chi tiết",
+      "Nắm vững chuẩn mực kế toán/thuế",
+      "Sử dụng phần mềm ERP"
+    ],
+    "suitableRoles": [
+      "Trưởng bộ phận quản trị rủi ro",
+      "Chuyên viên cao cấp Trưởng bộ phận quản trị rủi ro",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_cd_6",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "D",
+    "discLabel": "D – Quyết đoán",
+    "jobTitle": "Quản lý hệ thống thông tin doanh nghiệp",
+    "universityMajor": "Hệ thống thông tin quản lý",
+    "majorCode": "7340405",
+    "admissionCombinations": [
+      "A01",
+      "D01",
+      "A00",
+      "D07",
+      "X26"
+    ],
+    "description": "Vị trí Quản lý hệ thống thông tin doanh nghiệp thuộc chuyên ngành đào tạo Hệ thống thông tin quản lý. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc D – Quyết đoán, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Tư duy lập trình & thuật toán",
+      "Phân tích cơ sở dữ liệu",
+      "Bảo mật hệ thống",
+      "Quản trị giải pháp công nghệ"
+    ],
+    "suitableRoles": [
+      "Quản lý hệ thống thông tin doanh nghiệp",
+      "Chuyên viên cao cấp Quản lý hệ thống thông tin doanh nghiệp",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Công nghệ - ĐHQGHN",
+      "ĐH CNTT - ĐHQG TP.HCM"
+    ],
+    "averageSalaryRange": "20 - 45 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ci_1",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên dịch vụ ngân hàng",
+    "universityMajor": "Tài chính - Ngân hàng",
+    "majorCode": "7340201",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C01"
+    ],
+    "description": "Vị trí Chuyên viên dịch vụ ngân hàng thuộc chuyên ngành đào tạo Tài chính - Ngân hàng. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích báo cáo tài chính",
+      "Kiểm soát số liệu chi tiết",
+      "Nắm vững chuẩn mực kế toán/thuế",
+      "Sử dụng phần mềm ERP"
+    ],
+    "suitableRoles": [
+      "Chuyên viên dịch vụ ngân hàng",
+      "Chuyên viên cao cấp Chuyên viên dịch vụ ngân hàng",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ci_2",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên tư vấn thuế",
+    "universityMajor": "Kế toán",
+    "majorCode": "7340301",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C03",
+      "C04"
+    ],
+    "description": "Vị trí Chuyên viên tư vấn thuế thuộc chuyên ngành đào tạo Kế toán. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích báo cáo tài chính",
+      "Kiểm soát số liệu chi tiết",
+      "Nắm vững chuẩn mực kế toán/thuế",
+      "Sử dụng phần mềm ERP"
+    ],
+    "suitableRoles": [
+      "Chuyên viên tư vấn thuế",
+      "Chuyên viên cao cấp Chuyên viên tư vấn thuế",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ci_3",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên hành chính nhân sự",
+    "universityMajor": "Quản trị nhân lực",
+    "majorCode": "7340404",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07"
+    ],
+    "description": "Vị trí Chuyên viên hành chính nhân sự thuộc chuyên ngành đào tạo Quản trị nhân lực. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Chuyên viên hành chính nhân sự",
+      "Chuyên viên cao cấp Chuyên viên hành chính nhân sự",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ci_4",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên nghiệp vụ bảo hiểm",
+    "universityMajor": "Bảo hiểm",
+    "majorCode": "7340203",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "X25"
+    ],
+    "description": "Vị trí Chuyên viên nghiệp vụ bảo hiểm thuộc chuyên ngành đào tạo Bảo hiểm. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên nghiệp vụ bảo hiểm",
+      "Chuyên viên cao cấp Chuyên viên nghiệp vụ bảo hiểm",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ci_5",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên tư vấn tài chính cá nhân",
+    "universityMajor": "Tài chính - Ngân hàng",
+    "majorCode": "7340201",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C01"
+    ],
+    "description": "Vị trí Chuyên viên tư vấn tài chính cá nhân thuộc chuyên ngành đào tạo Tài chính - Ngân hàng. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích báo cáo tài chính",
+      "Kiểm soát số liệu chi tiết",
+      "Nắm vững chuẩn mực kế toán/thuế",
+      "Sử dụng phần mềm ERP"
+    ],
+    "suitableRoles": [
+      "Chuyên viên tư vấn tài chính cá nhân",
+      "Chuyên viên cao cấp Chuyên viên tư vấn tài chính cá nhân",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_ci_6",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "I",
+    "discLabel": "I – Ảnh hưởng",
+    "jobTitle": "Chuyên viên tư vấn pháp lý doanh nghiệp",
+    "universityMajor": "Luật kinh tế",
+    "majorCode": "7380107",
+    "admissionCombinations": [
+      "A00",
+      "C00",
+      "D01",
+      "C03",
+      "A01",
+      "D07",
+      "D14",
+      "X01"
+    ],
+    "description": "Vị trí Chuyên viên tư vấn pháp lý doanh nghiệp thuộc chuyên ngành đào tạo Luật kinh tế. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc I – Ảnh hưởng, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên tư vấn pháp lý doanh nghiệp",
+      "Chuyên viên cao cấp Chuyên viên tư vấn pháp lý doanh nghiệp",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_cs_1",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Kế toán viên",
+    "universityMajor": "Kế toán",
+    "majorCode": "7340301",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C03",
+      "C04"
+    ],
+    "description": "Vị trí Kế toán viên thuộc chuyên ngành đào tạo Kế toán. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích báo cáo tài chính",
+      "Kiểm soát số liệu chi tiết",
+      "Nắm vững chuẩn mực kế toán/thuế",
+      "Sử dụng phần mềm ERP"
+    ],
+    "suitableRoles": [
+      "Kế toán viên",
+      "Chuyên viên cao cấp Kế toán viên",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_cs_2",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Chuyên viên hành chính",
+    "universityMajor": "Quản trị văn phòng",
+    "majorCode": "7340406",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "A01",
+      "C03"
+    ],
+    "description": "Vị trí Chuyên viên hành chính thuộc chuyên ngành đào tạo Quản trị văn phòng. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích thị trường & khách hàng",
+      "Lập kế hoạch kinh doanh",
+      "Kỹ năng đàm phán & thuyết phục",
+      "Quản trị đội ngũ"
+    ],
+    "suitableRoles": [
+      "Chuyên viên hành chính",
+      "Chuyên viên cao cấp Chuyên viên hành chính",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_cs_3",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Nhân viên lưu trữ hồ sơ",
+    "universityMajor": "Lưu trữ học",
+    "majorCode": "7320303",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "C03",
+      "D15"
+    ],
+    "description": "Vị trí Nhân viên lưu trữ hồ sơ thuộc chuyên ngành đào tạo Lưu trữ học. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Nhân viên lưu trữ hồ sơ",
+      "Chuyên viên cao cấp Nhân viên lưu trữ hồ sơ",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_cs_4",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Chuyên viên vận hành ngân hàng",
+    "universityMajor": "Tài chính - Ngân hàng",
+    "majorCode": "7340201",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C01"
+    ],
+    "description": "Vị trí Chuyên viên vận hành ngân hàng thuộc chuyên ngành đào tạo Tài chính - Ngân hàng. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích báo cáo tài chính",
+      "Kiểm soát số liệu chi tiết",
+      "Nắm vững chuẩn mực kế toán/thuế",
+      "Sử dụng phần mềm ERP"
+    ],
+    "suitableRoles": [
+      "Chuyên viên vận hành ngân hàng",
+      "Chuyên viên cao cấp Chuyên viên vận hành ngân hàng",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_cs_5",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Chuyên viên quản lý hồ sơ y tế",
+    "universityMajor": "Quản lý bệnh viện",
+    "majorCode": "7720701",
+    "admissionCombinations": [
+      "B00",
+      "D01",
+      "D07",
+      "C01",
+      "C02",
+      "B08"
+    ],
+    "description": "Vị trí Chuyên viên quản lý hồ sơ y tế thuộc chuyên ngành đào tạo Quản lý bệnh viện. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên quản lý hồ sơ y tế",
+      "Chuyên viên cao cấp Chuyên viên quản lý hồ sơ y tế",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Y Hà Nội",
+      "ĐH Y Dược TP.HCM",
+      "ĐH Dược Hà Nội",
+      "ĐH Y khoa Phạm Ngọc Thạch"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_cs_6",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "S",
+    "discLabel": "S – Ổn định",
+    "jobTitle": "Chuyên viên hành chính giáo dục",
+    "universityMajor": "Quản lý giáo dục",
+    "majorCode": "7140114",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "X01",
+      "C03"
+    ],
+    "description": "Vị trí Chuyên viên hành chính giáo dục thuộc chuyên ngành đào tạo Quản lý giáo dục. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc S – Ổn định, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng sư phạm & truyền đạt",
+      "Thiết kế bài giảng tương tác",
+      "Thấu hiểu tâm lý người học",
+      "Ứng dụng công nghệ giáo dục"
+    ],
+    "suitableRoles": [
+      "Chuyên viên hành chính giáo dục",
+      "Chuyên viên cao cấp Chuyên viên hành chính giáo dục",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Cao",
+    "status": "active"
+  },
+  {
+    "id": "cm_cc_1",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Kiểm toán viên (cần đáp ứng điều kiện hành nghề nếu ký báo cáo)",
+    "universityMajor": "Kiểm toán",
+    "majorCode": "7340302",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C01"
+    ],
+    "description": "Vị trí Kiểm toán viên (cần đáp ứng điều kiện hành nghề nếu ký báo cáo) thuộc chuyên ngành đào tạo Kiểm toán. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích báo cáo tài chính",
+      "Kiểm soát số liệu chi tiết",
+      "Nắm vững chuẩn mực kế toán/thuế",
+      "Sử dụng phần mềm ERP"
+    ],
+    "suitableRoles": [
+      "Kiểm toán viên (cần đáp ứng điều kiện hành nghề nếu ký báo cáo)",
+      "Chuyên viên cao cấp Kiểm toán viên (cần đáp ứng điều kiện hành nghề nếu ký báo cáo)",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_cc_2",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Chuyên viên phân tích tài chính",
+    "universityMajor": "Tài chính - Ngân hàng",
+    "majorCode": "7340201",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "C01"
+    ],
+    "description": "Vị trí Chuyên viên phân tích tài chính thuộc chuyên ngành đào tạo Tài chính - Ngân hàng. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Phân tích báo cáo tài chính",
+      "Kiểm soát số liệu chi tiết",
+      "Nắm vững chuẩn mực kế toán/thuế",
+      "Sử dụng phần mềm ERP"
+    ],
+    "suitableRoles": [
+      "Chuyên viên phân tích tài chính",
+      "Chuyên viên cao cấp Chuyên viên phân tích tài chính",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_cc_3",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Chuyên viên quản trị dữ liệu",
+    "universityMajor": "Hệ thống thông tin quản lý",
+    "majorCode": "7340405",
+    "admissionCombinations": [
+      "A01",
+      "D01",
+      "A00",
+      "D07",
+      "X26"
+    ],
+    "description": "Vị trí Chuyên viên quản trị dữ liệu thuộc chuyên ngành đào tạo Hệ thống thông tin quản lý. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Tư duy lập trình & thuật toán",
+      "Phân tích cơ sở dữ liệu",
+      "Bảo mật hệ thống",
+      "Quản trị giải pháp công nghệ"
+    ],
+    "suitableRoles": [
+      "Chuyên viên quản trị dữ liệu",
+      "Chuyên viên cao cấp Chuyên viên quản trị dữ liệu",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Công nghệ - ĐHQGHN",
+      "ĐH CNTT - ĐHQG TP.HCM"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_cc_4",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Chuyên viên tuân thủ pháp luật",
+    "universityMajor": "Luật",
+    "majorCode": "7380101",
+    "admissionCombinations": [
+      "C00",
+      "D01",
+      "D14",
+      "C03",
+      "A00",
+      "X70",
+      "X78",
+      "X01",
+      "X74"
+    ],
+    "description": "Vị trí Chuyên viên tuân thủ pháp luật thuộc chuyên ngành đào tạo Luật. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên tuân thủ pháp luật",
+      "Chuyên viên cao cấp Chuyên viên tuân thủ pháp luật",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH KHXH&NV - ĐHQGHN",
+      "ĐH KHXH&NV - ĐHQG TP.HCM",
+      "ĐH Luật Hà Nội",
+      "ĐH Sư phạm Hà Nội"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_cc_5",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Chuyên viên phân tích dữ liệu kinh doanh",
+    "universityMajor": "Hệ thống thông tin quản lý",
+    "majorCode": "7340405",
+    "admissionCombinations": [
+      "A01",
+      "D01",
+      "A00",
+      "D07",
+      "X26"
+    ],
+    "description": "Vị trí Chuyên viên phân tích dữ liệu kinh doanh thuộc chuyên ngành đào tạo Hệ thống thông tin quản lý. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Tư duy lập trình & thuật toán",
+      "Phân tích cơ sở dữ liệu",
+      "Bảo mật hệ thống",
+      "Quản trị giải pháp công nghệ"
+    ],
+    "suitableRoles": [
+      "Chuyên viên phân tích dữ liệu kinh doanh",
+      "Chuyên viên cao cấp Chuyên viên phân tích dữ liệu kinh doanh",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Bách Khoa Hà Nội",
+      "ĐH Bách Khoa TP.HCM",
+      "ĐH Công nghệ - ĐHQGHN",
+      "ĐH CNTT - ĐHQG TP.HCM"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
+  },
+  {
+    "id": "cm_cc_6",
+    "holland": "C",
+    "hollandLabel": "C – NGHIỆP VỤ",
+    "disc": "C",
+    "discLabel": "C – Tuân thủ",
+    "jobTitle": "Chuyên viên thống kê y sinh",
+    "universityMajor": "Thống kê",
+    "majorCode": "7460201",
+    "admissionCombinations": [
+      "A00",
+      "A01",
+      "D01",
+      "D07",
+      "X06",
+      "C01"
+    ],
+    "description": "Vị trí Chuyên viên thống kê y sinh thuộc chuyên ngành đào tạo Thống kê. Định hướng phát triển tối ưu theo nhóm C – NGHIỆP VỤ kết hợp phong cách làm việc C – Tuân thủ, phát huy thế mạnh tư duy chuyên môn và phẩm chất nghề nghiệp.",
+    "keySkills": [
+      "Kỹ năng chuyên môn nghiệp vụ",
+      "Tư duy logic & giải quyết vấn đề",
+      "Giao tiếp và phối hợp nhóm",
+      "Tuân thủ quy chuẩn ngành"
+    ],
+    "suitableRoles": [
+      "Chuyên viên thống kê y sinh",
+      "Chuyên viên cao cấp Chuyên viên thống kê y sinh",
+      "Quản lý / Trưởng nhóm chuyên môn"
+    ],
+    "topUniversities": [
+      "ĐH Kinh tế Quốc dân",
+      "ĐH Kinh tế TP.HCM (UEH)",
+      "ĐH Ngoại thương",
+      "Học viện Tài chính"
+    ],
+    "averageSalaryRange": "15 - 32 triệu VNĐ/tháng",
+    "growthPotential": "Ổn định",
+    "status": "active"
   }
 ];
 
-// Danh sách tất cả các ngành đại học cho sinh viên lựa chọn / tìm kiếm
 export const UNIVERSITY_MAJORS_LIST: UniversityMajor[] = [
   {
     id: 'm-ktxd',

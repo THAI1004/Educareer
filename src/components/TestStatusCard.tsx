@@ -39,6 +39,7 @@ interface TestStatusCardProps {
   isLoggedIn: boolean;
   userEmail?: string;
   onRequireLogin: () => void;
+  onOpenTierSelection?: () => void;
 }
 
 export const TestStatusCard: React.FC<TestStatusCardProps> = ({
@@ -64,7 +65,8 @@ export const TestStatusCard: React.FC<TestStatusCardProps> = ({
   statusCheckFeedback,
   isLoggedIn,
   userEmail,
-  onRequireLogin
+  onRequireLogin,
+  onOpenTierSelection
 }) => {
   const isCompleted = status === 'completed';
   const isHollandDone = hollandAnsweredCount >= hollandTotal;
@@ -74,6 +76,10 @@ export const TestStatusCard: React.FC<TestStatusCardProps> = ({
   const handleStartHolland = () => {
     if (!isLoggedIn) {
       onRequireLogin();
+      return;
+    }
+    if (answeredCount === 0 && onOpenTierSelection) {
+      onOpenTierSelection();
       return;
     }
     onOpenHollandTest();
@@ -90,6 +96,10 @@ export const TestStatusCard: React.FC<TestStatusCardProps> = ({
   const handleStartAll = () => {
     if (!isLoggedIn) {
       onRequireLogin();
+      return;
+    }
+    if (answeredCount === 0 && onOpenTierSelection) {
+      onOpenTierSelection();
       return;
     }
     onOpenAllTests();
@@ -132,6 +142,23 @@ export const TestStatusCard: React.FC<TestStatusCardProps> = ({
               </>
             )}
           </div>
+
+          <button
+            type="button"
+            onClick={() => {
+              if (!isLoggedIn) {
+                onRequireLogin();
+                return;
+              }
+              onOpenTierSelection?.();
+            }}
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 transition-all cursor-pointer shadow-2xs"
+            title="Bấm để chọn lại mốc số lượng câu hỏi (20 / 50 / 70 câu)"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+            <span>Mốc: {tier} câu</span>
+            <span className="text-[10px] text-amber-700 underline font-normal ml-0.5">(Đổi mốc)</span>
+          </button>
 
           <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#FF5722] text-white shadow-2xs flex items-center gap-1.5 shrink-0">
             <School className="w-3.5 h-3.5 text-white" />

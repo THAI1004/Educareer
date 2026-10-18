@@ -17,7 +17,8 @@ import {
   Zap,
   CheckCircle,
   Users,
-  Target
+  Target,
+  Play
 } from 'lucide-react';
 import { Header } from './components/Header.tsx';
 import { TestStatusCard } from './components/TestStatusCard.tsx';
@@ -31,6 +32,7 @@ import { PrintReportModal } from './components/PrintReportModal.tsx';
 import { DiscHollandGuide } from './components/DiscHollandGuide.tsx';
 import { AuthModal } from './components/AuthModal.tsx';
 import { TierSelector } from './components/TierSelector.tsx';
+import { TierSelectionModal } from './components/TierSelectionModal.tsx';
 import { AdminDashboard } from './components/AdminDashboard.tsx';
 import { VisualCareerShowcase } from './components/VisualCareerShowcase.tsx';
 import { Grade10SubjectCombinationCard } from './components/Grade10SubjectCombinationCard.tsx';
@@ -59,6 +61,8 @@ export default function App() {
   const [currentUser, setCurrentUser] = useState<UserProfile | null>(null);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [authRequiredForTest, setAuthRequiredForTest] = useState(false);
+  const [isTierModalOpen, setIsTierModalOpen] = useState(false);
+  const [pendingActionAfterLogin, setPendingActionAfterLogin] = useState<'open_tier_modal' | null>(null);
 
   // Question Tier: 20, 50, or 70
   const [selectedTier, setSelectedTier] = useState<QuestionTier>(20);
@@ -378,6 +382,26 @@ export default function App() {
     if (activeTab === 'admin') setActiveTab('counseling');
   };
 
+  // Request start test flow: requires login first, then opens tier selection modal
+  const handleRequestStartTest = () => {
+    if (!currentUser) {
+      setAuthRequiredForTest(true);
+      setPendingActionAfterLogin('open_tier_modal');
+      setIsAuthModalOpen(true);
+      return;
+    }
+    setIsTierModalOpen(true);
+  };
+
+  // Confirm tier from modal and launch test directly
+  const handleConfirmTierAndStart = (tier: QuestionTier) => {
+    handleSelectTier(tier);
+    const questions = QUESTIONS_BY_TIER[tier] || QUESTIONS_BY_TIER[20];
+    const firstUnanswered = questions.holland.findIndex((q) => !answers[String(q.id)]);
+    setTestModalInitialIndex(firstUnanswered >= 0 ? firstUnanswered : 0);
+    setIsTestModalOpen(true);
+  };
+
   // Handle Login Success
   const handleLoginSuccess = (user: UserProfile) => {
     setCurrentUser(user);
@@ -386,6 +410,13 @@ export default function App() {
       setStudentSchool(user.school);
     }
     localStorage.setItem(USER_SESSION_KEY, JSON.stringify(user));
+
+    if (pendingActionAfterLogin === 'open_tier_modal' || authRequiredForTest) {
+      setPendingActionAfterLogin(null);
+      setAuthRequiredForTest(false);
+      // Khi học sinh ấn làm bài thi sau khi đăng nhập rồi mới hiện bảng chọn mốc
+      setIsTierModalOpen(true);
+    }
   };
 
   return (
@@ -440,6 +471,27 @@ export default function App() {
                     <span className="text-[11px] font-bold text-slate-500">In Phiếu Đánh Giá</span>
                   </div>
                 </div>
+                {/* Primary CTA to start test */}
+                <div className="pt-2 flex items-center gap-3 flex-wrap">
+                  <button
+                    type="button"
+                    onClick={handleRequestStartTest}
+                    className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-orange-500 via-[#FF5722] to-amber-500 hover:from-orange-600 hover:to-[#F4511E] text-white font-heading font-black text-sm sm:text-base shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer flex items-center gap-2.5"
+                  >
+                    <Play className="w-5 h-5 fill-current" />
+                    <span>Làm Bài Thi Định Hướng Ngay</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const el = document.getElementById('step-1-test-section');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="px-5 py-3.5 rounded-2xl bg-white/90 hover:bg-white text-slate-700 font-bold text-xs sm:text-sm border border-amber-200/80 hover:border-amber-300 shadow-2xs transition-all cursor-pointer flex items-center gap-2"
+                  >
+                    <span>Xem Hướng Dẫn</span>
+                  </button>
+                </div>
               </div>
 
               {/* Right Side: 2 Students Image with transparent background */}
@@ -458,22 +510,6 @@ export default function App() {
               <div className="absolute top-6 right-8 w-44 h-44 rounded-full bg-amber-200/30 blur-2xl pointer-events-none" />
               <div className="absolute bottom-4 right-20 w-56 h-56 rounded-full bg-orange-300/20 blur-3xl pointer-events-none" />
             </div>
-
-            {/* VISUAL CAREER SHOWCASE: HOLLAND & DISC & MAJORS WITH PHOTOS (Tạm ẩn theo yêu cầu) */}
-            {/*
-            <VisualCareerShowcase
-              onStartTest={() => {
-                const el = document.getElementById('step-1-test-section');
-                if (el) el.scrollIntoView({ behavior: 'smooth' });
-              }}
-            />
-            */}
-
-            {/* TIER SELECTOR: 20, 50, 70 CÂU */}
-            <TierSelector
-              selectedTier={selectedTier}
-              onSelectTier={handleSelectTier}
-            />
 
             {/* BƯỚC 1: Thực hiện 2 bài test định hướng */}
             <div id="step-1-test-section" className="bg-white rounded-[32px] border border-slate-200/90 shadow-xs p-6 sm:p-8 scroll-mt-20">
@@ -518,6 +554,7 @@ export default function App() {
                   setAuthRequiredForTest(true);
                   setIsAuthModalOpen(true);
                 }}
+                onOpenTierSelection={handleRequestStartTest}
               />
             </div>
 
@@ -606,7 +643,10 @@ export default function App() {
                   Để đảm bảo tính khoa học và định hướng chính xác, bảng ma trận chi tiết chỉ mở khóa sau khi học sinh đã làm trắc nghiệm hướng nghiệp ít nhất 1 lần.
                 </p>
                 <button
-                  onClick={() => setActiveTab('counseling')}
+                  onClick={() => {
+                    setActiveTab('counseling');
+                    handleRequestStartTest();
+                  }}
                   className="px-6 py-3 rounded-2xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm shadow-md shadow-orange-500/20 transition-all cursor-pointer inline-flex items-center gap-2"
                 >
                   <Compass className="w-4 h-4" />
@@ -617,7 +657,10 @@ export default function App() {
               <CareerMatrixTableView
                 onSelectCareerDetail={(c) => setSelectedCareerDetail(c)}
                 isUnlocked={hasCompletedTestAtLeastOnce}
-                onGoToTest={() => setActiveTab('counseling')}
+                onGoToTest={() => {
+                  setActiveTab('counseling');
+                  handleRequestStartTest();
+                }}
               />
             )}
           </div>
@@ -651,6 +694,7 @@ export default function App() {
             onStartNewTest={() => {
               handleResetTest();
               setActiveTab('counseling');
+              handleRequestStartTest();
             }}
             onLoadSampleHistory={() => {}}
           />
@@ -693,6 +737,16 @@ export default function App() {
         requiredForTest={authRequiredForTest}
         initialSchool={studentSchool}
         onSchoolChange={setStudentSchool}
+      />
+
+      {/* Tier Selection Modal (Chỉ hiện khi học sinh ấn Làm bài thi sau khi đăng nhập) */}
+      <TierSelectionModal
+        isOpen={isTierModalOpen}
+        onClose={() => setIsTierModalOpen(false)}
+        selectedTier={selectedTier}
+        onSelectTier={handleSelectTier}
+        onStartTest={handleConfirmTierAndStart}
+        userName={currentUser?.name}
       />
 
       {/* Assessment Test Modal */}

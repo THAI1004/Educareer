@@ -1448,7 +1448,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
             <button
               onClick={() => {
                 setEditingHolland({
-                  code: '',
+                  code: '' as any,
                   name: '',
                   full_name: '',
                   description: '',
@@ -1559,7 +1559,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ currentUser }) =
             <button
               onClick={() => {
                 setEditingDisc({
-                  code: '',
+                  code: '' as any,
                   name: '',
                   color: '#3B82F6',
                   characteristics: '',
