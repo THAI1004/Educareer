@@ -123,22 +123,22 @@ export const TestStatusCard: React.FC<TestStatusCardProps> = ({
             {isCompleted ? (
               <>
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                <span>ĐÃ HOÀN THÀNH BÀI TEST ({totalQuestions}/{totalQuestions} CÂU)</span>
+                <span>ĐÃ HOÀN THÀNH BÀI TEST </span>
               </>
             ) : isHollandDone ? (
               <>
                 <AlertCircle className="w-3.5 h-3.5 text-orange-600" />
-                <span>XONG BÀI 1 • ĐANG LÀM BÀI 2 ({discAnsweredCount}/{discTotal} CÂU)</span>
+                <span>XONG BÀI 1 • ĐANG LÀM BÀI 2 </span>
               </>
             ) : hollandAnsweredCount > 0 ? (
               <>
                 <AlertCircle className="w-3.5 h-3.5 text-orange-600" />
-                <span>ĐANG LÀM BÀI 1 ({hollandAnsweredCount}/{hollandTotal} CÂU)</span>
+                <span>ĐANG LÀM BÀI 1 </span>
               </>
             ) : (
               <>
                 <AlertCircle className="w-3.5 h-3.5 text-slate-400" />
-                <span>CHƯA LÀM BÀI TEST (BẮT BUỘC 2 BÀI • MỐC {tier} CÂU)</span>
+                <span>CHƯA LÀM BÀI</span>
               </>
             )}
           </div>

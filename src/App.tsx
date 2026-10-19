@@ -519,7 +519,7 @@ export default function App() {
                 </div>
                 <div>
                   <h3 className="text-lg sm:text-xl font-heading font-black text-slate-900">
-                    Bước 1: Thực Hiện 2 Bài Test Định Hướng THPT (Mốc {selectedTier} Câu)
+                    Bước 1: Thực Hiện 2 Bài Test Định Hướng THPT 
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-500">
                     Bắt buộc đăng nhập tài khoản email để lưu kết quả và tải phiếu chứng nhận
@@ -713,20 +713,10 @@ export default function App() {
         )}
       </main>
 
-      {/* Footer matching exact project specifications */}
-      <footer className="mt-12 bg-white border-t border-slate-200/80 pt-6 pb-20 md:pb-6 text-xs text-slate-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
-          <p className="font-semibold text-slate-600 text-xs sm:text-sm">
-            © 2026–2027 Đề Tài NCKH KHKT • Trường THPT Thành Sen, Tỉnh Hà Tĩnh
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] text-slate-400">
-            <span>Chuẩn dữ liệu mã ngành Bộ GD&ĐT</span>
-            <span className="hidden sm:inline">•</span>
-            <span>Định hướng tuyển sinh 2026</span>
-            <span className="hidden sm:inline">•</span>
-            <span>Mô hình tích hợp DISC & Holland RIASEC</span>
-          </div>
-        </div>
+      <footer className="mt-12 bg-white border-t border-slate-200/80 px-4 py-6 pb-20 text-center text-xs text-slate-500 md:pb-6">
+        <p className="font-semibold text-slate-600 text-xs sm:text-sm">
+          © 2026 -Trường THPT Thành Sen, Tỉnh Hà Tĩnh
+        </p>
       </footer>
 
       {/* Auth Modal */}
