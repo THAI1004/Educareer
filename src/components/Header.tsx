@@ -72,17 +72,19 @@ export const Header: React.FC<HeaderProps> = ({
                 <span>Tư Vấn THPT</span>
               </button>
 
-              <button
-                onClick={() => setActiveTab('matrix')}
-                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-2xl text-xs sm:text-sm font-bold transition-all cursor-pointer shrink-0 ${
-                  activeTab === 'matrix'
-                    ? 'bg-orange-500 text-white shadow-sm shadow-orange-500/30'
-                    : 'text-slate-600 hover:text-orange-600 hover:bg-orange-50/70'
-                }`}
-              >
-                <Table className="w-4 h-4" />
-                <span>Ma Trận Ngành</span>
-              </button>
+              {currentUser?.role === 'admin' && (
+                <button
+                  onClick={() => setActiveTab('matrix')}
+                  className={`flex items-center gap-1.5 px-3.5 py-2 rounded-2xl text-xs sm:text-sm font-bold transition-all cursor-pointer shrink-0 ${
+                    activeTab === 'matrix'
+                      ? 'bg-orange-500 text-white shadow-sm shadow-orange-500/30'
+                      : 'text-slate-600 hover:text-orange-600 hover:bg-orange-50/70'
+                  }`}
+                >
+                  <Table className="w-4 h-4" />
+                  <span>Ma Trận Ngành</span>
+                </button>
+              )}
 
               <button
                 onClick={() => setActiveTab('history')}
@@ -267,15 +269,17 @@ export const Header: React.FC<HeaderProps> = ({
           <span>Tư Vấn</span>
         </button>
 
-        <button
-          onClick={() => setActiveTab('matrix')}
-          className={`flex flex-col items-center gap-0.5 py-1 px-2.5 rounded-xl text-[10px] font-bold transition-all cursor-pointer ${
-            activeTab === 'matrix' ? 'text-orange-600' : 'text-slate-500'
-          }`}
-        >
-          <Table className="w-4 h-4" />
-          <span>Ma Trận</span>
-        </button>
+        {currentUser?.role === 'admin' && (
+          <button
+            onClick={() => setActiveTab('matrix')}
+            className={`flex flex-col items-center gap-0.5 py-1 px-2.5 rounded-xl text-[10px] font-bold transition-all cursor-pointer ${
+              activeTab === 'matrix' ? 'text-orange-600' : 'text-slate-500'
+            }`}
+          >
+            <Table className="w-4 h-4" />
+            <span>Ma Trận</span>
+          </button>
+        )}
 
         <button
           onClick={() => setActiveTab('history')}

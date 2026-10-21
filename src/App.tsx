@@ -6,12 +6,9 @@
 import React, { useState, useEffect } from 'react';
 import {
   Sparkles,
-  Compass,
   ClipboardList,
   Briefcase,
   Info,
-  Lock,
-  ArrowRight,
   School,
   Award,
   Zap,
@@ -86,9 +83,6 @@ export default function App() {
   // Chức năng 2 State: History from PostgreSQL
   const [history, setHistory] = useState<EvaluationResult[]>([]);
 
-  // Condition: Bảng ma trận chỉ hiển thị sau nếu người đó đã làm bài test 1 lần trở lên
-  const hasCompletedTestAtLeastOnce = evaluationResult !== null || history.length > 0;
-
   // Current questions according to selected tier (20, 50, 70)
   const activeQuestions = QUESTIONS_BY_TIER[selectedTier]?.all || QUESTIONS_BY_TIER[20].all;
   const activeHollandQuestions = QUESTIONS_BY_TIER[selectedTier]?.holland || QUESTIONS_BY_TIER[20].holland;
@@ -150,6 +144,23 @@ export default function App() {
       .then((data) => {
         if (data.items) {
           setHistory(data.items);
+          const latestResult = data.items[0] as EvaluationResult | undefined;
+          if (latestResult) {
+            setEvaluationResult(latestResult);
+            setAssessmentStatus('completed');
+            if (latestResult.tier) setSelectedTier(latestResult.tier);
+            if (latestResult.studentName) setStudentName(latestResult.studentName);
+            if (latestResult.answers) setAnswers(latestResult.answers);
+
+            const initialMajor = UNIVERSITY_MAJORS_LIST.find(
+              (major) => major.id === latestResult.initialMajorId || major.name === latestResult.initialMajorName
+            );
+            const revisedMajor = UNIVERSITY_MAJORS_LIST.find(
+              (major) => major.id === latestResult.finalMajorId || major.name === latestResult.finalMajorName
+            );
+            if (initialMajor) setSelectedInitialMajor(initialMajor);
+            if (revisedMajor) setSelectedRevisedMajor(revisedMajor);
+          }
         } else {
           setHistory([]);
         }
@@ -160,6 +171,12 @@ export default function App() {
   useEffect(() => {
     loadHistoryFromDB();
   }, [currentUser?.email]);
+
+  useEffect(() => {
+    if (activeTab === 'matrix' && currentUser?.role !== 'admin') {
+      setActiveTab('counseling');
+    }
+  }, [activeTab, currentUser?.role]);
 
   // Synchronize Real-time Session with Backend
   useEffect(() => {
@@ -447,7 +464,7 @@ export default function App() {
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-orange-800 border border-orange-200 shadow-2xs">
                   <School className="w-4 h-4 text-orange-500" />
                   <span className="text-xs font-bold uppercase tracking-wider">
-                    Định Hướng Ngành Học & Hướng Nghiệp THPT
+                    Kết nối bản thân - Nghề nghiệp - Ngành học
                   </span>
                 </div>
 
@@ -479,7 +496,7 @@ export default function App() {
                     className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-orange-500 via-[#FF5722] to-amber-500 hover:from-orange-600 hover:to-[#F4511E] text-white font-heading font-black text-sm sm:text-base shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer flex items-center gap-2.5"
                   >
                     <Play className="w-5 h-5 fill-current" />
-                    <span>Làm Bài Thi Định Hướng Ngay</span>
+                    <span>Làm Bài Test Ngay</span>
                   </button>
                   <button
                     type="button"
@@ -519,7 +536,7 @@ export default function App() {
                 </div>
                 <div>
                   <h3 className="text-lg sm:text-xl font-heading font-black text-slate-900">
-                    Bước 1: Thực Hiện 2 Bài Test Định Hướng THPT 
+                    Bước 1: Thực Hiện 2 Bài Test Định Hướng 
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-500">
                     Bắt buộc đăng nhập tài khoản email để lưu kết quả và tải phiếu chứng nhận
@@ -630,40 +647,12 @@ export default function App() {
         {/* ========================================================================= */}
         {/* TAB 2: CAREER MATRIX TABLE */}
         {/* ========================================================================= */}
-        {activeTab === 'matrix' && (
+        {activeTab === 'matrix' && currentUser?.role === 'admin' && (
           <div className="space-y-6">
-            {!hasCompletedTestAtLeastOnce ? (
-              <div className="bg-white rounded-[32px] p-8 sm:p-12 border border-slate-200 text-center max-w-2xl mx-auto shadow-xs space-y-4">
-                <div className="w-16 h-16 rounded-3xl bg-amber-100 text-orange-600 flex items-center justify-center mx-auto shadow-sm">
-                  <Lock className="w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-heading font-black text-slate-900">
-                  Ma Trận Nghề Nghiệp Đang Bị Khóa
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Để đảm bảo tính khoa học và định hướng chính xác, bảng ma trận chi tiết chỉ mở khóa sau khi học sinh đã làm trắc nghiệm hướng nghiệp ít nhất 1 lần.
-                </p>
-                <button
-                  onClick={() => {
-                    setActiveTab('counseling');
-                    handleRequestStartTest();
-                  }}
-                  className="px-6 py-3 rounded-2xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm shadow-md shadow-orange-500/20 transition-all cursor-pointer inline-flex items-center gap-2"
-                >
-                  <Compass className="w-4 h-4" />
-                  <span>Làm Bài Test Để Mở Khóa Ngay</span>
-                </button>
-              </div>
-            ) : (
-              <CareerMatrixTableView
-                onSelectCareerDetail={(c) => setSelectedCareerDetail(c)}
-                isUnlocked={hasCompletedTestAtLeastOnce}
-                onGoToTest={() => {
-                  setActiveTab('counseling');
-                  handleRequestStartTest();
-                }}
-              />
-            )}
+            <CareerMatrixTableView
+              onSelectCareerDetail={(c) => setSelectedCareerDetail(c)}
+              isUnlocked
+            />
           </div>
         )}
 
@@ -716,7 +705,7 @@ export default function App() {
 
       <footer className="mt-12 bg-white border-t border-slate-200/80 px-4 py-6 pb-20 text-center text-xs text-slate-500 md:pb-6">
         <p className="font-semibold text-slate-600 text-xs sm:text-sm">
-          © 2026 -Trường THPT Thành Sen, Tỉnh Hà Tĩnh
+          © NCKHKT 2026 - Albert Einstein Hà Tĩnh
         </p>
       </footer>
 
