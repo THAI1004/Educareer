@@ -97,28 +97,28 @@ export function generateEvaluationAnalysis(
     D: {
       title: 'Người Tiên Phong Quyết Đoán (Dominance)',
       tagline: 'Mục tiêu rõ ràng, hành động dứt khoát và thích nắm thế chủ động',
-      summary: 'Bạn mang phong cách hành vi tự tin, tập trung cao độ vào kết quả và giải quyết sự cố thực tế. Trong môi trường kỹ thuật, bạn luôn là người dẫn đầu, dám nhận trách nhiệm điều phối công trình và vận hành dây chuyền sản xuất phức tạp.',
+      summary: 'Bạn tự tin, tập trung vào kết quả và chủ động giải quyết vấn đề. Bạn thường sẵn sàng nhận trách nhiệm, dẫn dắt tập thể và đưa ra quyết định khi cần.',
       strengths: [
-        'Khả năng ra quyết định nhanh chóng dưới áp lực công việc cao',
-        'Tư duy giải quyết vấn đề thực tế, không ngại đối mặt sự cố phát sinh',
-        'Khả năng quản lý tiến độ và đốc thúc công việc đạt mục tiêu',
-        'Ý chí tự chủ cao và bản lĩnh chỉ huy hiện trường'
+        'Khả năng ra quyết định nhanh khi đối mặt với thử thách',
+        'Chủ động phân tích và tìm hướng giải quyết vấn đề',
+        'Khả năng xác định mục tiêu và thúc đẩy công việc tiến lên',
+        'Tinh thần tự chủ và bản lĩnh dẫn dắt tập thể'
       ],
       workStyle: 'Trực diện, thẳng thắn, hướng tới hiệu suất và tối ưu hóa thời gian.',
       idealEnv: 'Môi trường làm việc năng động, trao quyền quyết định, có mục tiêu rõ ràng và cơ hội thăng tiến lãnh đạo.',
       growth: [
-        'Rèn luyện sự kiên nhẫn khi lắng nghe đồng nghiệp và giải thích quy trình kỹ thuật tỉ mỉ hơn',
-        'Chú ý cảm xúc và áp lực của các thành viên trong đội thi công'
+        'Rèn luyện sự kiên nhẫn khi lắng nghe và trao đổi với người khác',
+        'Quan tâm đến cảm xúc, góc nhìn và áp lực của các thành viên trong nhóm'
       ],
       tips: [
-        'Chọn các ngành có yếu tố chỉ huy, điều phối dự án (Kỹ thuật xây dựng, Tự động hóa, Quản lý chuỗi cung ứng).',
-        'Tham gia các câu lạc bộ lãnh đạo kỹ thuật hoặc ban quản lý sinh viên tại trường đại học.'
+        'Chia mục tiêu lớn thành các bước cụ thể và theo dõi tiến độ thực hiện.',
+        'Luyện cách trao quyền, tiếp nhận phản hồi và phối hợp với những người có phong cách khác mình.'
       ]
     },
     I: {
       title: 'Người Truyền Cảm Hứng & Thuyết Phục (Influence)',
       tagline: 'Nhiệt tình, hoạt ngôn, giàu năng lượng và kết nối tuyệt vời',
-      summary: 'Bạn sở hữu sự hòa đồng, tài giao tiếp và khả năng truyền tải ý tưởng kỹ thuật một cách dễ hiểu, cuốn hút. Bạn rất giỏi biến các thông số kỹ thuật khô khan thành giá trị thực tế cho khách hàng và đối tác.',
+      summary: 'Bạn hòa đồng, giao tiếp tốt và có khả năng truyền tải ý tưởng một cách dễ hiểu, cuốn hút. Bạn thường tạo được kết nối tích cực với những người xung quanh.',
       strengths: [
         'Kỹ năng thuyết trình giải pháp công nghệ ấn tượng và cuốn hút',
         'Khả năng xây dựng mối quan hệ đối tác bền vững và tin cậy',
@@ -126,73 +126,89 @@ export function generateEvaluationAnalysis(
         'Khả năng nắm bắt tâm lý khách hàng và người nghe xuất sắc'
       ],
       workStyle: 'Sôi nổi, linh hoạt, đề cao sự tương tác xã hội và tính sáng tạo.',
-      idealEnv: 'Môi trường cởi mở, thường xuyên tiếp xúc khách hàng, đối tác công nghệ và tổ chức sự kiện chuyên môn.',
+      idealEnv: 'Môi trường cởi mở, thường xuyên trao đổi, kết nối với mọi người và có cơ hội chia sẻ ý tưởng.',
       growth: [
-        'Tăng cường sự tập trung vào các số liệu chi tiết và ghi chép nhật ký công việc bài bản',
-        'Tránh cam kết quá nhiều việc cùng lúc khi chưa rà soát khối lượng kỹ thuật'
+        'Tăng cường tập trung vào chi tiết và ghi chép công việc có hệ thống',
+        'Cân nhắc khối lượng công việc trước khi nhận thêm cam kết mới'
       ],
       tips: [
-        'Chọn các ngành giao thoa giữa kỹ thuật và kinh doanh/tư vấn (Kỹ thuật cơ khí Pre-sales, Ô tô cao cấp, Nông nghiệp công nghệ cao, Năng lượng sạch).',
-        'Phát triển khả năng ngoại ngữ tiếng Anh chuyên ngành kỹ thuật để làm việc với đối tác quốc tế.'
+        'Luyện trình bày ý tưởng ngắn gọn, rõ ràng và có dẫn chứng phù hợp.',
+        'Chủ động tìm cơ hội làm việc nhóm, thuyết trình và kết nối cộng đồng.'
       ]
     },
     S: {
       title: 'Người Kiên Định & Tận Tâm (Steadiness)',
       tagline: 'Điềm tĩnh, chu đáo, đáng tin cậy và gắn bó lâu dài',
-      summary: 'Bạn là điểm tựa vững chắc của mọi tập thể kỹ thuật. Bạn làm việc cẩn trọng, kiên nhẫn kiểm tra từng thông số và giữ cho hệ thống máy móc vận hành liên tục không gián đoạn.',
+      summary: 'Bạn điềm tĩnh, kiên nhẫn và đáng tin cậy. Bạn góp phần duy trì sự ổn định, hỗ trợ người khác và hoàn thành công việc một cách bền bỉ.',
       strengths: [
-        'Tính kiên nhẫn cao, thích ứng tốt với các quy trình bảo trì dài hạn',
+        'Tính kiên nhẫn cao và khả năng theo đuổi công việc dài hạn',
         'Độ tin cậy và tinh thần trách nhiệm tuyệt đối trong công việc',
         'Khả năng phối hợp đồng đội hòa nhã, giảm thiểu xung đột nội bộ',
-        'Sự chu đáo trong việc chăm sóc bảo dưỡng thiết bị và môi trường'
+        'Sự chu đáo và khả năng quan tâm đến nhu cầu của mọi người'
       ],
       workStyle: 'Từ tốn, chắc chắn, tuân thủ chu kỳ kiểm tra và tôn trọng tính bền vững.',
-      idealEnv: 'Môi trường ổn định, văn hóa tôn trọng, quy trình chuẩn mực và có sự hỗ trợ lẫn nhau.',
+      idealEnv: 'Môi trường ổn định, tôn trọng, có sự hỗ trợ lẫn nhau và nhịp độ làm việc hợp lý.',
       growth: [
-        'Mạnh dạn bày tỏ quan điểm và đề xuất cải tiến khi thấy quy trình chưa tối ưu',
-        'Tập làm quen với sự thay đổi đột ngột và rèn luyện phản xạ ra quyết định nhanh'
+        'Mạnh dạn bày tỏ quan điểm và đề xuất cải tiến khi cần thiết',
+        'Tập làm quen với thay đổi và rèn luyện sự tự tin khi ra quyết định'
       ],
       tips: [
-        'Chọn các ngành vận hành ổn định, bảo dưỡng hệ thống kỹ thuật (Bảo trì cơ khí, Hệ thống điện, Kỹ thuật y sinh, Quản lý trang trại & thủy sản).',
-        'Tích lũy các chứng chỉ vận hành chuyên môn và an toàn lao động quốc gia.'
+        'Đặt các mốc tiến độ nhỏ để duy trì động lực cho mục tiêu dài hạn.',
+        'Tìm cơ hội phối hợp nhóm và phát huy thế mạnh hỗ trợ, lắng nghe.'
       ]
     },
     C: {
       title: 'Chuyên Gia Chuẩn Xác & Kỷ Luật (Conscientiousness)',
       tagline: 'Tư duy logic, chặt chẽ, coi trọng tiêu chuẩn và độ chính xác tuyệt đối',
-      summary: 'Bạn là người bảo vệ chất lượng và sự an toàn. Với tư duy logic sắc sảo, bạn phân tích từng sai số kỹ thuật, bản vẽ thiết kế 3D và không bao giờ thỏa hiệp với những khiếm khuyết sản phẩm.',
+      summary: 'Bạn coi trọng chất lượng, tính chính xác và sự nhất quán. Với tư duy logic, bạn thường xem xét kỹ dữ liệu và nhận ra những điểm cần được kiểm tra thêm.',
       strengths: [
-        'Độ chính xác cao, khả năng phát hiện lỗi kỹ thuật mà người khác bỏ sót',
-        'Tư duy phân tích số liệu, bản vẽ và tiêu chuẩn kỹ thuật quốc tế (ISO/IEC/DIN)',
-        'Ý thức kỷ luật nghiêm ngặt và tinh thần thượng tôn quy chuẩn an toàn',
-        'Khả năng thiết kế mô hình hóa và lập trình chi tiết hoàn hảo'
+        'Độ chính xác cao và khả năng phát hiện điểm chưa hợp lý',
+        'Tư duy phân tích dữ liệu và thông tin có hệ thống',
+        'Ý thức kỷ luật và sự tôn trọng các nguyên tắc chung',
+        'Khả năng sắp xếp, kiểm tra và hoàn thiện công việc'
       ],
-      workStyle: 'Phương pháp khoa học, kiểm chứng số liệu thực nghiệm và tài liệu hóa rõ ràng.',
-      idealEnv: 'Môi trường chuyên nghiệp, đánh giá dựa trên tiêu chuẩn năng lực, có trang thiết bị đo lường kiểm định tiên tiến.',
+      workStyle: 'Có phương pháp, kiểm chứng thông tin và ghi chép rõ ràng.',
+      idealEnv: 'Môi trường chuyên nghiệp, có mục tiêu và tiêu chí rõ ràng, coi trọng chất lượng.',
       growth: [
-        'Tránh quá cầu toàn dẫn đến kéo dài thời gian hoàn thành dự án',
-        'Học cách chia sẻ công việc và linh hoạt trước các tình huống thực tế tại hiện trường'
+        'Tránh quá cầu toàn làm chậm tiến độ hoàn thành công việc',
+        'Luyện sự linh hoạt và chia sẻ công việc với người khác'
       ],
       tips: [
-        'Chọn các ngành đòi hỏi sự chính xác cao (Kiểm định chất lượng cơ khí QA/QC, Thiết kế cơ điện tử, An toàn lao động, Trắc địa bản đồ).',
-        'Rèn luyện thành thạo các phần mềm thiết kế và kiểm thử chuyên dụng (AutoCAD, SolidWorks, Matlab, GIS).'
+        'Xác định mức độ hoàn thiện cần thiết trước khi bắt đầu để quản lý thời gian tốt hơn.',
+        'Luyện giải thích kết quả phân tích theo cách rõ ràng, dễ hiểu.'
       ]
     }
   };
 
   const profile = discProfiles[primaryDisc];
-  const hollandName = primaryHolland === 'R' ? 'Kỹ thuật - Thực tế' : primaryHolland;
+  const hollandNames: Record<HollandCode, string> = {
+    R: 'Kỹ thuật – Thực tế',
+    I: 'Nghiên cứu – Khám phá',
+    A: 'Nghệ thuật – Sáng tạo',
+    S: 'Xã hội – Tương tác',
+    E: 'Quản lý – Kinh doanh',
+    C: 'Nghiệp vụ – Quy chuẩn'
+  };
+  const hollandName = hollandNames[primaryHolland];
+  const hollandAdvice: Record<HollandCode, string> = {
+    R: 'Ưu tiên trải nghiệm thực hành và các hoạt động làm việc với công cụ, thiết bị hoặc môi trường thực tế.',
+    I: 'Tìm cơ hội nghiên cứu, phân tích thông tin và giải quyết câu hỏi bằng tư duy logic.',
+    A: 'Thử sức với dự án sáng tạo, thiết kế và những cách thể hiện ý tưởng riêng.',
+    S: 'Tham gia hoạt động hỗ trợ, giảng dạy, chăm sóc hoặc đồng hành cùng cộng đồng.',
+    E: 'Thử sức với hoạt động tổ chức, thuyết phục, điều phối và phát triển ý tưởng kinh doanh.',
+    C: 'Rèn kỹ năng sắp xếp thông tin, quản lý dữ liệu và làm việc theo quy trình rõ ràng.'
+  };
 
   return {
     title: profile.title,
     codeName: `${primaryDisc}${secondaryDisc}`,
     tagline: profile.tagline,
-    summary: profile.summary,
+    summary: `${profile.summary} Xu hướng Holland ${hollandName} cho thấy bạn hứng thú với các hoạt động thuộc nhóm này.`,
     coreBehavior: `Nhóm hành vi chính: ${primaryDisc} (${profile.title}) phối hợp xu hướng phụ ${secondaryDisc}, kết hợp định hướng nghề nghiệp Holland nhóm ${hollandName}.`,
     strengths: profile.strengths,
-    idealWorkEnvironment: profile.idealEnv,
+    idealWorkEnvironment: `${profile.idealEnv} ${hollandAdvice[primaryHolland]}`,
     growthAdvice: profile.growth,
-    studyTips: profile.tips
+    studyTips: [...profile.tips, hollandAdvice[primaryHolland]]
   };
 }
 

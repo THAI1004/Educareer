@@ -464,13 +464,14 @@ export default function App() {
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-orange-800 border border-orange-200 shadow-2xs">
                   <School className="w-4 h-4 text-orange-500" />
                   <span className="text-xs font-bold uppercase tracking-wider">
-                    Kết nối bản thân - Nghề nghiệp - Ngành học
+                    Khám phá và tra cứu
+Hướng Nghiệp
                   </span>
                 </div>
 
                 <h1 className="text-2xl sm:text-4xl lg:text-5xl font-heading font-black text-slate-900 tracking-tight leading-tight">
-                  Khám Phá Bản Thân, <br className="hidden sm:inline" />
-                  Chắp Cánh <span className="text-orange-500">Tương Lai</span> Đại Học
+                  Hiểu mình hôm nay <br className="hidden sm:inline" /> Vững bước ngày mai
+
                 </h1>
 
                 {/* 3 Stat Badges matching Edukids Style */}

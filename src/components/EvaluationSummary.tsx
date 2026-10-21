@@ -11,10 +11,12 @@ import {
   BookOpen,
   Layers,
   ChevronRight,
-  Target
+  Target,
+  X
 } from 'lucide-react';
 import type { EvaluationResult, UniversityMajor, DISCCode, HollandCode, DISCGroup, HollandGroup } from '../types/career.ts';
 import { DISC_TRAITS_INFO, HOLLAND_TRAITS_INFO } from '../data/careerMatrix.ts';
+import { generateEvaluationAnalysis } from '../utils/scoring.ts';
 import { MajorSelector } from './MajorSelector.tsx';
 import { formatImageUrl } from '../utils/imageHelper.ts';
 
@@ -48,10 +50,14 @@ export const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
   onSelectRevisedMajor,
   onViewRecommendations
 }) => {
-  const { analysis, discPercentages, primaryDisc, primaryHolland, hollandScores } = evaluation;
+  const { discPercentages, primaryDisc, primaryHolland, hollandScores } = evaluation;
+  const analysis = generateEvaluationAnalysis(primaryDisc, evaluation.secondaryDisc, primaryHolland);
 
   const [discImageMap, setDiscImageMap] = useState<Record<string, string>>(DEFAULT_DISC_IMAGES);
   const [hollandImageMap, setHollandImageMap] = useState<Record<string, string>>(DEFAULT_HOLLAND_IMAGES);
+  const [selectedTrait, setSelectedTrait] = useState<
+    { kind: 'disc'; code: DISCCode } | { kind: 'holland'; code: HollandCode } | null
+  >(null);
 
   useEffect(() => {
     // Fetch live images from DB master
@@ -85,6 +91,11 @@ export const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
   const discKeys: DISCCode[] = ['D', 'I', 'S', 'C'];
   const hollandKeys: HollandCode[] = ['R', 'I', 'A', 'S', 'E', 'C'];
   const hollandInfo = HOLLAND_TRAITS_INFO[primaryHolland];
+  const hollandName = hollandInfo?.name.split('–')[1]?.trim() || hollandInfo?.name || primaryHolland;
+  const discName = DISC_TRAITS_INFO[primaryDisc]?.name.split('–')[1]?.trim() || primaryDisc;
+  const hasPrimaryPairRecommendations = evaluation.recommendedCareers?.some(
+    (career) => career.holland === primaryHolland && career.disc === primaryDisc
+  ) ?? false;
   const primaryDiscImage = discImageMap[primaryDisc] || DEFAULT_DISC_IMAGES[primaryDisc];
   const primaryHollandImage = hollandImageMap[primaryHolland] || DEFAULT_HOLLAND_IMAGES[primaryHolland];
 
@@ -237,7 +248,17 @@ export const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
                 return (
                   <div
                     key={key}
-                    className={`rounded-2xl border overflow-hidden transition-all flex flex-col group ${
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => setSelectedTrait({ kind: 'disc', code: key })}
+                    onKeyDown={(event) => {
+                      if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        setSelectedTrait({ kind: 'disc', code: key });
+                      }
+                    }}
+                    aria-label={`Xem thông tin đầy đủ về nhóm DISC ${info.name}`}
+                    className={`rounded-2xl border overflow-hidden transition-all flex flex-col group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 ${
                       isDominant
                         ? 'bg-sky-50/40 border-sky-400 ring-2 ring-sky-400/40 shadow-md'
                         : 'bg-white border-slate-200 hover:border-slate-300 shadow-2xs'
@@ -304,7 +325,17 @@ export const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
                 return (
                   <div
                     key={key}
-                    className={`rounded-2xl border overflow-hidden text-center transition-all flex flex-col group ${
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => setSelectedTrait({ kind: 'holland', code: key })}
+                    onKeyDown={(event) => {
+                      if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        setSelectedTrait({ kind: 'holland', code: key });
+                      }
+                    }}
+                    aria-label={`Xem thông tin đầy đủ về nhóm Holland ${hInfo?.name || key}`}
+                    className={`rounded-2xl border overflow-hidden text-center transition-all flex flex-col group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 ${
                       isDominant
                         ? 'bg-orange-50/50 border-orange-400 ring-2 ring-orange-400/40 shadow-md'
                         : 'bg-white border-slate-200 hover:border-slate-300 shadow-2xs'
@@ -345,6 +376,7 @@ export const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
       </div>
 
       {/* Trait Insights Grid */}
+      {hasPrimaryPairRecommendations && (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Điểm mạnh cốt lõi */}
         <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
@@ -354,7 +386,7 @@ export const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
             </div>
             <div>
               <h4 className="text-xs sm:text-sm font-heading font-bold text-slate-900">
-                Điểm Mạnh Cốt Lõi Trong Môi Trường Kỹ Thuật
+                Điểm Mạnh Cốt Lõi – {hollandName} × {discName}
               </h4>
             </div>
           </div>
@@ -378,7 +410,7 @@ export const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
               </div>
               <div>
                 <h4 className="text-xs sm:text-sm font-heading font-bold text-slate-900">
-                  Môi Trường Làm Việc Phù Hợp & Lời Khuyên
+                  Môi Trường Phù Hợp – {hollandName} × {discName}
                 </h4>
               </div>
             </div>
@@ -399,9 +431,97 @@ export const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
           </div>
         </div>
       </div>
+      )}
 
       {/* Lựa chọn & đối chiếu chuyên ngành đại học sau khi có kết quả đánh giá */}
-    
+
+      {selectedTrait && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/60 p-4 backdrop-blur-sm"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) setSelectedTrait(null);
+          }}
+          onKeyDown={(event) => {
+            if (event.key === 'Escape') setSelectedTrait(null);
+          }}
+        >
+          <section
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="trait-dialog-title"
+            className="w-full max-w-xl overflow-hidden rounded-3xl bg-white shadow-2xl animate-in fade-in zoom-in-95 duration-200"
+          >
+            {selectedTrait.kind === 'disc' ? (() => {
+              const info = DISC_TRAITS_INFO[selectedTrait.code];
+              return (
+                <>
+                  <div className="flex items-start justify-between gap-4 p-5 sm:p-6" style={{ backgroundColor: info.bgLight }}>
+                    <div>
+                      <span className="inline-flex rounded-full bg-white px-3 py-1 text-xs font-extrabold" style={{ color: info.color }}>
+                        Nhóm DISC {selectedTrait.code} · {discPercentages[selectedTrait.code] || 0}%
+                      </span>
+                      <h3 id="trait-dialog-title" className="mt-3 text-xl font-black text-slate-900">{info.name}</h3>
+                      <p className="mt-1 text-sm font-semibold text-slate-600">{info.fullName}</p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedTrait(null)}
+                      aria-label="Đóng thông tin nhóm"
+                      className="rounded-full bg-white/80 p-2 text-slate-500 hover:bg-white hover:text-slate-800"
+                    >
+                      <X className="h-5 w-5" />
+                    </button>
+                  </div>
+                  <div className="space-y-5 p-5 sm:p-6">
+                    <div>
+                      <h4 className="text-sm font-bold text-slate-800">Đặc điểm nhóm</h4>
+                      <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{info.characteristics}</p>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-slate-800">Từ khóa nổi bật</h4>
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {info.keywords.map((keyword) => (
+                          <span key={keyword} className="rounded-full border px-3 py-1 text-xs font-semibold" style={{ color: info.color, borderColor: info.color, backgroundColor: info.bgLight }}>
+                            {keyword}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </>
+              );
+            })() : (() => {
+              const info = HOLLAND_TRAITS_INFO[selectedTrait.code];
+              return (
+                <>
+                  <div className="flex items-start justify-between gap-4 bg-orange-50 p-5 sm:p-6">
+                    <div>
+                      <span className="inline-flex rounded-full bg-white px-3 py-1 text-xs font-extrabold text-orange-700">
+                        Nhóm Holland {selectedTrait.code} · {hollandScores?.[selectedTrait.code] || 0} điểm
+                      </span>
+                      <h3 id="trait-dialog-title" className="mt-3 text-xl font-black text-slate-900">{info.name}</h3>
+                      <p className="mt-1 text-sm font-semibold text-slate-600">{info.fullName}</p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedTrait(null)}
+                      aria-label="Đóng thông tin nhóm"
+                      className="rounded-full bg-white/80 p-2 text-slate-500 hover:bg-white hover:text-slate-800"
+                    >
+                      <X className="h-5 w-5" />
+                    </button>
+                  </div>
+                  <div className="p-5 sm:p-6">
+                    <h4 className="text-sm font-bold text-slate-800">Sở thích và xu hướng nghề nghiệp</h4>
+                    <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{info.description}</p>
+                  </div>
+                </>
+              );
+            })()}
+          </section>
+        </div>
+      )}
+
     </div>
   );
 };
