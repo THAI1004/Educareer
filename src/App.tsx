@@ -615,8 +615,9 @@ export default function App() {
 
                 <div id="career-recommendations-section" className="scroll-mt-24">
                   <CareerRecommendations
-                    careers={evaluationResult.recommendedCareers || []}
+                    careers={CAREER_MATRIX_DATA}
                     userPrimaryDisc={evaluationResult.primaryDisc}
+                    userPrimaryHolland={evaluationResult.primaryHolland}
                     selectedMajorName={selectedRevisedMajor.name}
                     onSelectCareerDetail={(c) => setSelectedCareerDetail(c)}
                   />

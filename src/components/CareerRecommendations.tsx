@@ -11,7 +11,7 @@ import {
   BookmarkCheck,
   Sparkles
 } from 'lucide-react';
-import type { CareerMatrixItem, DISCCode } from '../types/career.ts';
+import type { CareerMatrixItem, DISCCode, HollandCode } from '../types/career.ts';
 import { DISC_TRAITS_INFO, HOLLAND_TRAITS_INFO } from '../data/careerMatrix.ts';
 import { formatImageUrl } from '../utils/imageHelper.ts';
 
@@ -76,6 +76,7 @@ const getJobCardImage = (jobTitle: string, universityMajor: string, holland: str
 interface CareerRecommendationsProps {
   careers: CareerMatrixItem[];
   userPrimaryDisc?: DISCCode;
+  userPrimaryHolland?: HollandCode;
   selectedMajorName?: string;
   onSelectCareerDetail: (career: CareerMatrixItem) => void;
 }
@@ -83,12 +84,13 @@ interface CareerRecommendationsProps {
 export const CareerRecommendations: React.FC<CareerRecommendationsProps> = ({
   careers,
   userPrimaryDisc,
+  userPrimaryHolland,
   selectedMajorName,
   onSelectCareerDetail
 }) => {
   const [selectedDiscFilter, setSelectedDiscFilter] = useState<string>(userPrimaryDisc || 'all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedHollandFilter, setSelectedHollandFilter] = useState<string>('all');
+  const [selectedHollandFilter, setSelectedHollandFilter] = useState<string>(userPrimaryHolland || 'all');
   const searchInputId = useId();
   const discSelectId = useId();
   const hollandSelectId = useId();
@@ -132,12 +134,12 @@ export const CareerRecommendations: React.FC<CareerRecommendationsProps> = ({
         </div>
 
         {/* Selected Major Badge Indicator */}
-        {selectedMajorName && (
+        {/* {selectedMajorName && (
           <div className="flex items-center gap-2 px-3 py-1 rounded-xl bg-orange-50 border border-orange-200 text-xs">
             <span className="text-slate-500">Chuyên ngành ưu tiên:</span>
             <strong className="text-orange-900">{selectedMajorName}</strong>
           </div>
-        )}
+        )} */}
       </div>
 
       {/* Filter Toolbar: Dropdown tính cách, Tìm kiếm, Nhóm Holland */}
@@ -271,7 +273,10 @@ export const CareerRecommendations: React.FC<CareerRecommendationsProps> = ({
         <span>
           Tìm thấy <strong className="text-slate-900 font-bold">{filteredCareers.length}</strong> nghề nghiệp & ngành đào tạo phù hợp
         </span>
-        {userPrimaryDisc && selectedDiscFilter === userPrimaryDisc && (
+        {userPrimaryDisc &&
+          userPrimaryHolland &&
+          selectedDiscFilter === userPrimaryDisc &&
+          selectedHollandFilter === userPrimaryHolland && (
           <span className="text-sky-700 font-semibold flex items-center gap-1">
             <BookmarkCheck className="w-3.5 h-3.5 text-sky-600" />
             Nhóm phù hợp với kết quả trắc nghiệm của bạn
@@ -301,7 +306,7 @@ export const CareerRecommendations: React.FC<CareerRecommendationsProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredCareers.map((item) => {
             const discInfo = DISC_TRAITS_INFO[item.disc];
-            const isUserTraitMatch = userPrimaryDisc === item.disc;
+            const isUserTraitMatch = userPrimaryDisc === item.disc && userPrimaryHolland === item.holland;
             const cardImg = getJobCardImage(item.jobTitle, item.universityMajor, item.holland, item.image_url);
 
             return (

@@ -401,40 +401,7 @@ export const EvaluationSummary: React.FC<EvaluationSummaryProps> = ({
       </div>
 
       {/* Lựa chọn & đối chiếu chuyên ngành đại học sau khi có kết quả đánh giá */}
-      <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
-        <div className="flex items-center gap-3 mb-3">
-          <div className="w-9 h-9 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center shrink-0">
-            <Award className="w-5 h-5" />
-          </div>
-          <div>
-            <h4 className="text-xs sm:text-sm font-heading font-bold text-slate-900">
-              Lựa Chọn & Đối Chiếu Ngành Học Đại Học
-            </h4>
-          </div>
-        </div>
-
-        <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
-          <MajorSelector
-            selectedMajorId={currentMajorId}
-            onSelectMajor={onSelectRevisedMajor}
-            label="Chọn ngành đại học để đối chiếu:"
-            isRevisedSelection={true}
-          />
-
-          <div className="mt-3 pt-2.5 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2 text-xs">
-            <div className="flex items-center gap-2 text-slate-600">
-              <span className="font-semibold text-slate-800">Ngành đang đối chiếu:</span>
-              <span className="px-2 py-0.5 rounded-md bg-sky-50 text-sky-800 font-bold border border-sky-200">
-                {evaluation.finalMajorName || evaluation.initialMajorName}
-              </span>
-            </div>
-            <span className="text-sky-700 font-medium flex items-center gap-1">
-              <ShieldCheck className="w-3.5 h-3.5 text-sky-600" />
-              Đã đồng bộ hóa với gợi ý nghề nghiệp
-            </span>
-          </div>
-        </div>
-      </div>
+    
     </div>
   );
 };
