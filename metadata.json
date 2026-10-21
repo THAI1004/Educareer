@@ -1,6 +1,6 @@
 {
-  "name": "EduCareer - Tư Vấn Hướng Nghiệp & Ngành Học (DISC & Holland)",
-  "description": "Nền tảng tư vấn chọn ngành nghề cho sinh viên theo phân tích hành vi DISC và trắc nghiệm Holland RIASEC, kèm mã ngành và tổ hợp xét tuyển.",
+  "name": "Career Compass",
+  "description": "Hiểu mình hôm nay – Vững bước ngày mai. Nền tảng tư vấn hướng nghiệp theo DISC và Holland RIASEC.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

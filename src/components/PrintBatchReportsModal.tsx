@@ -156,12 +156,13 @@ export const PrintBatchReportsModal: React.FC<PrintBatchReportsModalProps> = ({
                 <div>
                   <div className="flex items-center gap-1.5">
                     <span className="font-heading font-black text-lg text-slate-900 tracking-tight">
-                      EduCareer<span className="text-orange-500">.</span>
+                      Career Compass
                     </span>
                     <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-orange-100 text-orange-900">
                       THPT Quốc Gia
                     </span>
                   </div>
+                  <p className="text-[8px] text-slate-500 mt-0.5">Hiểu mình hôm nay – Vững bước ngày mai.</p>
                   <h4 className="text-xs font-bold text-slate-700 mt-0.5 uppercase">
                     PHIẾU KẾT QUẢ ĐÁNH GIÁ ĐỊNH HƯỚNG NGHỀ NGHIỆP & CHỌN NGÀNH
                   </h4>
@@ -286,7 +287,7 @@ export const PrintBatchReportsModal: React.FC<PrintBatchReportsModalProps> = ({
                 </div>
                 <div className="text-center">
                   <p>Chuyên viên tư vấn / Nhà trường</p>
-                  <p className="mt-5 font-semibold text-slate-700">EduCareer Certified</p>
+                  <p className="mt-5 font-semibold text-slate-700">Career Compass</p>
                 </div>
               </div>
             </div>

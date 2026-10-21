@@ -517,7 +517,7 @@ export default function App() {
                   <div className="absolute inset-0 bg-gradient-to-tr from-amber-400/25 to-orange-400/35 rounded-full blur-2xl transform scale-100 pointer-events-none" />
                   <img
                     src="/students-transparent.png"
-                    alt="Học sinh THPT EduCareer"
+                    alt="Học sinh THPT Career Compass"
                     className="relative z-10 max-h-72 sm:max-h-80 md:max-h-[380px] lg:max-h-[410px] object-contain drop-shadow-xl transition-transform hover:scale-105 duration-300"
                   />
                 </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Compass,
   History,
   Table,
   BookOpen,
@@ -38,22 +37,22 @@ export const Header: React.FC<HeaderProps> = ({
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-amber-100 shadow-2xs">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14 sm:h-20">
-            {/* Logo & Edukids Brand Aesthetic */}
+            {/* Career Compass brand */}
             <div
               onClick={() => setActiveTab('counseling')}
               className="flex items-center gap-2 sm:gap-3 cursor-pointer shrink-0"
             >
-              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-2xl bg-[#FF5722] flex items-center justify-center text-white shadow-md shadow-orange-500/20 shrink-0 transform hover:scale-105 transition-transform">
-                <Compass className="w-5 h-5 sm:w-6 sm:h-6" />
-              </div>
-              <div>
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  <span className="font-heading font-black text-base sm:text-xl text-slate-900 tracking-tight">
-                    EduCareer<span className="text-orange-500">.</span>
-                  </span>
-                  <span className="text-[10px] sm:text-xs font-bold px-1.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-200">
-                    THPT
-                  </span>
+              <img
+                src="/logo.png"
+                alt="Career Compass"
+                className="w-9 h-9 sm:w-11 sm:h-11 object-contain shrink-0 transition-transform hover:scale-105"
+              />
+              <div className="min-w-0">
+                <div className="font-heading font-black text-base sm:text-xl text-slate-900 tracking-tight leading-tight">
+                  Career Compass
+                </div>
+                <div className="text-[8px] sm:text-[10px] font-semibold text-slate-500 leading-tight mt-0.5 whitespace-nowrap">
+                  Hiểu mình hôm nay – Vững bước ngày mai.
                 </div>
               </div>
             </div>

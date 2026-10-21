@@ -139,8 +139,9 @@ export const PrintReportModal: React.FC<PrintReportModalProps> = ({ result, onCl
             <div>
               <div className="flex items-center gap-1.5 text-sky-700 mb-0.5">
                 <Compass className="w-4 h-4" />
-                <span className="text-[10px] font-bold tracking-widest uppercase">EduCareer Guidance Platform</span>
+                <span className="text-[10px] font-bold tracking-widest uppercase">Career Compass</span>
               </div>
+              <p className="text-[9px] text-slate-500 mb-0.5">Hiểu mình hôm nay – Vững bước ngày mai.</p>
               <h1 className="text-lg sm:text-xl font-black text-slate-900 tracking-tight uppercase leading-tight">
                 Phiếu Tư Vấn Định Hướng Ngành Nghề & Đại Học
               </h1>
