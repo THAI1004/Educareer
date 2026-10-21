@@ -126,10 +126,10 @@ export const CareerRecommendations: React.FC<CareerRecommendationsProps> = ({
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3 pb-4 border-b border-slate-100">
         <div>
           <h3 className="text-base sm:text-lg font-heading font-extrabold text-slate-900">
-            Gợi Ý Nghề Nghiệp Dựa Vào Tính Cách & Ngành Đào Tạo
+            Dòng trên đổi thành Tra cứu thông tin
           </h3>
           <p className="text-xs text-slate-500 mt-0.5">
-            Đối chiếu nhóm Holland và tính cách DISC để hiển thị nghề nghiệp, ngành đào tạo đại học và tổ hợp xét tuyển
+            Đối chiếu nhóm Holland và tính cách DISC để hiển thị nghề nghiệp, ngành đào tạo đại học và tổ hợp xét tuyển tham khảo
           </p>
         </div>
 
